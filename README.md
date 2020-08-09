@@ -98,9 +98,11 @@ Code has been used by me from the following sources:
 Language | Effect | Example | Source | URL
 -------- | ------ | ------- | ------ | ---
 
-### Acknowledgements !!!
+### Acknowledgements
 
-- I received inspiration for this project from X
+While I  decided to create a memory game, I got the inspiration for the overall theme from my partner Glen Harris. He has always been truly fascinated by astronomy and stars in particular. When looking at the different constellations at night, I had the idea to combine this with my second project. 
+
+A special thanks to my mentor [Rahul Lakhanpal](https://github.com/rahulkp220), who has provided me with valuable insights into best practices when building a game as well as writing automated testing. I furthermore want to thank the slack community of Code Institute for reviewing my project and providing me with constructive criticism. 
 
 ## Disclaimer
 
