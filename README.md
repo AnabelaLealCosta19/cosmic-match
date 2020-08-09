@@ -1,8 +1,12 @@
-# Your Project's Name
+# Cosmic match
 
 One or two paragraphs providing an overview of your project.
 
 Essentially, this part is your sales pitch.
+
+## Table of Content
+
+1. [Disclaimer](#disclaimer)
  
 ## UX
  
@@ -79,3 +83,7 @@ In addition, if it is not obvious, you should also describe how to run your code
 ### Acknowledgements
 
 - I received inspiration for this project from X
+
+## Disclaimer
+
+This website has been created for educational purposes only.
