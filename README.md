@@ -6,6 +6,11 @@ Essentially, this part is your sales pitch.
 
 ## Table of Content
 
+1. Technologies used
+    - [Languages](#languages)
+    - [Libraries](#libraries)
+    - [Tools](#tools)
+1. [Testing](#testing) 
 1. Bugs 
     - [Fixed bugs](#fixed-bugs)
     - [Existing bugs](#existing-bugs)
@@ -48,13 +53,32 @@ In addition, you may also use this section to discuss plans for additional featu
 
 ## Technologies Used
 
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
+### Languages
+This project uses **HTML5**, **CSS3** and **JavaScript**. 
 
-- [JQuery](https://jquery.com)
-    - The project uses **JQuery** to simplify DOM manipulation.
+### Libraries !!!
+- [Bootstrap](https://getbootstrap.com/): Its grid, components and classes simplify the website structure and add additional responsiveness. 
+- [jQuery](https://jquery.com/): This JavaScript library simplifies DOM manipulation.
+- [Jasmine](https://jasmine.github.io/): Allows me to automatically test my JavaScript and jQuery code. 
+- [Jasmine-jQuery](https://github.com/velesin/jasmine-jquery): Used when writing automated testing. 
+- [Favicon.io](https://favicon.io/): Provides favicons to improve website recognition and branding.
+- [Font Awesome](https://fontawesome.com/): Provides icons to simplify and visualise content and creates a better UX.
+- [Google Fonts](https://fonts.google.com/): Used to style the website font.
 
+### Tools !!!
 
-## Testing
+- [Github](https://github.com/): Hosts the project files and was used to deploy the website to Git Pages. Additionally the Githubs Projects Planner was used to plan the project and keep track of any outstanding tasks (see [here](https://github.com/AnabelaLealCosta19/cosmic-match/projects/1))
+- [Gitpod](https://www.gitpod.io/): Provides a developing environment to write code and commit changes to Github.
+- [Git](https://git-scm.com/): Used for version control of the project.
+- [Balsamiq](https://balsamiq.com/?gclid=CjwKCAjwh472BRAGEiwAvHVfGsly1Nt9bDZCFUTGCc9I8OfaLtSIcxLhm_WX8911ERsm__luBJslTBoCqgQQAvD_BwE): Used in the surface plane (UXD) to plan my project and create wireframes.
+- [Nu HTML Checker](https://validator.w3.org/nu/): Validated my HTML code.
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/): Validate my CSS code.
+- [FREEFORMATTER](https://www.freeformatter.com/): Indented my HTML, CSS and JS code
+- [LetterCount](https://www.lettercount.com/): Counted letters of commit messages to ensure they aren't too long.
+- [Scribens.com](https://www.scribens.com/): Checked grammar of website and readme content.
+- [Am I Responsive](http://ami.responsivedesign.is/): Used to display website across devices for screenshot in product introduction.
+
+## Testing !!!
 
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
@@ -76,9 +100,9 @@ If this section grows too long, you may want to split it off into a separate fil
 
 ## Bugs
 
-### Fixed bugs
+### Fixed bugs !!!
 
-### Existing bugs
+### Existing bugs !!!
 
 ## Deployment
 
