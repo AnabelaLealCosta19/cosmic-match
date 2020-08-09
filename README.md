@@ -23,13 +23,6 @@ Essentially, this part is your sales pitch.
     - [Wireframes](#wireframes)
 1. Features 
     - [Existing features](#existing-features)
-    - Page specific features
-        - [Home](#home)
-        - [Bonobos](#bonobos)
-        - [About](#about)
-        - [Program](#program)
-        - [Adopt](#adopt)
-        - [Donate](#donate)
     - [Future considerations](#future-considerations)
 1. Technologies used
     - [Languages](#languages)
@@ -63,31 +56,31 @@ This section is also where you would share links to any wireframes, mockups, dia
 
 ### Goals
 
-#### User
+#### User !!!
 
-#### Stakeholder
+#### Stakeholder !!!
 
-### User Stories
+### User Stories !!!
 
 ### Design Choices
 
-#### Layout
+#### Layout !!!
 
-#### Colour scheme
+#### Colour scheme !!!
 
-#### Images
+#### Images !!!
 
-#### Audio 
+#### Audio !!!
 
-#### Typography
+#### Typography !!!
 
-#### Icons
+#### Icons !!!
 
-### Accessibility
+### Accessibility !!!
 
-### Navigation
+### Navigation !!!
 
-### Wireframes
+### Wireframes !!!
 
 These wireframes were created using [Balsamiq](https://balsamiq.com/?gclid=CjwKCAjwh472BRAGEiwAvHVfGsly1Nt9bDZCFUTGCc9I8OfaLtSIcxLhm_WX8911ERsm__luBJslTBoCqgQQAvD_BwE) during the design and planning process for this project. They have not been amended since the repository has been created and, therefore, display small differences when compared to the live website.
 
@@ -128,13 +121,13 @@ This project uses **HTML5**, **CSS3** and **JavaScript**.
 
 ### Tools !!!
 
-- [Github](https://github.com/): Hosts the project files and was used to deploy the website to Git Pages. Additionally the Githubs Projects Planner was used to plan the project and keep track of any outstanding tasks (see [here](https://github.com/AnabelaLealCosta19/cosmic-match/projects/1))
+- [Github](https://github.com/): Hosts the project files and was used to deploy the website to Git Pages. Additionally the Githubs Projects Planner was used to plan the project and keep track of any outstanding tasks (see [here](https://github.com/AnabelaLealCosta19/cosmic-match/projects/1)).
 - [Gitpod](https://www.gitpod.io/): Provides a developing environment to write code and commit changes to Github.
 - [Git](https://git-scm.com/): Used for version control of the project.
 - [Balsamiq](https://balsamiq.com/?gclid=CjwKCAjwh472BRAGEiwAvHVfGsly1Nt9bDZCFUTGCc9I8OfaLtSIcxLhm_WX8911ERsm__luBJslTBoCqgQQAvD_BwE): Used in the surface plane (UXD) to plan my project and create wireframes.
 - [Nu HTML Checker](https://validator.w3.org/nu/): Validated my HTML code.
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/): Validate my CSS code.
-- [FREEFORMATTER](https://www.freeformatter.com/): Indented my HTML, CSS and JS code
+- [FREEFORMATTER](https://www.freeformatter.com/): Indented my HTML, CSS and JS code.
 - [LetterCount](https://www.lettercount.com/): Counted letters of commit messages to ensure they aren't too long.
 - [Scribens.com](https://www.scribens.com/): Checked grammar of website and readme content.
 - [Am I Responsive](http://ami.responsivedesign.is/): Used to display website across devices for screenshot in product introduction.
