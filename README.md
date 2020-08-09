@@ -6,6 +6,13 @@ Essentially, this part is your sales pitch.
 
 ## Table of Content
 
+1. Credits
+    - [Content](#content)
+    - Media
+        - [Images](#images)
+        - [Audio](#audio)
+    - [Code](#code) 
+    - [Acknowledgements](#acknowledgements)
 1. [Disclaimer](#disclaimer)
  
 ## UX
@@ -74,13 +81,24 @@ In addition, if it is not obvious, you should also describe how to run your code
 
 ## Credits
 
-### Content
+### Content !!!
 - The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
 
 ### Media
+
+#### Images !!!
 - The photos used in this site were obtained from ...
 
-### Acknowledgements
+#### Audio !!!
+
+### Code !!!
+
+Code has been used by me from the following sources: 
+
+Language | Effect | Example | Source | URL
+-------- | ------ | ------- | ------ | ---
+
+### Acknowledgements !!!
 
 - I received inspiration for this project from X
 
