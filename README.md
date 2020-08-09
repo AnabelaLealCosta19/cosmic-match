@@ -6,6 +6,9 @@ Essentially, this part is your sales pitch.
 
 ## Table of Content
 
+1. Bugs 
+    - [Fixed bugs](#fixed-bugs)
+    - [Existing bugs](#existing-bugs)
 1. Deployment
     - [Deploy project](#deploy-project)
     - [Deployed vs development version](#deployed-vs-development-version)
@@ -70,6 +73,12 @@ In addition, you should mention in this section how your project looks and works
 You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
 
 If this section grows too long, you may want to split it off into a separate file and link to it from here.
+
+## Bugs
+
+### Fixed bugs
+
+### Existing bugs
 
 ## Deployment
 
