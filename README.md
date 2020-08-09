@@ -89,6 +89,14 @@ This section is also where you would share links to any wireframes, mockups, dia
 
 ### Wireframes
 
+These wireframes were created using [Balsamiq](https://balsamiq.com/?gclid=CjwKCAjwh472BRAGEiwAvHVfGsly1Nt9bDZCFUTGCc9I8OfaLtSIcxLhm_WX8911ERsm__luBJslTBoCqgQQAvD_BwE) during the design and planning process for this project. They have not been amended since the repository has been created and, therefore, display small differences when compared to the live website.
+
+* [Start page](assets/wireframes/start-page.pdf)
+* [Memory game](assets/wireframes/memory-game.pdf)
+* [Modal - Instructions](assets/wireframes/instructions.pdf)
+* [Modal - Game won](assets/wireframes/game-won.pdf)
+* [Modal - Game over](assets/wireframes/game-over.pdf)
+
 ## Features
 
 In this section, you should go over the different parts of your project, and describe each in a sentence or so.
