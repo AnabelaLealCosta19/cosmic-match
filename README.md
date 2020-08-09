@@ -6,6 +6,16 @@ Essentially, this part is your sales pitch.
 
 ## Table of Content
 
+1. Features 
+    - [Existing features](#existing-features)
+    - Page specific features
+        - [Home](#home)
+        - [Bonobos](#bonobos)
+        - [About](#about)
+        - [Program](#program)
+        - [Adopt](#adopt)
+        - [Donate](#donate)
+    - [Future considerations](#future-considerations)
 1. Technologies used
     - [Languages](#languages)
     - [Libraries](#libraries)
@@ -40,7 +50,7 @@ This section is also where you would share links to any wireframes, mockups, dia
 
 In this section, you should go over the different parts of your project, and describe each in a sentence or so.
  
-### Existing Features
+### Existing Features !!!
 - Feature 1 - allows users X to achieve Y, by having them fill out Z
 - ...
 
@@ -48,7 +58,7 @@ For some/all of your features, you may choose to reference the specific project 
 
 In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
 
-### Features Left to Implement
+### Future considerations !!!
 - Another feature idea
 
 ## Technologies Used
