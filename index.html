@@ -15,6 +15,8 @@
     <link rel="manifest" href="assets/favicon/site.webmanifest">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/821756c581.js" crossorigin="anonymous"></script>
     <!-- Own CSS -->
     <link rel="stylesheet" href="assets/css/style.css" type="text/css"/>
 </head>
@@ -31,16 +33,45 @@
 
     <article class="container">
         <div class="row">
-            <div class="col-12">
-                <!-- Player details -->
+            <div class="col-12 my-col">
                 <div class="row">
-                    <div class="col-6">
+                    <!-- Player details -->
+                    <div class="col-6 my-col">
                         <h2>Player</h2>
                     </div>
+                    <!-- /.Player details -->
+                    <!-- Action items -->
+                    <div class="col-6 my-col">
+                        <ul class="list-inline">
+                            <li class="list-inline-item">
+                                <a href="#" class="action-items">
+                                    <i class="fas fa-redo-alt"></i>
+                                    <span class="sr-only">Restart</span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="action-items">
+                                    <i class="fas fa-question"></i>
+                                    <span class="sr-only">Instructions</span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="action-items">
+                                    <i class="fas fa-volume-up"></i>
+                                    <span class="sr-only">Sound On</span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item d-none">
+                                <a href="#" class="action-items">
+                                    <i class="fas fa-volume-mute"></i>
+                                    <span class="sr-only">Sound Off</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.Action items -->
                 </div>
-                <!-- /.Player details -->
             </div>
-            <!-- /.Player details + action items -->
             <!-- Game details -->
             <div class="col-12">
                 Game details
