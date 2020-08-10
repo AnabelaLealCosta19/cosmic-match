@@ -33,15 +33,69 @@
 
     <article class="container">
         <div class="row">
-            <div class="col-12 my-col">
+            <div class="col-12 col-lg-4 my-col">
                 <div class="row">
-                    <!-- Player details -->
-                    <div class="col-6 my-col">
+                    <div class="col-6 col-lg-12 my-col">
+                        <!-- Player details -->
                         <h2>Player</h2>
+                        <!-- /.Player details -->
+                        <!-- Game details (desktop) -->
+                        <div class="col-12 d-none d-lg-block my-col">
+                            <div class="row">
+                                <div class="col-12 d-lg-block my-col">
+                                    <i class="fas fa-hourglass-start d-md-none" aria-hidden="true"></i>
+                                    <span class="sr-only d-md-none">Time:</span> 
+                                    <span class="d-none d-md-inline">Time:</span>
+                                    <span>1:00</span>         
+                                </div>
+                                <div class="col-12 d-lg-block my-col">
+                                    <i class="fas fa-mouse d-md-none" aria-hidden="true">                        </i>
+                                    <span class="sr-only d-md-none">Flips:</span> 
+                                    <span class="d-none d-md-inline">Flips:</span> 
+                                    <span>0</span>    
+                                </div>
+                                <div class="col-12 d-lg-block my-col">
+                                    <i class="fas fa-bolt d-md-none" aria-hidden="true"></i>
+                                    <span class="sr-only d-md-none">Difficulty:</span> 
+                                    <span class="d-none d-md-inline">Difficulty:</span> 
+                                    <span>?</span>         
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.Game details (desktop) -->
+                        <!-- Action items (desktop) -->
+                        <div class="col-12 d-none d-lg-block my-col">
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <a href="#" class="action-items">
+                                        <i class="fas fa-redo-alt" aria-hidden="true"></i>
+                                        <span class="sr-only">Restart</span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="action-items">
+                                        <i class="fas fa-question" aria-hidden="true"></i>
+                                        <span class="sr-only">Instructions</span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="action-items">
+                                        <i class="fas fa-volume-up" aria-hidden="true"></i>
+                                        <span class="sr-only">Sound On</span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item d-none">
+                                    <a href="#" class="action-items">
+                                        <i class="fas fa-volume-mute" aria-hidden="true"></i>
+                                        <span class="sr-only">Sound Off</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /.Action items (desktop) -->
                     </div>
-                    <!-- /.Player details -->
-                    <!-- Action items -->
-                    <div class="col-6 my-col">
+                    <!-- Action items (phone + tablet) -->
+                    <div class="col-6 d-lg-none my-col">
                         <ul class="list-inline">
                             <li class="list-inline-item">
                                 <a href="#" class="action-items">
@@ -72,8 +126,8 @@
                     <!-- /.Action items -->
                 </div>
             </div>
-            <!-- Game details -->
-            <div class="col-12 my-col">
+            <!-- Game details (phone + tablet) -->
+            <div class="col-12 d-lg-none my-col">
                 <div class="row">
                     <div class="col-4 my-col">
                         <i class="fas fa-hourglass-start d-md-none" aria-hidden="true"></i>
@@ -97,41 +151,45 @@
             </div>
             <!-- /.Game details -->
             <!-- Cards -->
-            <div class="col-4 my-col card">
-                <img src="assets/images/cards-easy/aquaris.png" id="aquaris1" class="cards card-front aquaris" alt="Aquaris">
-            </div>
-            <div class="col-4 my-col card">
-                <img src="assets/images/cards-easy/aquaris.png" id="aquaris2" class="cards card-front aquaris" alt="Aquaris">
-            </div>
-            <div class="col-4 my-col card">
-                <img src="assets/images/cards-easy/capricorn.png" id="capricorn1" class="cards card-front capricorn" alt="Capricorn">
-            </div>
-            <div class="col-4 my-col card">
-                <img src="assets/images/cards-easy/capricorn.png" id="capricorn2" class="cards card-front capricorn" alt="Capricorn">
-            </div>
-            <div class="col-4 my-col card">
-                <img src="assets/images/cards-easy/saggitarius.png" id="saggitarius1" class="cards card-front saggitarius" alt="Saggitarius">
-            </div>
-            <div class="col-4 my-col card">
-                <img src="assets/images/cards-easy/saggitarius.png" id="saggitarius2" class="cards card-front saggitarius" alt="Saggitarius">
-            </div>
-            <div class="col-4 my-col card">
-                <img src="assets/images/cards-easy/scorpio.png" id="scorpio1" class="cards card-front scorpio" alt="Scorpio">
-            </div>
-            <div class="col-4 my-col card">
-                <img src="assets/images/cards-easy/scorpio.png" id="scorpio2" class="cards card-front scorpio" alt="Scorpio">
-            </div>
-            <div class="col-4 my-col card">
-                <img src="assets/images/cards-easy/libra.png" id="libra1" class="cards card-front libra" alt="Libra">
-            </div>
-            <div class="col-4 my-col card">
-                <img src="assets/images/cards-easy/libra.png" id="libra2" class="cards card-front libra" alt="Libra">
-            </div>
-            <div class="col-4 my-col card">
-                <img src="assets/images/cards-easy/virgo.png" id="virgo1" class="cards card-front virgo" alt="Virgo">
-            </div>
-            <div class="col-4 my-col card">
-                <img src="assets/images/cards-easy/virgo.png" id="virgo2" class="cards card-front virgo" alt="Virgo">
+            <div class="col-12 col-lg-8 my-col">
+                <div class="row">
+                    <div class="col-4 col-lg-3 my-col card">
+                        <img src="assets/images/cards-easy/aquaris.png" id="aquaris1" class="cards card-front aquaris" alt="Aquaris">
+                    </div>
+                    <div class="col-4 col-lg-3 my-col card">
+                        <img src="assets/images/cards-easy/aquaris.png" id="aquaris2" class="cards card-front aquaris" alt="Aquaris">
+                    </div>
+                    <div class="col-4 col-lg-3 my-col card">
+                        <img src="assets/images/cards-easy/capricorn.png" id="capricorn1" class="cards card-front capricorn" alt="Capricorn">
+                    </div>
+                    <div class="col-4 col-lg-3 my-col card">
+                        <img src="assets/images/cards-easy/capricorn.png" id="capricorn2" class="cards card-front capricorn" alt="Capricorn">
+                    </div>
+                    <div class="col-4 col-lg-3 my-col card">
+                        <img src="assets/images/cards-easy/saggitarius.png" id="saggitarius1" class="cards card-front saggitarius" alt="Saggitarius">
+                    </div>
+                    <div class="col-4 col-lg-3 my-col card">
+                        <img src="assets/images/cards-easy/saggitarius.png" id="saggitarius2" class="cards card-front saggitarius" alt="Saggitarius">
+                    </div>
+                    <div class="col-4 col-lg-3 my-col card">
+                        <img src="assets/images/cards-easy/scorpio.png" id="scorpio1" class="cards card-front scorpio" alt="Scorpio">
+                    </div>
+                    <div class="col-4 col-lg-3 my-col card">
+                        <img src="assets/images/cards-easy/scorpio.png" id="scorpio2" class="cards card-front scorpio" alt="Scorpio">
+                    </div>
+                    <div class="col-4 col-lg-3 my-col card">
+                        <img src="assets/images/cards-easy/libra.png" id="libra1" class="cards card-front libra" alt="Libra">
+                    </div>
+                    <div class="col-4 col-lg-3 my-col card">
+                        <img src="assets/images/cards-easy/libra.png" id="libra2" class="cards card-front libra" alt="Libra">
+                    </div>
+                    <div class="col-4 col-lg-3 my-col card">
+                        <img src="assets/images/cards-easy/virgo.png" id="virgo1" class="cards card-front virgo" alt="Virgo">
+                    </div>
+                    <div class="col-4 col-lg-3 my-col card">
+                        <img src="assets/images/cards-easy/virgo.png" id="virgo2" class="cards card-front virgo" alt="Virgo">
+                    </div>
+                </div>
             </div>
             <!-- /.Cards -->
         </div>    
