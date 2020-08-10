@@ -9,3 +9,16 @@
 .my-col{
     border: 5px solid red;
 } 
+
+div .card{
+    padding: 2px;
+}
+
+.cards{
+    max-width: 33,33vw;
+    max-height: 14vh;
+}
+
+.card-front{
+    background-color: black;
+}
