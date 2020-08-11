@@ -1,3 +1,4 @@
+/*
 .container{
     border: 5px solid green;
 }
@@ -8,7 +9,19 @@
 
 .my-col{
     border: 5px solid red;
-} 
+} */
+
+body {
+    width: 100vw;
+    height: 100vh;
+    
+    /* Source of the following picture is https://pxhere.com/ (URL https://pxhere.com/en/photo/115088) */
+    background: url("../images/background-image.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 
 div .card{
     padding: 2px;
