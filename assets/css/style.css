@@ -11,10 +11,14 @@
     border: 5px solid red;
 } */
 
+/* Body */
+
 body {
     width: 100vw;
     height: 100vh;
-    
+    font-family: 'montserrat', sans-serif;
+    font-weight: 500;
+    color: white;
     /* Source of the following picture is https://pxhere.com/ (URL https://pxhere.com/en/photo/115088) */
     background: url("../images/background-image.jpg") no-repeat center center;
     -webkit-background-size: cover;
@@ -22,6 +26,21 @@ body {
     -o-background-size: cover;
     background-size: cover;
 }
+
+h1 {
+    font-family: 'orbitron', 'sans-serif';
+    text-align: center;
+}
+
+/* /.Body */
+
+/* Heading */
+
+/* /.Heading */
+
+/* Footer */
+
+/* Footer */
 
 div .card{
     padding: 2px;
