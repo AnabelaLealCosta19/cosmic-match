@@ -79,14 +79,42 @@ footer p {
 
 /* Player details */
 
+/* Vertically aligning block-level element with unknown height | source: 'CSS-Tricks' (URL: https://css-tricks.com/centering-css-complete-guide/) */
+.player-details {
+    position:relative;
+}
+
 h2 {
     font-size: 1.5em;
     margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
+
 /* /.Player details */
 
 /* Game details */
 
+.game-detail-mobile {
+    margin: 0.25em 0;
+}
+
+span {
+    font-size: 1.15em;
+}
+
+p i {
+    padding: 2px;
+}
+
+#flips {
+    text-align: center;
+}
+
+#difficulty {
+    text-align: right;
+}
 
 
 /* /.Game details */
@@ -123,15 +151,34 @@ div .card {
     h2 {
         font-size: 1.75em;
     }
+    span {
+        font-size: 1.35em;
+    }
 }
 
 @media only screen and (min-width: 768px) {
     h1 {
         font-size: 4.5em;
     } 
+    .player-details {
+        position:static;
+    }
     h2 {
         font-size: 2.5em;
-    }   
+        margin: 0;
+        position:static;
+        top: 0%;
+        transform: translateY(0%);
+    }
+    .game-detail-mobile {
+        margin: 0.5em 0;
+    }
+    span {
+        font-size: 1.8em;
+    }  
+    #flips {
+        text-align: right;
+    }
     footer {
         font-size: 1em;
     }
@@ -147,7 +194,11 @@ div .card {
         background-size: cover;
     }
     h2 {
-        font-size: 3em;
+        font-size: 2.75em;
+        padding-bottom: 0.5em;
+    }
+    .game-detail-desktop {
+        padding: 0;
     }
 }
 
@@ -156,7 +207,10 @@ div .card {
         font-size: 6em;
     }
     h2 {
-        font-size: 4em;
+        font-size: 3.5em;
+    }
+    span {
+        font-size: 2.25em;
     }
 }
 
