@@ -20,7 +20,7 @@ body {
     font-weight: 500;
     color: white;
     /* Source of the following picture is https://pxhere.com/ (URL https://pxhere.com/en/photo/115088) */
-    background: url("../images/background-image.jpg") no-repeat center center;
+    background: url("../images/bg-img/background-img-crop-mobl.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -68,6 +68,7 @@ article {
 
 footer {
     height: 1.5em;
+    font-size: 0.75em;
 }
 
 footer p {
@@ -88,6 +89,9 @@ h2 {
 /* /.Player details */
 
 /* Game details */
+
+
+
 /* /.Game details */
 
 
@@ -96,10 +100,43 @@ div .card {
 }
 
 .cards {
-    max-width: 33,33vw;
+    max-width: 33.33vw;
     max-height: 14vh;
 }
 
 .card-front {
     background-color: black;
 }
+
+
+/* Media queries */
+
+@media only screen and (min-width: 650px) {
+    body {
+        /* Source of the following picture is https://pxhere.com/ (URL https://pxhere.com/en/photo/115088) */
+        background: url("../images/bg-img/background-img-crop-mobl-tabl.jpg") no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    footer {
+        font-size: 1em;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    body {
+        /* Source of the following picture is https://pxhere.com/ (URL https://pxhere.com/en/photo/115088) */
+        background: url("../images/bg-img/background-img-crop-desk.jpg") no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+}
+
+/* /.Media queries */
