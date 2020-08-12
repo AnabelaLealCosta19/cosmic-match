@@ -46,8 +46,7 @@ header {
 
 h1 {
     font-family: 'orbitron', 'sans-serif';
-    /* Responsive font size | source: 'stackoverflow' (URL: https://stackoverflow.com/questions/23560087/is-there-such-a-thing-as-min-font-size-and-max-font-size/39962030) */
-    font-size: calc(10vh - 1.75em);
+    font-size: 2em;
 }
 
 h1, .h1 {
@@ -111,7 +110,7 @@ div .card {
 
 /* Media queries */
 
-@media only screen and (min-width: 650px) {
+@media only screen and (min-width: 350px) {
     body {
         /* Source of the following picture is https://pxhere.com/ (URL https://pxhere.com/en/photo/115088) */
         background: url("../images/bg-img/background-img-crop-mobl-tabl.jpg") no-repeat center center;
@@ -120,9 +119,15 @@ div .card {
         -o-background-size: cover;
         background-size: cover;
     }
+    h1 {
+        font-size: 2.5em;
+    }
 }
 
 @media only screen and (min-width: 768px) {
+    h1 {
+        font-size: 4.5em;
+    }    
     footer {
         font-size: 1em;
     }
@@ -136,6 +141,12 @@ div .card {
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+    }
+}
+
+@media only screen and (min-width: 2000px) {
+    h1 {
+        font-size: 6em;
     }
 }
 
