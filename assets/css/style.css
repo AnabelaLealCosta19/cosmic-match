@@ -46,6 +46,7 @@ header {
 
 h1 {
     font-family: 'orbitron', 'sans-serif';
+    /* Responsive font size | source: 'stackoverflow' (URL: https://stackoverflow.com/questions/23560087/is-there-such-a-thing-as-min-font-size-and-max-font-size/39962030) */
     font-size: calc(10vh - 1.75em);
 }
 
@@ -60,7 +61,8 @@ h1, .h1 {
 article {
     height: calc(80vh - 1.5em);
 }
-/* Article */
+
+/* /.Article */
 
 /* Footer */
 
@@ -73,7 +75,21 @@ footer p {
     font-weight: 300;
 }
 
-/* Footer */
+/* /.Footer */
+
+/* Player details */
+
+h2 {
+    /* Responsive font size | source: 'stackoverflow' (URL: https://stackoverflow.com/questions/23560087/is-there-such-a-thing-as-min-font-size-and-max-font-size/39962030) */
+    font-size: calc(7.5vh - 1.25em);
+    padding: 0.25em;
+    margin: 0;
+}
+/* /.Player details */
+
+/* Game details */
+/* /.Game details */
+
 
 div .card {
     padding: 2px;
