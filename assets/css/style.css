@@ -79,17 +79,9 @@ footer p {
 
 /* Player details */
 
-/* Vertically aligning block-level element with unknown height | source: 'CSS-Tricks' (URL: https://css-tricks.com/centering-css-complete-guide/) */
-.player-details {
-    position:relative;
-}
-
 h2 {
     font-size: 1.5em;
     margin: 0;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
 }
 
 /* /.Player details */
@@ -119,6 +111,30 @@ p i {
 
 /* /.Game details */
 
+/* Action items */
+
+/* Vertically aligning block-level element with unknown height | source: 'CSS-Tricks' (URL: https://css-tricks.com/centering-css-complete-guide/) */
+.action-items-container {
+    position:relative;
+}
+
+ul {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+li {
+    line-height: 1.25em;
+}
+
+li a i {
+    color: white;
+    font-size: 1.25em; 
+}
+
+/* /.Action items */
 
 div .card {
     padding: 2px;
@@ -154,21 +170,21 @@ div .card {
     span {
         font-size: 1.35em;
     }
+    li {
+        line-height: 1.5em;
+    }
+    li a i {
+        font-size: 1.5em; 
+    }
+    
 }
 
 @media only screen and (min-width: 768px) {
     h1 {
         font-size: 4.5em;
     } 
-    .player-details {
-        position:static;
-    }
     h2 {
         font-size: 2.5em;
-        margin: 0;
-        position:static;
-        top: 0%;
-        transform: translateY(0%);
     }
     .game-detail-mobile {
         margin: 0.5em 0;
@@ -178,6 +194,13 @@ div .card {
     }  
     #flips {
         text-align: right;
+    }
+    li {
+        line-height: 2.25em;
+    }
+    li a i {
+        font-size: 2.25em;
+        margin-right: 0.25em; 
     }
     footer {
         font-size: 1em;
@@ -193,12 +216,34 @@ div .card {
         -o-background-size: cover;
         background-size: cover;
     }
+    .info-container-desktop {
+        margin-top: 3em;
+    }
     h2 {
         font-size: 2.75em;
         padding-bottom: 0.5em;
     }
+    .game-detail-container-desktop {
+        margin: 1em 0;
+    }
     .game-detail-desktop {
         padding: 0;
+    }
+    .action-items-container {
+        position: static;
+        padding: 1.25em 0;
+    }
+    ul {
+        position: static;
+        top: 0;
+        transform: translateY(0);
+    }
+    li {
+        line-height: 2.25em;
+    }
+    li a i {
+        font-size: 2.25em;
+        margin-right: 0.25em; 
     }
 }
 
@@ -206,11 +251,26 @@ div .card {
     h1 {
         font-size: 6em;
     }
+    .info-container-desktop {
+        margin-top: 6em;
+    }
     h2 {
         font-size: 3.5em;
     }
+    .game-detail-container-desktop {
+        margin: 2em 0;
+    }
     span {
         font-size: 2.25em;
+    }
+    .action-items-container {
+        padding: 3em 0;
+    }
+    li {
+        line-height: 2.75em;
+    }
+    li a i {
+        font-size: 2.75em;
     }
 }
 
