@@ -71,7 +71,7 @@ footer {
 }
 
 footer p {
-    margin: 0;
+    margin: 2px 0;
     font-weight: 300;
 }
 
@@ -183,6 +183,13 @@ div .card {
     h1 {
         font-size: 4.5em;
     } 
+    article {
+        height: calc(80vh - 2em);
+    }
+    footer {
+        height: 2em;
+        font-size: 1em;
+    }
     h2 {
         font-size: 2.5em;
     }
@@ -202,9 +209,7 @@ div .card {
         font-size: 2.25em;
         margin-right: 0.25em; 
     }
-    footer {
-        font-size: 1em;
-    }
+
 }
 
 @media only screen and (min-width: 992px) {
