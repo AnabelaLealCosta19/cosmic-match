@@ -137,7 +137,12 @@ li a i {
 /* /.Action items */
 
 div .card {
-    padding: 2px;
+    padding: 5px;
+}
+
+.card img {
+    vertical-align: middle;
+    padding: 10px;
 }
 
 .cards {
@@ -146,7 +151,9 @@ div .card {
 }
 
 .card-front {
-    background-color: black;
+    border: 1px solid rgba(253, 253, 253, 0.8);
+    border-radius: .25em;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 
