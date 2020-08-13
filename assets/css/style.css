@@ -33,7 +33,7 @@ body {
 
 /* Vertically aligning block-level element with unknown height | source: 'CSS-Tricks' (URL: https://css-tricks.com/centering-css-complete-guide/) */
 header {
-    height: 20vh;
+    height: 18vh;
     position:relative;
 }
 
@@ -58,7 +58,7 @@ h1, .h1 {
 /* Article */
 
 article {
-    height: calc(80vh - 1.5em);
+    height: calc(82vh - 1.5em);
 }
 
 /* /.Article */
@@ -193,7 +193,7 @@ li a i {
         font-size: 4.5em;
     } 
     article {
-        height: calc(80vh - 2em);
+        height: calc(82vh - 2em);
     }
     footer {
         height: 2em;
