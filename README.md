@@ -125,6 +125,11 @@ This project uses **HTML5**, **CSS3** and **JavaScript**.
 - [Gitpod](https://www.gitpod.io/): Provides a developing environment to write code and commit changes to Github.
 - [Git](https://git-scm.com/): Used for version control of the project.
 - [Balsamiq](https://balsamiq.com/?gclid=CjwKCAjwh472BRAGEiwAvHVfGsly1Nt9bDZCFUTGCc9I8OfaLtSIcxLhm_WX8911ERsm__luBJslTBoCqgQQAvD_BwE): Used in the surface plane (UXD) to plan my project and create wireframes.
+- [Paint 3D](https://www.microsoft.com/en-us/p/paint-3d/9nblggh5fv99?activetab=pivot:overviewtab): Used to crop background image for each device type devices and to remove star constellations names from cards. 
+- [Snipping Tool](https://en.wikipedia.org/wiki/Snipping_Tool): Used to make screenshots and to compare different styles side by side.
+- [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools): Allows styling withing Chrome browser and provides valuable insights when troubleshooting.
+- [Unicorn Revealer](https://chrome.google.com/webstore/detail/unicorn-revealer/lmlkphhdlngaicolpmaakfmhplagoaln): Changes styling of website to black and pink to show borders and simplify debugging of overflow. 
+- [WhatIsMyScreenResolution](http://whatismyscreenresolution.net/): Determines the screen resolution of your current device (this information helps when troubleshooting with developer tools).
 - [Nu HTML Checker](https://validator.w3.org/nu/): Validated my HTML code.
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/): Validate my CSS code.
 - [FREEFORMATTER](https://www.freeformatter.com/): Indented my HTML, CSS and JS code.
