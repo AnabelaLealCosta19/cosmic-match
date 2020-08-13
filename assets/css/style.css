@@ -136,6 +136,8 @@ li a i {
 
 /* /.Action items */
 
+/* Cards */
+
 .row div .card {
     padding: 5px;
     background: none;
@@ -158,6 +160,7 @@ li a i {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
+/* /.Cards */
 
 /* Media queries */
 
@@ -230,6 +233,12 @@ li a i {
         -o-background-size: cover;
         background-size: cover;
     }
+    header {
+        height: 20vh;
+    }
+    h1 {
+        font-size: 7.5vh;
+    } 
     .info-container-desktop {
         margin-top: 3em;
     }
