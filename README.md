@@ -206,7 +206,11 @@ Find below the necessary steps to be able to run the code locally. The default i
 ### Media
 
 #### Images !!!
-- The photos used in this site were obtained from ...
+
+The images used in this project have been obtained from the following sources:
+
+* **Background image:** Free image downloaded from [pxhere](https://pxhere.com/en/photo/115088). To view the image click [here](https://pxhere.com/en/photo/115088).
+* **Card images - front:** Vector images purchased at [Creative market](https://creativemarket.com/). To view the specific product click [here](https://creativemarket.com/skyboxcreative/448990-Constellations-Vector-Set#fullscreen)
 
 #### Audio !!!
 
@@ -216,6 +220,8 @@ Code has been used by me from the following sources:
 
 Language | Effect | Example | Source | URL
 -------- | ------ | ------- | ------ | ---
+CSS | Vertically align block-level element with unknown height | style.css, lines 34-45 | [CSS tricks](https://css-tricks.com/) | [here](https://css-tricks.com/centering-css-complete-guide/)
+CSS | Combine several conditions in same media query | style.css, lines 283-303 | [MDN web docs](https://developer.mozilla.org/en-US/) | [here](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
 
 ### Acknowledgements
 
