@@ -136,8 +136,10 @@ li a i {
 
 /* /.Action items */
 
-div .card {
+.row div .card {
     padding: 5px;
+    background: none;
+    border: none;
 }
 
 .card img {
