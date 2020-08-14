@@ -152,9 +152,6 @@ li a i {
 .cards {
     max-width: 33.33vw;
     max-height: 14vh;
-}
-
-.card-front {
     border: 1px solid rgba(253, 253, 253, 0.8);
     border-radius: .25em;
     background-color: rgba(0, 0, 0, 0.6);
