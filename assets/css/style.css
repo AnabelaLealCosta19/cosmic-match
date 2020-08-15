@@ -116,6 +116,7 @@ p i {
 /* Vertically aligning block-level element with unknown height | source: 'CSS-Tricks' (URL: https://css-tricks.com/centering-css-complete-guide/) */
 .action-items-container {
     position:relative;
+    padding-right: 0;
 }
 
 ul {
@@ -133,6 +134,8 @@ li a i {
     color: white;
     font-size: 1.25em; 
 }
+
+
 
 /* /.Action items */
 
