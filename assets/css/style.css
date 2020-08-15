@@ -144,18 +144,29 @@ li a i {
     border: none;
 }
 
-.card img {
-    vertical-align: middle;
-    padding: 10px;
-}
 
 .cards {
     max-width: 33.33vw;
     max-height: 14vh;
+    vertical-align: middle;
+    padding: 10px;
     border: 1px solid rgba(253, 253, 253, 0.8);
     border-radius: .25em;
     background-color: rgba(0, 0, 0, 0.6);
 }
+
+.card-alignment-parent {
+    position: relative;
+    height: 14vh;
+    margin: 5px 0;
+} 
+
+.card-alignment-child {
+    position: absolute;
+    box-sizing: border-box;
+    width: calc(100% - 10px);
+    height: 100%;
+} */
 
 /* /.Cards */
 
@@ -288,6 +299,9 @@ li a i {
     .cards {
         max-height: 17.5vh;
     }
+    .card-alignment-parent {
+        height: 17.5vh;
+    } 
 }
 
 @media only screen and (min-width: 992px) and (min-height: 750px) and (max-height: 849px) {
