@@ -13,8 +13,7 @@ for (let n=1; n<13; n++) {
 };
 
 // Shuffle Cards
- 
-(function shuffle (){
+ (function shuffle (){
     for (let n=1; n<13; n++) {
         let randomNumber = Math.round(Math.random()*12);
         let currentCard = document.getElementsByClassName(`card-${n}`)[0];
