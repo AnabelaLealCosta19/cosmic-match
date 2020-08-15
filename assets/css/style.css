@@ -146,6 +146,7 @@ li a i {
     background: none;
     border: none;
     transform: scale(1);
+    order: 0;
 }
 
 .cards {
@@ -156,6 +157,7 @@ li a i {
     border: 1px solid rgba(253, 253, 253, 0.8);
     border-radius: .25em;
     background-color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
 }
 
 /* Add simple CSS animation | source: 'thoughtbot' (URL: https://thoughtbot.com/blog/transitions-and-transforms) */
