@@ -5,10 +5,8 @@ let selectedChildren;
 
 let hasFlippedCard = false;
 
-let firstCard;
-let secondCard;
-let firstCardType;
-let secondCardType;
+let firstCard, secondCard;
+let firstCardType, secondCardType;
 
 
 // Align card-front and card-back on top of each other
