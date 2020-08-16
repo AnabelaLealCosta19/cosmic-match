@@ -56,8 +56,11 @@ function checkCard() {
     // Check if cards match
     if (firstCardType !== undefined && secondCardType !== undefined) {
         if (firstCardType == secondCardType) {
+            // Remove event listener (see line 63) for clicking on further cards while code setTimeOut function is executing
+            activeCards.forEach(activeCards => activeCards.removeEventListener('click', checkCard));
             setTimeout(cardsMatch, 750);
         } else {
+            activeCards.forEach(activeCards => activeCards.removeEventListener('click', checkCard));
             setTimeout(noMatch, 750);
         };
     };
@@ -81,6 +84,8 @@ function cardsMatch() {
     matchedChildren.forEach(matchedChildren => matchedChildren.classList.remove("selected"));
     // Reset all first and second card variables
     firstCard = secondCard = firstCardType = secondCardType = undefined;
+    // Add event listener again
+    activeCards.forEach(activeCards => activeCards.addEventListener('click', checkCard));
 };
 
 function noMatch() {
@@ -92,6 +97,8 @@ function noMatch() {
     matchedChildren.forEach(matchedChildren => matchedChildren.classList.remove("selected"));
     // Reset all first and second card variables
     firstCard = secondCard = firstCardType = secondCardType = undefined;
+    // Add event listener again
+    activeCards.forEach(activeCards => activeCards.addEventListener('click', checkCard));
 };
 
 // Event listener for click on cards
