@@ -41,6 +41,9 @@ function checkCard() {
         firstCardType = defineCardType(firstCard);
         this.classList.add("flip");
         markChildrenAsSelected();
+    } else if (hasFlippedCard && this.id == firstCard.id){
+        // Click on same card again
+        hasFlippedCard = true;
     } else {
         // Click on second card 
         hasFlippedCard = false;
