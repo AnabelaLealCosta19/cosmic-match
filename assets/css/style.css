@@ -193,8 +193,16 @@ li a i {
     border: none;
 }
 
+/* Flip card */
 .card.flip .cards {
     transform: rotateY(180deg);
+}
+
+/* Selected card */
+.row div .cards.selected {
+    outline: none;
+    border-color: #f8f9fa;
+    box-shadow: 0 0 5px #f8f9fa;
 }
 
 /* /.Cards */

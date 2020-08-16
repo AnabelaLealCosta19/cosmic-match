@@ -21,13 +21,21 @@ activeCards.forEach(activeCards => {
 })();
 
 
-// Flip Cards
+// Flip and select Cards
 
 // Flip Cards | source: 'Memory Card Game - JavaScript Tutorial - freecodecamp' (URL: https://www.youtube.com/watch?v=ZniVgo8U7ek&t=298s) 
-function flipcard () {
-    this.classList.toggle("flip");
+function selectCard () {
+    let selectedChildren = Array.from(this.children);
+    if (selectedChildren[0].classList.contains("selected")) {
+        console.log("Already selected!");
+    } else {
+        console.log("New selection!");
+        this.classList.add("flip");
+        selectedChildren.forEach(selectedChildren => selectedChildren.classList.add("selected"));
+    }
+    
 }
 
-activeCards.forEach(activeCards => activeCards.addEventListener('click', flipcard));
+activeCards.forEach(activeCards => activeCards.addEventListener('click', selectCard));
 
 
