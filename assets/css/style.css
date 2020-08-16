@@ -159,12 +159,6 @@ li a i {
     cursor: pointer;
 }
 
-/* Add simple CSS animation | source: 'thoughtbot' (URL: https://thoughtbot.com/blog/transitions-and-transforms) */
-.cards:active {
-    transform: scale(.95);
-    transition: transform .1s;
-}
-
 .card-alignment-parent {
     position: relative;
     height: 14vh;
@@ -177,6 +171,16 @@ li a i {
     width: calc(100% - 10px);
     height: 100%;
 } 
+
+/* Add simple CSS animation | source: 'thoughtbot' (URL: https://thoughtbot.com/blog/transitions-and-transforms) */
+.cards:active {
+    transform: scale(.95);
+    transition: transform .1s;
+}
+
+.card.flip .cards {
+    transform: rotateY(180deg);
+}
 
 /* /.Cards */
 

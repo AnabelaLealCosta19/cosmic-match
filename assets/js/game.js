@@ -1,4 +1,4 @@
-let activeCards = document.getElementsByClassName("card");
+let activeCards = Array.from(document.getElementsByClassName("card"));
 
 // Align card-front and card-back on top of each other
 for (let n=1; n<13; n++) {
@@ -23,4 +23,11 @@ for (let n=1; n<13; n++) {
 })();
 
 
+// Flip Cards
 
+// Flip Cards | source: 'freecodecamp' (URL: https://www.youtube.com/watch?v=ZniVgo8U7ek&t=298s) 
+function flipcard () {
+    this.classList.toggle("flip");
+}
+
+activeCards.forEach(activeCards => activeCards.addEventListener('click', flipcard));
