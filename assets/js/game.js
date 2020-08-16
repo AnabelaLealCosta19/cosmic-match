@@ -1,5 +1,6 @@
 let activeCards = Array.from(document.getElementsByClassName("card"));
 
+
 // Align card-front and card-back on top of each other
 
 activeCards.forEach(activeCards => {
