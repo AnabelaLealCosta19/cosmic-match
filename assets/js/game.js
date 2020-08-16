@@ -3,8 +3,8 @@
 let activeCards = Array.from(document.getElementsByClassName("card"));
 
 let hasFlippedCard = false;
-let firstCard = undefined;
-let secondCard = undefined;
+let firstCard;
+let secondCard;
 
 let firstCardType;
 let secondCardType;
@@ -53,6 +53,7 @@ function selectCard () {
         firstCardType = firstCard.id.substr(0, this.id.length -1);
         console.log({hasFlippedCard, firstCard, firstCardType});
     } else {
+        hasFlippedCard = false;
         secondCard = this;
         secondCardType = secondCard.id.substr(0, this.id.length -1);
         console.log({hasFlippedCard, secondCard, secondCardType});
@@ -62,10 +63,17 @@ function selectCard () {
     if (firstCardType !== undefined && secondCardType !== undefined) {
         if (firstCardType == secondCardType) {
             console.log("We have a match!")
+            setTimeout(() => {
+                let matchedChildren = Array.from(firstCard.children).concat(Array.from(secondCard.children));
+                matchedChildren.forEach(matchedChildren => matchedChildren.classList.remove("selected"));
+                console.log(matchedChildren);
+                // Reset all first and second card variables
+                firstCard = secondCard = firstCardType = secondCardType = undefined;
+                console.log(firstCard, secondCard, firstCardType, secondCardType);
+            }, 750);
         } else {
             console.log("Try again!")
         };
-        console.log("We can start checking if cards match! :)");
     };
     
 };
