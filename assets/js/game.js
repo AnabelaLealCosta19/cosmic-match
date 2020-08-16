@@ -13,13 +13,14 @@ for (let n=1; n<13; n++) {
 };
 
 // Shuffle Cards
+
+// Shuffle Cards | source: 'freecodecamp' (URL: https://www.youtube.com/watch?v=ZniVgo8U7ek&t=298s) 
  (function shuffle (){
-    for (let n=1; n<13; n++) {
+    activeCards.forEach(activeCards => {
         let randomNumber = Math.round(Math.random()*12);
-        let currentCard = document.getElementsByClassName(`card-${n}`)[0];
-        console.log(currentCard);
-        currentCard.style.order = randomNumber;
-    };
+        console.log(activeCards);
+        activeCards.style.order = randomNumber;
+     })
 })();
 
 
@@ -31,3 +32,5 @@ function flipcard () {
 }
 
 activeCards.forEach(activeCards => activeCards.addEventListener('click', flipcard));
+
+
