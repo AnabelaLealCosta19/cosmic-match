@@ -12,7 +12,7 @@ activeCards.forEach(activeCards => {
 
 // Shuffle Cards
 
-// Shuffle Cards | source: 'freecodecamp' (URL: https://www.youtube.com/watch?v=ZniVgo8U7ek&t=298s) 
+// Shuffle Cards | source: 'Memory Card Game - JavaScript Tutorial - freecodecamp' (URL: https://www.youtube.com/watch?v=ZniVgo8U7ek&t=298s) 
  (function shuffle (){
     activeCards.forEach(activeCards => {
         let randomNumber = Math.round(Math.random()*12);
@@ -23,7 +23,7 @@ activeCards.forEach(activeCards => {
 
 // Flip Cards
 
-// Flip Cards | source: 'freecodecamp' (URL: https://www.youtube.com/watch?v=ZniVgo8U7ek&t=298s) 
+// Flip Cards | source: 'Memory Card Game - JavaScript Tutorial - freecodecamp' (URL: https://www.youtube.com/watch?v=ZniVgo8U7ek&t=298s) 
 function flipcard () {
     this.classList.toggle("flip");
 }

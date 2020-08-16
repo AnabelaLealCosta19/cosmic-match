@@ -141,11 +141,25 @@ li a i {
 
 /* Cards */
 
+.card-container{
+    perspective: 1000px;
+    -webkit-perspective: 1000px;
+}
+
+/*.card-board{
+    perspective: 1000px;
+} */
+
 .row div .card {
     padding: 5px;
     background: none;
     border: none;
     transform: scale(1);
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transition: transform 3s;
+    -o-transition: transform 3s;
+    -webkit-transition: -webkit-transform 3s;
 }
 
 .cards {
@@ -174,8 +188,9 @@ li a i {
 
 /* Add simple CSS animation | source: 'thoughtbot' (URL: https://thoughtbot.com/blog/transitions-and-transforms) */
 .cards:active {
-    transform: scale(.95);
+    transform: scale(.90);
     transition: transform .1s;
+    border: none;
 }
 
 .card.flip .cards {
