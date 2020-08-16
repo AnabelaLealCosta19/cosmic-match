@@ -72,6 +72,16 @@ function selectCard () {
                 console.log(firstCard, secondCard, firstCardType, secondCardType);
             }, 750);
         } else {
+            setTimeout(() => {
+                firstCard.classList.remove("flip");
+                secondCard.classList.remove("flip");
+                let matchedChildren = Array.from(firstCard.children).concat(Array.from(secondCard.children));
+                matchedChildren.forEach(matchedChildren => matchedChildren.classList.remove("selected"));
+                console.log(matchedChildren);
+                // Reset all first and second card variables
+                firstCard = secondCard = firstCardType = secondCardType = undefined;
+                console.log(firstCard, secondCard, firstCardType, secondCardType);
+            }, 750);
             console.log("Try again!")
         };
     };
