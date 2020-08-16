@@ -53,6 +53,12 @@ h1, .h1 {
     margin: 0;
 }
 
+/* Glowing text | source: 'Free Frontend' (URL: https://freefrontend.com/css-glow-text-effects/) */
+.neon {
+    color: #fff;
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #44525b, 0 0 80px #284558, 0 0 90px #7986b0, 0 0 100px #000000, 0 0 150px #382929;
+}
+
 /* /.Heading */
 
 /* Article */
@@ -169,7 +175,7 @@ li a i {
     padding: 10px;
     border: 1px solid rgba(253, 253, 253, 0.8);
     border-radius: .25em;
-    background-color: rgb(20, 25, 45);
+    background-color: rgb(10, 22, 30); 
     cursor: pointer;
 }
 
@@ -206,6 +212,34 @@ li a i {
 }
 
 /* /.Cards */
+
+/* Modal start page */
+
+.modal .modal-content {
+    background-color: rgb(10, 22, 30); 
+    border: 1px solid rgba(253, 253, 253, 0.8);
+    box-shadow: 0 0 5px #f8f9fa;
+}
+
+.modal-content span {
+    font-family: 'orbitron', 'sans-serif';
+    font-size: 1.5em;
+}
+
+.modal-content input {
+    margin-bottom: 1.5em;
+}
+
+.modal-content .btn-play {
+    border: 1px solid rgba(253, 253, 253, 0.8);
+}
+
+.btn-play:hover {
+    color: #fff;    
+    box-shadow: 0 0 5px #f8f9fa;
+}
+
+/* /.Modal start page */
 
 /* Media queries */
 

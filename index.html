@@ -28,7 +28,7 @@
     <header class="container-fluid">
         <div class="row">
             <div class="col-12 heading-div">
-                <h1 class="text-uppercase text-center">Cosmic Match</h1>
+                <h1 class="neon text-uppercase text-center">Cosmic Match</h1>
             </div>
         </div>
     </header>
@@ -322,7 +322,45 @@
         </div>
     </footer>
 
+    <!-- Modal start page-->
+    <div class="modal fade" id="start-page" tabindex="-1" role="dialog" aria-labelledby="start-page" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title text-center mx-auto" id="message-title">Welcome to<br><span class="text-uppercase neon">Cosmic match</span></h5>
+        </div>
+        <div class="modal-body">
+            <p class="text-center">It's great to see you around!</p>
+            <form class="needs-validation" novalidate>
+                <div class="form-group text-center">
+                    <label for="name" class="mx-auto">Please tell us your name:</label>
+                    <input type="text" class="form-control" name="name" id="name" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please provide your name.
+                    </div>
+                    <p class="text-center">What difficulty do you prefer?</p>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" id="btn-easy" class="btn btn-secondary focus">Easy</button>
+                        <button type="button" id="btn-normal" class="btn btn-secondary">Normal</button>
+                        <button type="button" id="btn-hard" class="btn btn-secondary">Hard</button>
+                    </div>
+                </div>
+                <div class="text-center">
+                <button type="submit" value="Send" class="btn align-self-center text-uppercase btn-play neon">Play now</button> 
+                </div> 
+            </form>     
+        </div>
+    </div>
+</div>
 <!-- Scripts -->
+<!-- Bootstrap JavaScript -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- Own JavaScript-->
 <script src="assets/js/game.js"></script>
 <!-- /.Scripts -->
 </body>

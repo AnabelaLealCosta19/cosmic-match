@@ -8,6 +8,10 @@ let hasFlippedCard = false;
 let firstCard, secondCard;
 let firstCardType, secondCardType;
 
+// Open start page Modal
+$(document).ready(function(){
+    $("#start-page").modal('show');
+});
 
 // Align card-front and card-back on top of each other
 activeCards.forEach(activeCards => {
