@@ -60,10 +60,15 @@ function selectCard () {
 
     // Check if cards match
     if (firstCardType !== undefined && secondCardType !== undefined) {
+        if (firstCardType == secondCardType) {
+            console.log("We have a match!")
+        } else {
+            console.log("Try again!")
+        };
         console.log("We can start checking if cards match! :)");
     };
     
-}
+};
 
 activeCards.forEach(activeCards => activeCards.addEventListener('click', selectCard));
 
