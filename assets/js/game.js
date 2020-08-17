@@ -1,4 +1,7 @@
 // Global Variables
+let player = localStorage.getItem("player");
+let usedDifficulty = localStorage.getItem("usedDifficulty");
+
 let activeCards = Array.from(document.getElementsByClassName("card"));
 
 let selectedChildren;
@@ -8,10 +11,36 @@ let hasFlippedCard = false;
 let firstCard, secondCard;
 let firstCardType, secondCardType;
 
-// Open start page Modal
+// Open correct modal on page load
 $(document).ready(function(){
-    $("#start-page").modal('show');
+    if (player == null){
+        $("#firstStartPage").modal('show');
+    } else {
+        console.log("Player name has been saved and is")
+        console.log(player);
+    }
 });
+
+$('#firstStartPage').modal({
+    backdrop: 'static',
+    keyboard: false
+});
+
+// Update player name
+// Start page modal: first
+$('#playNow').on("click", function() {
+    updatePlayerName();
+});
+
+function updatePlayerName() {
+    console.log("Click button works");
+    player = $('#player').val();
+    localStorage.setItem("player", player);
+    $('.player').text(player);
+    console.log(player);
+};
+
+
 
 // Align card-front and card-back on top of each other
 activeCards.forEach(activeCards => {

@@ -40,7 +40,7 @@
                 <div class="row">
                     <div class="col-6 col-lg-12 my-col info-container-desktop">
                         <!-- Player details -->
-                        <h2 class="text-uppercase">Player</h2>
+                        <h2 class="text-uppercase player">Player</h2>
                         <!-- /.Player details -->
                         <!-- Game details (desktop) -->
                         <div class="col-12 d-none d-lg-block my-col game-detail-container-desktop">
@@ -322,38 +322,34 @@
         </div>
     </footer>
 
-    <!-- Modal start page-->
-    <div class="modal fade" id="start-page" tabindex="-1" role="dialog" aria-labelledby="start-page" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title text-center mx-auto" id="message-title">Welcome to<br><span class="text-uppercase neon">Cosmic match</span></h5>
-        </div>
-        <div class="modal-body">
-            <p class="text-center">It's great to see you around!</p>
-            <form class="needs-validation" novalidate>
-                <div class="form-group text-center">
-                    <label for="name" class="mx-auto">Please tell us your name:</label>
-                    <input type="text" class="form-control" name="name" id="name" required>
-                    <div class="valid-feedback">
-                        Looks good!
+    <!-- Modal start page: first -->
+    <div class="modal fade" id="firstStartPage" tabindex="-1" role="dialog" aria-labelledby="welcome" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-center mx-auto" id="welcome">Welcome to<br><span class="text-uppercase neon">Cosmic match</span></h5>
+            </div>
+            <div class="modal-body">
+                <p class="text-center">It's great to see you around!</p>
+                <form>
+                    <div class="form-group text-center">
+                        <label for="player" class="mx-auto">Please tell us your name:</label>
+                        <input type="text" class="form-control" name="player" id="player" maxlength="10" required>
+                        <p class="text-center">What difficulty do you prefer?</p>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" id="btnEasy" class="btn btn-secondary focus">Easy</button>
+                            <button type="button" id="btnNormal" class="btn btn-secondary">Normal</button>
+                            <button type="button" id="btnHard" class="btn btn-secondary">Hard</button>
+                        </div>
                     </div>
-                    <div class="invalid-feedback">
-                        Please provide your name.
-                    </div>
-                    <p class="text-center">What difficulty do you prefer?</p>
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" id="btn-easy" class="btn btn-secondary focus">Easy</button>
-                        <button type="button" id="btn-normal" class="btn btn-secondary">Normal</button>
-                        <button type="button" id="btn-hard" class="btn btn-secondary">Hard</button>
-                    </div>
-                </div>
-                <div class="text-center">
-                <button type="submit" value="Send" class="btn align-self-center text-uppercase btn-play neon">Play now</button> 
-                </div> 
-            </form>     
+                    <div class="text-center">
+                        <button type="button" id="playNow" class="btn text-uppercase btn-play neon" data-dismiss="modal" aria-label="Play now">Play now</button> 
+                    </div> 
+                </form>     
+            </div>
         </div>
     </div>
+    <!-- Modal start page: first -->
 </div>
 <!-- Scripts -->
 <!-- Bootstrap JavaScript -->
