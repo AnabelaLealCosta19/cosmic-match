@@ -148,7 +148,7 @@ function checkCard() {
 // Define card type
 function defineCardType(cardType) {
     // Remove last character from id | source: stackoverflow' (URL: https://stackoverflow.com/questions/1794822/remove-last-character-in-id-attribute) 
-    return cardType.id.substr(0, cardtype.id.length -1);
+    return cardType.id.substr(0, cardType.id.length -1);
 }
 
 // Mark children as selected
