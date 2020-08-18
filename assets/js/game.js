@@ -33,7 +33,6 @@ function showStartPage(modalId) {
         });
 };
 
-
 // Play now buttons in modals
 $('#firstPlayNow').on("click", function() {
     firstUpdatePlayerName();
@@ -44,6 +43,7 @@ $('#repeatPlayNow').on("click", function() {
     checkForChangedPlayerName();
     checkDifficultySelection();
 });
+
 
 // Update player name
 function firstUpdatePlayerName() {
@@ -66,7 +66,6 @@ function checkForChangedPlayerName() {
 
 // Update difficulty
 function selectDifficulty() {
-    console.log("Eventlistener works");
     $(".btn-difficulty").removeClass("focus");
     $(this).addClass("focus");
 };
@@ -74,65 +73,42 @@ function selectDifficulty() {
 function UpdateDifficulty() {
     $('.difficulty').text(difficulty);  
     if (difficulty == "easy") {
-        $('.time').text("1:30");
-        $(".btn-difficulty").removeClass("focus");
-        $(".btn-easy").addClass("focus");
+        updateGameSettings("easy", "1:30");
     }  else if (difficulty == "normal") {
-        $('.time').text("1:15");
-        $(".btn-difficulty").removeClass("focus");
-        $(".btn-normal").addClass("focus");
+        updateGameSettings("normal", "1:15");
     } else {
-        $('.time').text("1:00");
-        $(".btn-difficulty").removeClass("focus");
-        $(".btn-hard").addClass("focus");
+        updateGameSettings("hard", "1:00");
     };
 };
 
+// Update game settings (upon page load)
+function updateGameSettings(providedDifficulty, time) {
+    $('.time').text(time);
+    $(".btn-difficulty").removeClass("focus");
+    $(".btn-"+providedDifficulty).addClass("focus");
+};
+
+// Check which difficulty has been selected
 function checkDifficultySelection() {
-    console.log("setting difficuly works"); 
     if ($(".focus").hasClass("btn-easy")) {
-        console.log("easy selected");
-        activateEasyMode();
-    } else if (($(".focus").hasClass("btn-normal"))) {
-        console.log("normal selected");
-        activateNormalMode();
+        activateDifficultyMode("easy", "1:30");
+    } else if ($(".focus").hasClass("btn-normal")) {
+        activateDifficultyMode("normal", "1:15");
     } else {
-        console.log("hard selected");
-        activateHardMode();
+        activateDifficultyMode("hard", "1:00");
     }
 };
 
-function activateEasyMode() {
+// Adapt game to difficulty passed
+function activateDifficultyMode(providedDifficulty, time) {
     // Store difficulty
-    difficulty = "easy";
+    difficulty = providedDifficulty;
     localStorage.setItem("difficulty", difficulty);
     $('.difficulty').text(difficulty);
     // Change game settings
-    $('.time').text("1:30");
+    $('.time').text(time);
     $(".card").addClass("d-none");
-    $(".easy").removeClass("d-none");
-};
-
-function activateNormalMode() {
-    // Store difficulty
-    difficulty = "normal";
-    localStorage.setItem("difficulty", difficulty);
-    $('.difficulty').text(difficulty);
-    // Change game settings
-    $('.time').text("1:15");
-    $(".card").addClass("d-none");
-    $(".normal").removeClass("d-none");
-};
-
-function activateHardMode() {
-    // Store difficulty
-    difficulty = "hard";
-    localStorage.setItem("difficulty", difficulty);
-    $('.difficulty').text(difficulty);
-    // Change game settings
-    $('.time').text("1:00");
-    $(".card").addClass("d-none");
-    $(".hard").removeClass("d-none");
+    $("."+providedDifficulty).removeClass("d-none");
 };
 
 // Prevent enter key from closing modal
@@ -160,13 +136,11 @@ allCards.forEach(allCards => {
      })
 })();
 
-
-// Check what card it is and if it matches other card
 function checkCard() {    
     // Check if card is first, same  or second card
-    selectedChildren = Array.from(this.children);
     // Define if card is firstCard or secondCard | source: 'Memory Card Game - JavaScript Tutorial - freecodecamp' (URL: https://www.youtube.com/watch?v=ZniVgo8U7ek&t=298s) 
-    if (!hasFlippedCard){
+    selectedChildren = Array.from(this.children);
+     if (!hasFlippedCard){
         // Click on first card
         hasFlippedCard = true;
         firstCard = this;
@@ -188,7 +162,7 @@ function checkCard() {
     // Check if cards match
     if (firstCardType !== undefined && secondCardType !== undefined) {
         if (firstCardType == secondCardType) {
-            // Remove event listener (see line 63) for clicking on further cards while code setTimeOut function is executing
+            // Remove event listener for clicking on further cards while setTimeOut function is executing
             allCards.forEach(allCards => allCards.removeEventListener('click', checkCard));
             setTimeout(cardsMatch, 1000);
         } else {
