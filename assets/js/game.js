@@ -1,6 +1,6 @@
 // Global Variables
 let player = localStorage.getItem("player");
-let usedDifficulty = localStorage.getItem("usedDifficulty");
+let difficulty = localStorage.getItem("usedDifficulty");
 
 let activeCards = Array.from(document.getElementsByClassName("card"));
 
@@ -14,67 +14,52 @@ let firstCardType, secondCardType;
 // Open correct modal on page load
 $(document).ready(function(){
     if (player == null || player == ""){
-        $("#firstStartPage").modal({
-            show: true,
-            backdrop: 'static',
-            keyboard: false
-        });
-        $("#repeatStartPage").modal('hide');
-        console.log("No player name saved");
+        showStartPage("#firstStartPage");
     } else {
-        $("#firstStartPage").modal('hide');
-        $("#repeatStartPage").modal({
-            show: true,
-            backdrop: 'static',
-            keyboard: false
-        });
-        RepeatUpdatePlayerName()
-        console.log("Player name has been saved and is");
-        console.log(player);
+        showStartPage("#repeatStartPage");
+        UpdatePlayerName()
     }
 });
 
+// Show start page modals
+function showStartPage(modalId) {
+    $(modalId).modal({
+            show: true,
+            backdrop: 'static',
+            keyboard: false
+        });
+};
 
-// Update player name
-// Start page modal: first
+
+// Play now buttons in modals
 $('#firstPlayNow').on("click", function() {
     firstUpdatePlayerName();
 });
 
 $('#repeatPlayNow').on("click", function() {
-    console.log("Click button works");
     checkForChangedPlayerName();
 });
 
-
+// Update player name
 function firstUpdatePlayerName() {
-    console.log("Click button works");
     player = $('#player').val();
     localStorage.setItem("player", player);
     $('.player').text(player);
-    console.log(player);
 };
 
-function RepeatUpdatePlayerName() {
-    console.log("Repeated player is being updated...");
-    $('.player').text(player);
-    console.log(player);
-    
+function UpdatePlayerName() {
+    $('.player').text(player);    
 };
 
 function checkForChangedPlayerName() {
-    console.log("Function works");
     if (($('#otherPlayer').val()) == null || ($('#otherPlayer').val()) == "") {
         console.log("Name stays same");
     } else {
-        console.log("Name changed");
         player = $('#otherPlayer').val();
         localStorage.setItem("player", player);
         $('.player').text(player);
     }
 }
-
-
 
 // Align card-front and card-back on top of each other
 activeCards.forEach(activeCards => {
@@ -143,6 +128,7 @@ function markChildrenAsSelected() {
     selectedChildren.forEach(selectedChildren => selectedChildren.classList.add("selected"));
 };
 
+// Cards match
 function cardsMatch() {
     // Remove highlighted border
     let matchedChildren = Array.from(firstCard.children).concat(Array.from(secondCard.children));
@@ -153,6 +139,7 @@ function cardsMatch() {
     activeCards.forEach(activeCards => activeCards.addEventListener('click', checkCard));
 };
 
+// Cards don't match
 function noMatch() {
     // Turn cards back over
     firstCard.classList.remove("flip");
