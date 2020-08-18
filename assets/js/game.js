@@ -109,6 +109,8 @@ function activateEasyMode() {
     $('.difficulty').text(difficulty);
     // Change game settings
     $('.time').text("1:30");
+    $(".card").addClass("d-none");
+    $(".easy").removeClass("d-none");
 };
 
 function activateNormalMode() {
@@ -118,6 +120,8 @@ function activateNormalMode() {
     $('.difficulty').text(difficulty);
     // Change game settings
     $('.time').text("1:15");
+    $(".card").addClass("d-none");
+    $(".normal").removeClass("d-none");
 };
 
 function activateHardMode() {
@@ -127,6 +131,8 @@ function activateHardMode() {
     $('.difficulty').text(difficulty);
     // Change game settings
     $('.time').text("1:00");
+    $(".card").addClass("d-none");
+    $(".hard").removeClass("d-none");
 };
 
 // Prevent enter key from closing modal
