@@ -4,7 +4,7 @@ let difficulty = localStorage.getItem("difficulty");
 
 let difficultyButtons = Array.from($(".btn-difficulty"));
 
-let activeCards = Array.from(document.getElementsByClassName("card"));
+let activeCards = Array.from($(".easy")); // Default setting is easy, therefore easy cards are used at start
 let selectedChildren;
 
 let hasFlippedCard = false;
@@ -19,6 +19,7 @@ $(document).ready(function(){
     } else {
         showStartPage("#repeatStartPage");
         UpdatePlayerName();
+        UpdateDifficulty();
     }
 });
 
@@ -69,15 +70,34 @@ function selectDifficulty() {
     $(this).addClass("focus");
 };
 
+function UpdateDifficulty() {
+    $('.difficulty').text(difficulty);  
+    if (difficulty = "easy") {
+        $('.time').text("1:30");
+    }  
+};
+
 function checkDifficultySelection() {
     console.log("setting difficuly works"); 
     if ($(".focus").hasClass("btn-easy")) {
         console.log("easy selected");
+        activateEasyMode();
     } else if (($(".focus").hasClass("btn-normal"))) {
         console.log("normal selected");
     } else {
         console.log("hard selected");
     }
+};
+
+function activateEasyMode() {
+    // Store difficulty
+    difficulty = "easy";
+    localStorage.setItem("difficulty", difficulty);
+    $('.difficulty').text(difficulty);
+    // Change game settings
+    $('.time').text("1:30");
+    activeCards = Array.from($(".easy"));
+    console.log(activeCards);
 };
 
 
