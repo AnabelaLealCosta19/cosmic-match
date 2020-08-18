@@ -152,15 +152,10 @@ li a i {
     -webkit-perspective: 1000px;
 }
 
-/*.card-board{
-    perspective: 1000px;
-} */
-
 .row div .card {
     padding: 5px;
     background: none;
     border: none;
-    transform: scale(1);
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
     transition: transform 3s;
@@ -177,6 +172,7 @@ li a i {
     border-radius: .25em;
     background-color: rgb(10, 22, 30); 
     cursor: pointer;
+    transition: transform .75s;
 }
 
 .card-alignment-parent {
@@ -191,13 +187,6 @@ li a i {
     width: calc(100% - 10px);
     height: 100%;
 } 
-
-/* Add simple CSS animation | source: 'thoughtbot' (URL: https://thoughtbot.com/blog/transitions-and-transforms) */
-.cards:active {
-    transform: scale(.90);
-    transition: transform .1s;
-    border: none;
-}
 
 /* Flip card */
 .card.flip .cards {

@@ -116,10 +116,10 @@ function checkCard() {
         if (firstCardType == secondCardType) {
             // Remove event listener (see line 63) for clicking on further cards while code setTimeOut function is executing
             activeCards.forEach(activeCards => activeCards.removeEventListener('click', checkCard));
-            setTimeout(cardsMatch, 750);
+            setTimeout(cardsMatch, 1000);
         } else {
             activeCards.forEach(activeCards => activeCards.removeEventListener('click', checkCard));
-            setTimeout(noMatch, 750);
+            setTimeout(noMatch, 1000);
         };
     };
     
