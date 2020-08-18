@@ -16,6 +16,7 @@ let firstCardType, secondCardType;
 $(document).ready(function(){
     if (player == null || player == ""){
         showStartPage("#firstStartPage");
+        activateEasyMode();
     } else {
         showStartPage("#repeatStartPage");
         UpdatePlayerName();
@@ -72,9 +73,15 @@ function selectDifficulty() {
 
 function UpdateDifficulty() {
     $('.difficulty').text(difficulty);  
-    if (difficulty = "easy") {
+    if (difficulty == "easy") {
         $('.time').text("1:30");
-    }  
+        $(".btn-difficulty").removeClass("focus");
+        $(".btn-easy").addClass("focus");
+    }  else if (difficulty == "normal") {
+        $('.time').text("1:15");
+        $(".btn-difficulty").removeClass("focus");
+        $(".btn-normal").addClass("focus");
+    }
 };
 
 function checkDifficultySelection() {
@@ -84,6 +91,7 @@ function checkDifficultySelection() {
         activateEasyMode();
     } else if (($(".focus").hasClass("btn-normal"))) {
         console.log("normal selected");
+        activateNormalMode();
     } else {
         console.log("hard selected");
     }
@@ -100,6 +108,16 @@ function activateEasyMode() {
     console.log(activeCards);
 };
 
+function activateNormalMode() {
+    // Store difficulty
+    difficulty = "normal";
+    localStorage.setItem("difficulty", difficulty);
+    $('.difficulty').text(difficulty);
+    // Change game settings
+    $('.time').text("1:15");
+    activeCards = Array.from($(".normal"));
+    console.log(activeCards);
+};
 
 // Prevent enter key from closing modal
 // Disable enter key | source: 'Paulund' (URL: https://paulund.co.uk/how-to-disable-enter-key-on-forms) 
