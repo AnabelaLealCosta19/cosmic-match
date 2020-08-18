@@ -40,6 +40,7 @@ $('#firstPlayNow').on("click", function() {
 
 $('#repeatPlayNow').on("click", function() {
     checkForChangedPlayerName();
+    checkDifficultySelection();
 });
 
 // Update player name
@@ -54,9 +55,7 @@ function UpdatePlayerName() {
 };
 
 function checkForChangedPlayerName() {
-    if (($('#otherPlayer').val()) == null || ($('#otherPlayer').val()) == "") {
-        console.log("Name stays same");
-    } else {
+    if (!(($('#otherPlayer').val()) == null || ($('#otherPlayer').val()) == "")) {
         player = $('#otherPlayer').val();
         localStorage.setItem("player", player);
         $('.player').text(player);
@@ -72,10 +71,13 @@ function selectDifficulty() {
 
 function checkDifficultySelection() {
     console.log("setting difficuly works"); 
-    if ($(".btn-easy").hasClass("focus")) {
+    if ($(".focus").hasClass("btn-easy")) {
         console.log("easy selected");
+    } else if (($(".focus").hasClass("btn-normal"))) {
+        console.log("normal selected");
+    } else {
+        console.log("hard selected");
     }
-    
 };
 
 
