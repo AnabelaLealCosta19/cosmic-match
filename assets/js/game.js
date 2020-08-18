@@ -81,7 +81,11 @@ function UpdateDifficulty() {
         $('.time').text("1:15");
         $(".btn-difficulty").removeClass("focus");
         $(".btn-normal").addClass("focus");
-    }
+    } else {
+        $('.time').text("1:00");
+        $(".btn-difficulty").removeClass("focus");
+        $(".btn-hard").addClass("focus");
+    };
 };
 
 function checkDifficultySelection() {
@@ -94,6 +98,7 @@ function checkDifficultySelection() {
         activateNormalMode();
     } else {
         console.log("hard selected");
+        activateHardMode();
     }
 };
 
@@ -116,6 +121,17 @@ function activateNormalMode() {
     // Change game settings
     $('.time').text("1:15");
     activeCards = Array.from($(".normal"));
+    console.log(activeCards);
+};
+
+function activateHardMode() {
+    // Store difficulty
+    difficulty = "hard";
+    localStorage.setItem("difficulty", difficulty);
+    $('.difficulty').text(difficulty);
+    // Change game settings
+    $('.time').text("1:00");
+    activeCards = Array.from($(".hard"));
     console.log(activeCards);
 };
 
