@@ -110,8 +110,16 @@ p i {
     text-align: center;
 }
 
+.difficulty-div {
+    padding-left: 0; 
+}
+
 #difficulty {
     text-align: right;
+}
+
+.difficulty {
+    font-size: 0.98em;
 }
 
 
@@ -269,7 +277,9 @@ li a i {
     li a i {
         font-size: 1.5em; 
     }
-
+    .difficulty {
+        font-size: 1.22em;
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -292,6 +302,9 @@ li a i {
     span {
         font-size: 1.8em;
     }  
+    .difficulty {
+        font-size: 1.8em;
+    }
     #flips {
         text-align: right;
     }
@@ -343,6 +356,9 @@ li a i {
     span {
         font-size: 3.5vh;
     } 
+    .difficulty {
+        font-size: 3.5vh;
+    }
     .action-items-container {
         position: static;
         padding: 2vh 0;
