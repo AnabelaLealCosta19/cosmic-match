@@ -1,9 +1,10 @@
 // Global Variables
 let player = localStorage.getItem("player");
-let difficulty = localStorage.getItem("usedDifficulty");
+let difficulty = localStorage.getItem("difficulty");
+
+let difficultyButtons = Array.from($(".btn-difficulty"));
 
 let activeCards = Array.from(document.getElementsByClassName("card"));
-
 let selectedChildren;
 
 let hasFlippedCard = false;
@@ -17,7 +18,7 @@ $(document).ready(function(){
         showStartPage("#firstStartPage");
     } else {
         showStartPage("#repeatStartPage");
-        UpdatePlayerName()
+        UpdatePlayerName();
     }
 });
 
@@ -34,6 +35,7 @@ function showStartPage(modalId) {
 // Play now buttons in modals
 $('#firstPlayNow').on("click", function() {
     firstUpdatePlayerName();
+    checkDifficultySelection();
 });
 
 $('#repeatPlayNow').on("click", function() {
@@ -60,6 +62,22 @@ function checkForChangedPlayerName() {
         $('.player').text(player);
     }
 }
+
+// Update difficulty
+function selectDifficulty() {
+    console.log("Eventlistener works");
+    $(".btn-difficulty").removeClass("focus");
+    $(this).addClass("focus");
+};
+
+function checkDifficultySelection() {
+    console.log("setting difficuly works"); 
+    if ($(".btn-easy").hasClass("focus")) {
+        console.log("easy selected");
+    }
+    
+};
+
 
 // Prevent enter key from closing modal
 // Disable enter key | source: 'Paulund' (URL: https://paulund.co.uk/how-to-disable-enter-key-on-forms) 
@@ -126,9 +144,9 @@ function checkCard() {
 };
 
 // Define card type
-function defineCardType(cardtype) {
+function defineCardType(cardType) {
     // Remove last character from id | source: stackoverflow' (URL: https://stackoverflow.com/questions/1794822/remove-last-character-in-id-attribute) 
-    return cardtype.id.substr(0, cardtype.id.length -1);
+    return cardType.id.substr(0, cardtype.id.length -1);
 }
 
 // Mark children as selected
@@ -161,7 +179,6 @@ function noMatch() {
     activeCards.forEach(activeCards => activeCards.addEventListener('click', checkCard));
 };
 
-// Event listener for click on cards
+// Event listeners
 activeCards.forEach(activeCards => activeCards.addEventListener('click', checkCard));
-
-
+difficultyButtons.forEach(difficultyButtons => difficultyButtons.addEventListener('click', selectDifficulty));
