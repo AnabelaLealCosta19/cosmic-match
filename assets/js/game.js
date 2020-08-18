@@ -4,7 +4,7 @@ let difficulty = localStorage.getItem("difficulty");
 
 let difficultyButtons = Array.from($(".btn-difficulty"));
 
-let activeCards = Array.from($(".easy")); // Default setting is easy, therefore easy cards are used at start
+let allCards = Array.from($(".card")); 
 let selectedChildren;
 
 let hasFlippedCard = false;
@@ -109,8 +109,6 @@ function activateEasyMode() {
     $('.difficulty').text(difficulty);
     // Change game settings
     $('.time').text("1:30");
-    activeCards = Array.from($(".easy"));
-    console.log(activeCards);
 };
 
 function activateNormalMode() {
@@ -120,8 +118,6 @@ function activateNormalMode() {
     $('.difficulty').text(difficulty);
     // Change game settings
     $('.time').text("1:15");
-    activeCards = Array.from($(".normal"));
-    console.log(activeCards);
 };
 
 function activateHardMode() {
@@ -131,8 +127,6 @@ function activateHardMode() {
     $('.difficulty').text(difficulty);
     // Change game settings
     $('.time').text("1:00");
-    activeCards = Array.from($(".hard"));
-    console.log(activeCards);
 };
 
 // Prevent enter key from closing modal
@@ -144,9 +138,9 @@ $("form").keypress(function(e) {
 });
 
 // Align card-front and card-back on top of each other
-activeCards.forEach(activeCards => {
-    activeCards.classList.add("card-alignment-parent");
-    let children = Array.from(activeCards.children);
+allCards.forEach(allCards => {
+    allCards.classList.add("card-alignment-parent");
+    let children = Array.from(allCards.children);
     children.forEach(children => children.classList.add("card-alignment-child"));
 });
 
@@ -154,9 +148,9 @@ activeCards.forEach(activeCards => {
 // Shuffle Cards
  (function shuffle (){
     // Shuffle Cards | source: 'Memory Card Game - JavaScript Tutorial - freecodecamp' (URL: https://www.youtube.com/watch?v=ZniVgo8U7ek&t=298s) 
-    activeCards.forEach(activeCards => {
+    allCards.forEach(allCards => {
         let randomNumber = Math.round(Math.random()*12);
-        activeCards.style.order = randomNumber;
+        allCards.style.order = randomNumber;
      })
 })();
 
@@ -189,10 +183,10 @@ function checkCard() {
     if (firstCardType !== undefined && secondCardType !== undefined) {
         if (firstCardType == secondCardType) {
             // Remove event listener (see line 63) for clicking on further cards while code setTimeOut function is executing
-            activeCards.forEach(activeCards => activeCards.removeEventListener('click', checkCard));
+            allCards.forEach(allCards => allCards.removeEventListener('click', checkCard));
             setTimeout(cardsMatch, 1000);
         } else {
-            activeCards.forEach(activeCards => activeCards.removeEventListener('click', checkCard));
+            allCards.forEach(allCards => allCards.removeEventListener('click', checkCard));
             setTimeout(noMatch, 1000);
         };
     };
@@ -218,7 +212,7 @@ function cardsMatch() {
     // Reset all first and second card variables
     firstCard = secondCard = firstCardType = secondCardType = undefined;
     // Add event listener again
-    activeCards.forEach(activeCards => activeCards.addEventListener('click', checkCard));
+    allCards.forEach(allCards => allCards.addEventListener('click', checkCard));
 };
 
 // Cards don't match
@@ -232,9 +226,9 @@ function noMatch() {
     // Reset all first and second card variables
     firstCard = secondCard = firstCardType = secondCardType = undefined;
     // Add event listener again
-    activeCards.forEach(activeCards => activeCards.addEventListener('click', checkCard));
+    allCards.forEach(allCards => allCards.addEventListener('click', checkCard));
 };
 
 // Event listeners
-activeCards.forEach(activeCards => activeCards.addEventListener('click', checkCard));
+allCards.forEach(allCards => allCards.addEventListener('click', checkCard));
 difficultyButtons.forEach(difficultyButtons => difficultyButtons.addEventListener('click', selectDifficulty));
