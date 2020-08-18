@@ -41,6 +41,12 @@ $('#firstPlayNow').on("click", function() {
     firstUpdatePlayerName();
 });
 
+$('#repeatPlayNow').on("click", function() {
+    console.log("Click button works");
+    checkForChangedPlayerName();
+});
+
+
 function firstUpdatePlayerName() {
     console.log("Click button works");
     player = $('#player').val();
@@ -53,7 +59,20 @@ function RepeatUpdatePlayerName() {
     console.log("Repeated player is being updated...");
     $('.player').text(player);
     console.log(player);
+    
 };
+
+function checkForChangedPlayerName() {
+    console.log("Function works");
+    if (($('#otherPlayer').val()) == null || ($('#otherPlayer').val()) == "") {
+        console.log("Name stays same");
+    } else {
+        console.log("Name changed");
+        player = $('#otherPlayer').val();
+        localStorage.setItem("player", player);
+        $('.player').text(player);
+    }
+}
 
 
 
