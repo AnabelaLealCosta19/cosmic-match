@@ -213,7 +213,7 @@ li a i {
 
 /* /.Cards */
 
-/* Modal start page */
+/* Modal start page: first */
 
 .modal .modal-content {
     background-color: rgb(10, 22, 30); 
@@ -221,7 +221,7 @@ li a i {
     box-shadow: 0 0 5px #f8f9fa;
 }
 
-.modal-content span {
+.modal-content span.cosmic-match {
     font-family: 'orbitron', 'sans-serif';
     font-size: 1.5em;
 }
@@ -239,7 +239,20 @@ li a i {
     box-shadow: 0 0 5px #f8f9fa;
 }
 
-/* /.Modal start page */
+/* /.Modal start page: first */
+
+/* Modal start page: repeat */
+
+.other-player {
+    color: white;
+    text-decoration: underline;
+}
+
+.other-player, .other-player .player {
+    font-size: 12px;
+}
+
+/* /.Modal start page: repeat */
 
 /* Media queries */
 

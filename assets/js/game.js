@@ -13,29 +13,44 @@ let firstCardType, secondCardType;
 
 // Open correct modal on page load
 $(document).ready(function(){
-    if (player == null){
-        $("#firstStartPage").modal('show');
+    if (player == null || player == ""){
+        $("#firstStartPage").modal({
+            show: true,
+            backdrop: 'static',
+            keyboard: false
+        });
+        $("#repeatStartPage").modal('hide');
+        console.log("No player name saved");
     } else {
-        console.log("Player name has been saved and is")
+        $("#firstStartPage").modal('hide');
+        $("#repeatStartPage").modal({
+            show: true,
+            backdrop: 'static',
+            keyboard: false
+        });
+        RepeatUpdatePlayerName()
+        console.log("Player name has been saved and is");
         console.log(player);
     }
 });
 
-$('#firstStartPage').modal({
-    backdrop: 'static',
-    keyboard: false
-});
 
 // Update player name
 // Start page modal: first
-$('#playNow').on("click", function() {
-    updatePlayerName();
+$('#firstPlayNow').on("click", function() {
+    firstUpdatePlayerName();
 });
 
-function updatePlayerName() {
+function firstUpdatePlayerName() {
     console.log("Click button works");
     player = $('#player').val();
     localStorage.setItem("player", player);
+    $('.player').text(player);
+    console.log(player);
+};
+
+function RepeatUpdatePlayerName() {
+    console.log("Repeated player is being updated...");
     $('.player').text(player);
     console.log(player);
 };
