@@ -61,6 +61,14 @@ function checkForChangedPlayerName() {
     }
 }
 
+// Prevent enter key from closing modal
+// Disable enter key | source: 'Paulund' (URL: https://paulund.co.uk/how-to-disable-enter-key-on-forms) 
+$("form").keypress(function(e) {
+  if (e.which == 13) {
+    return false;
+  }
+});
+
 // Align card-front and card-back on top of each other
 activeCards.forEach(activeCards => {
     activeCards.classList.add("card-alignment-parent");
@@ -117,7 +125,7 @@ function checkCard() {
     
 };
 
- // Define card type
+// Define card type
 function defineCardType(cardtype) {
     // Remove last character from id | source: stackoverflow' (URL: https://stackoverflow.com/questions/1794822/remove-last-character-in-id-attribute) 
     return cardtype.id.substr(0, cardtype.id.length -1);
