@@ -13,7 +13,9 @@ let firstCard, secondCard;
 let firstCardType, secondCardType;
 
 let flipsCounted = 0;
-let time, minutes, seconds;
+let time, defaultTime, minutes, seconds;
+
+let restartIcons = Array.from($(".restart-btn"));
 
 // Open correct modal on page load
 $(document).ready(function(){
@@ -49,30 +51,30 @@ $("form").keypress(function(e) {
 $('#firstPlayNow').on("click", function() {
     firstUpdatePlayerName();
     checkDifficultySelection();
-    startTimer();
+    //startTimer();
 });
 
 $('#repeatPlayNow').on("click", function() {
     checkForChangedPlayerName();
     checkDifficultySelection();
-    startTimer();
+    //startTimer();
 });
 
 // Handle timer
 function startTimer() {
     if (difficulty == "easy") {
         time = 90;
-        while (time != 0) {
+        while (time > 0) {
             setTimeout(countDownTime(time), 1000);
         }
     } else if (difficulty == "normal") {
         time = 75;
-        while (time != 0) {
+        while (time > 0) {
             setTimeout(countDownTime(time), 1000);
         }
     } else {
         time = 60;
-        while (time != 0) {
+        while (time > 0) {
             setTimeout(countDownTime(time), 1000);
         }
     };
@@ -255,6 +257,26 @@ function noMatch() {
     allCards.forEach(allCards => allCards.addEventListener('click', checkCard));
 };
 
+// Restart game
+function restartGame() {
+    // Reset time & flip counter
+    flipsCounted = 0;
+    $(".flips-counted").text(flipsCounted);
+    time = defaultTime;
+    // startTimer();
+    // Turn back all cards
+    allCards.forEach(allCards => {
+        allCards.classList.remove("flip");
+        let children = Array.from(allCards.children);
+        children.forEach(children => children.classList.remove("selected"));
+    });
+    // Reset variables
+    hasFlippedCard = false;
+    firstCard = secondCard = firstCardType = secondCardType = undefined;
+};
+
 // Event listeners
 allCards.forEach(allCards => allCards.addEventListener('click', checkCard));
 difficultyButtons.forEach(difficultyButtons => difficultyButtons.addEventListener('click', selectDifficulty));
+restartIcons.forEach(restartIcons => restartIcons.addEventListener('click', restartGame));
+
