@@ -67,11 +67,11 @@ $('#repeatPlayNow').on("click", function() {
 // Set time according to difficulty
 function startTimer() {
     if (difficulty == "easy") {
-        countDownTime(90);
-    } else if (difficulty == "normal") {
         countDownTime(75);
-    } else {
+    } else if (difficulty == "normal") {
         countDownTime(60);
+    } else {
+        countDownTime(45);
     };
 };
 
