@@ -23,7 +23,7 @@ let restartIcons = Array.from($(".restart-btn"));
 $(document).ready(function(){
     if (player == null || player == ""){
         showStartPage("#firstStartPage");
-        activateDifficultyMode("easy", "1:30");
+        activateDifficultyMode("easy");
     } else {
         showStartPage("#repeatStartPage");
         UpdatePlayerName();
@@ -125,17 +125,16 @@ function selectDifficulty() {
 function UpdateDifficulty() {
     $('.difficulty').text(difficulty);  
     if (difficulty == "easy") {
-        updateGameSettings("easy", "1:30");
+        updateGameSettings("easy");
     }  else if (difficulty == "normal") {
-        updateGameSettings("normal", "1:15");
+        updateGameSettings("normal");
     } else {
-        updateGameSettings("hard", "1:00");
+        updateGameSettings("hard");
     };
 };
 
 // Update game settings (upon page load)
-function updateGameSettings(providedDifficulty, time) {
-    $('.time').text(time);
+function updateGameSettings(providedDifficulty) {
     $(".btn-difficulty").removeClass("focus");
     $(".btn-"+providedDifficulty).addClass("focus");
 };
@@ -143,22 +142,21 @@ function updateGameSettings(providedDifficulty, time) {
 // Check which difficulty has been selected
 function checkDifficultySelection() {
     if ($(".focus").hasClass("btn-easy")) {
-        activateDifficultyMode("easy", "1:30");
+        activateDifficultyMode("easy");
     } else if ($(".focus").hasClass("btn-normal")) {
-        activateDifficultyMode("normal", "1:15");
+        activateDifficultyMode("normal");
     } else {
-        activateDifficultyMode("hard", "1:00");
+        activateDifficultyMode("hard");
     }
 };
 
 // Adapt game to difficulty passed
-function activateDifficultyMode(providedDifficulty, time) {
+function activateDifficultyMode(providedDifficulty) {
     // Store difficulty
     difficulty = providedDifficulty;
     localStorage.setItem("difficulty", difficulty);
     $('.difficulty').text(difficulty);
-    // Change game settings
-    $('.time').text(time);
+    // Change cards
     $(".card").addClass("d-none");
     $("."+providedDifficulty).removeClass("d-none");
 };
