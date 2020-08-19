@@ -261,6 +261,14 @@ button.action-items.restart-btn {
 
 /* /.Modal start page: repeat */
 
+/* Modal instructions */
+
+.instructions-body p {
+    text-align: center;
+};
+
+/* /.Modal instructions */
+
 /* Media queries */
 
 @media only screen and (min-width: 350px) {

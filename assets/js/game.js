@@ -67,6 +67,7 @@ function startTimer() {
     if (difficulty == "easy") {
         time = 90;
         while (time > 0) {
+            console.log("time easy",time);
             setTimeout(countDownTime(time), 1000);
         }
     } else if (difficulty == "normal") {
@@ -84,6 +85,8 @@ function startTimer() {
 
 function countDownTime(time) {
     time--;
+    console.log("Log time");
+    console.log(time);
     minutes = Math.floor(time / 60);
     seconds = Math.floor(time % 60);
     if (time > 9){
