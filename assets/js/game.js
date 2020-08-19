@@ -13,6 +13,7 @@ let firstCard, secondCard;
 let firstCardType, secondCardType;
 
 let flipsCounted = 0;
+let time, minutes, seconds;
 
 // Open correct modal on page load
 $(document).ready(function(){
@@ -48,13 +49,45 @@ $("form").keypress(function(e) {
 $('#firstPlayNow').on("click", function() {
     firstUpdatePlayerName();
     checkDifficultySelection();
+    startTimer();
 });
 
 $('#repeatPlayNow').on("click", function() {
     checkForChangedPlayerName();
     checkDifficultySelection();
+    startTimer();
 });
 
+// Handle timer
+function startTimer() {
+    if (difficulty == "easy") {
+        time = 90;
+        while (time != 0) {
+            setTimeout(countDownTime(time), 1000);
+        }
+    } else if (difficulty == "normal") {
+        time = 75;
+        while (time != 0) {
+            setTimeout(countDownTime(time), 1000);
+        }
+    } else {
+        time = 60;
+        while (time != 0) {
+            setTimeout(countDownTime(time), 1000);
+        }
+    };
+};
+
+function countDownTime(time) {
+    time--;
+    minutes = Math.floor(time / 60);
+    seconds = Math.floor(time % 60);
+    if (time > 9){
+        $(".time").text(`${minutes}:${seconds}`);
+    } else {
+        $(".time").text(`${minutes}:0${seconds}`);
+    };   
+};
 
 // Update player name
 function firstUpdatePlayerName() {
