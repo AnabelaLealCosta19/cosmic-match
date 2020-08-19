@@ -13,7 +13,7 @@ let firstCard, secondCard;
 let firstCardType, secondCardType;
 
 let flipsCounted = 0;
-let time, defaultTime, minutes, seconds;
+let time, minutes, seconds;
 
 let restartIcons = Array.from($(".restart-btn"));
 
@@ -21,7 +21,7 @@ let restartIcons = Array.from($(".restart-btn"));
 $(document).ready(function(){
     if (player == null || player == ""){
         showStartPage("#firstStartPage");
-        activateEasyMode();
+        activateDifficultyMode("easy", "1:30");
     } else {
         showStartPage("#repeatStartPage");
         UpdatePlayerName();
@@ -52,48 +52,45 @@ $('#firstPlayNow').on("click", function() {
     shuffle();
     firstUpdatePlayerName();
     checkDifficultySelection();
-    //startTimer();
+    startTimer();
 });
 
 $('#repeatPlayNow').on("click", function() {
     shuffle();
     checkForChangedPlayerName();
     checkDifficultySelection();
-    //startTimer();
+    startTimer();
 });
 
-// Handle timer
+// Set time according to difficulty
 function startTimer() {
     if (difficulty == "easy") {
-        time = 90;
-        while (time > 0) {
-            console.log("time easy",time);
-            setTimeout(countDownTime(time), 1000);
-        }
+        countDownTime(90);
     } else if (difficulty == "normal") {
-        time = 75;
-        while (time > 0) {
-            setTimeout(countDownTime(time), 1000);
-        }
+        countDownTime(75);
     } else {
-        time = 60;
-        while (time > 0) {
-            setTimeout(countDownTime(time), 1000);
-        }
+        countDownTime(60);
     };
 };
 
+// Count down time
 function countDownTime(time) {
-    time--;
-    console.log("Log time");
-    console.log(time);
-    minutes = Math.floor(time / 60);
-    seconds = Math.floor(time % 60);
-    if (time > 9){
-        $(".time").text(`${minutes}:${seconds}`);
-    } else {
-        $(".time").text(`${minutes}:0${seconds}`);
-    };   
+    let timer = setInterval(function() {
+        // Reduce time by 1
+        time--;
+        // Display time in minutes and seconds
+        minutes = Math.floor(time / 60);
+        seconds = Math.floor(time % 60);
+        if (seconds > 9){
+            $(".time").text(`${minutes}:${seconds}`);
+        } else {
+            $(".time").text(`${minutes}:0${seconds}`);
+        };  
+        // Clear Interval
+        if (time === 0) {
+            clearInterval(timer);
+        }; 
+    }, 1000); 
 };
 
 // Update player name
