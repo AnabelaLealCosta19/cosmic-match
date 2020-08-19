@@ -12,6 +12,8 @@ let hasFlippedCard = false;
 let firstCard, secondCard;
 let firstCardType, secondCardType;
 
+let flipsCounted = 0;
+
 // Open correct modal on page load
 $(document).ready(function(){
     if (player == null || player == ""){
@@ -21,6 +23,7 @@ $(document).ready(function(){
         showStartPage("#repeatStartPage");
         UpdatePlayerName();
         UpdateDifficulty();
+        flipsCounted = 0;
     }
 });
 
@@ -32,6 +35,14 @@ function showStartPage(modalId) {
             keyboard: false
         });
 };
+
+// Prevent enter key from closing modal
+// Disable enter key | source: 'Paulund' (URL: https://paulund.co.uk/how-to-disable-enter-key-on-forms) 
+$("form").keypress(function(e) {
+  if (e.which == 13) {
+    return false;
+  }
+});
 
 // Play now buttons in modals
 $('#firstPlayNow').on("click", function() {
@@ -111,13 +122,7 @@ function activateDifficultyMode(providedDifficulty, time) {
     $("."+providedDifficulty).removeClass("d-none");
 };
 
-// Prevent enter key from closing modal
-// Disable enter key | source: 'Paulund' (URL: https://paulund.co.uk/how-to-disable-enter-key-on-forms) 
-$("form").keypress(function(e) {
-  if (e.which == 13) {
-    return false;
-  }
-});
+
 
 // Align card-front and card-back on top of each other
 allCards.forEach(allCards => {
@@ -136,6 +141,12 @@ allCards.forEach(allCards => {
      })
 })();
 
+// Count how often cards were flipped
+function countFlips() {
+    flipsCounted++;
+    $(".flips-counted").text(flipsCounted);
+};
+
 function checkCard() {    
     // Check if card is first, same  or second card
     // Define if card is firstCard or secondCard | source: 'Memory Card Game - JavaScript Tutorial - freecodecamp' (URL: https://www.youtube.com/watch?v=ZniVgo8U7ek&t=298s) 
@@ -147,6 +158,7 @@ function checkCard() {
         firstCardType = defineCardType(firstCard);
         this.classList.add("flip");
         markChildrenAsSelected();
+        countFlips();
     } else if (hasFlippedCard && this.id == firstCard.id){
         // Click on same card again
         hasFlippedCard = true;
@@ -157,6 +169,7 @@ function checkCard() {
         secondCardType = defineCardType(secondCard);
         this.classList.add("flip");
         markChildrenAsSelected();
+        countFlips();
     };
 
     // Check if cards match
