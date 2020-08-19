@@ -13,6 +13,8 @@ let firstCard, secondCard;
 let firstCardType, secondCardType;
 
 let flipsCounted = 0;
+
+let timer;
 let time, minutes, seconds;
 
 let restartIcons = Array.from($(".restart-btn"));
@@ -75,22 +77,24 @@ function startTimer() {
 
 // Count down time
 function countDownTime(time) {
-    let timer = setInterval(function() {
-        // Reduce time by 1
+    displayTime(time);
+    timer = setInterval(function() {
         time--;
-        // Display time in minutes and seconds
-        minutes = Math.floor(time / 60);
-        seconds = Math.floor(time % 60);
-        if (seconds > 9){
-            $(".time").text(`${minutes}:${seconds}`);
-        } else {
-            $(".time").text(`${minutes}:0${seconds}`);
-        };  
-        // Clear Interval
+        displayTime(time);
         if (time === 0) {
             clearInterval(timer);
         }; 
     }, 1000); 
+};
+
+function displayTime(time){
+    minutes = Math.floor(time / 60);
+    seconds = Math.floor(time % 60);
+    if (seconds > 9){
+        $(".time").text(`${minutes}:${seconds}`);
+    } else {
+        $(".time").text(`${minutes}:0${seconds}`);
+    };  
 };
 
 // Update player name
@@ -264,7 +268,8 @@ function restartGame() {
     // Reset time & flip counter
     flipsCounted = 0;
     $(".flips-counted").text(flipsCounted);
-    time = defaultTime;
+    clearInterval(timer);
+    startTimer();
     // startTimer();
     // Turn back all cards
     allCards.forEach(allCards => {
