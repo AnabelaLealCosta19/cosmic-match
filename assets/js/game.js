@@ -49,12 +49,14 @@ $("form").keypress(function(e) {
 
 // Play now buttons in modals
 $('#firstPlayNow').on("click", function() {
+    shuffle();
     firstUpdatePlayerName();
     checkDifficultySelection();
     //startTimer();
 });
 
 $('#repeatPlayNow').on("click", function() {
+    shuffle();
     checkForChangedPlayerName();
     checkDifficultySelection();
     //startTimer();
@@ -168,13 +170,13 @@ allCards.forEach(allCards => {
 
 
 // Shuffle Cards
- (function shuffle (){
+ function shuffle (){
     // Shuffle Cards | source: 'Memory Card Game - JavaScript Tutorial - freecodecamp' (URL: https://www.youtube.com/watch?v=ZniVgo8U7ek&t=298s) 
     allCards.forEach(allCards => {
         let randomNumber = Math.round(Math.random()*12);
         allCards.style.order = randomNumber;
      })
-})();
+};
 
 // Count how often cards were flipped
 function countFlips() {
@@ -270,6 +272,12 @@ function restartGame() {
         let children = Array.from(allCards.children);
         children.forEach(children => children.classList.remove("selected"));
     });
+    // Shuffle cards
+    allCards.forEach(allCards => allCards.removeEventListener('click', checkCard));
+    setTimeout(function(){ // TimeOut set as otherwise cards still being flipped after shuffled
+        shuffle();
+        allCards.forEach(allCards => allCards.addEventListener('click', checkCard));
+    }, 1000); 
     // Reset variables
     hasFlippedCard = false;
     firstCard = secondCard = firstCardType = secondCardType = undefined;
