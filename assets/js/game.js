@@ -27,8 +27,12 @@ let time, minutes, seconds;
 let pausedTime, newTime;
 
 let restartIcons = Array.from($(".restart-icon"));
-let pauseIcons = Array.from($(".pause-icon"));
 let instructionIcons = Array.from($(".instruction-icon"));
+
+let pauseIcons = Array.from($(".pause-icon"));
+let pauseContainer = Array.from($(".pause-icon-container"));
+let resumeIcons = Array.from($(".resume-icon"));
+let resumeContainer = Array.from($(".resume-icon-container"));
 
 
 // Display modals
@@ -54,7 +58,7 @@ function showModal(modalId) {  // Show start page modals
 
 function showInstructionsModal() {
     showModal("#instructions");
-    pauseTime();
+    clearInterval(timer);
 };
 
 $("form").keypress(function(e) {  // Prevent enter key from closing modal
@@ -281,12 +285,20 @@ function restartGame() {
 // Pause 
 function pauseTime() {  // Pause timer
     clearInterval(timer);
-}
+    pauseContainer.forEach(pauseIcons => pauseIcons.classList.add("d-none"));
+    resumeContainer.forEach(resumeIcons => resumeIcons.classList.remove("d-none"));
+};
 
 function continueTime() {  // Resume timer
     newTime = pausedTime;
     pausedTime = 0;  // ~ Reset paused time variable to allow repeated use of pause function
     countDownTime(newTime)
+};
+
+function resumeTime() {
+    continueTime();
+    pauseContainer.forEach(pauseIcons => pauseIcons.classList.remove("d-none"));
+    resumeContainer.forEach(resumeIcons => resumeIcons.classList.add("d-none"));
 };
 
 
@@ -295,5 +307,6 @@ allCards.forEach(allCards => allCards.addEventListener('click', checkCard));  //
 difficultyButtons.forEach(difficultyButtons => difficultyButtons.addEventListener('click', selectDifficulty));  // Click difficulty button >> buttons are displayed as "focused" 
 restartIcons.forEach(restartIcons => restartIcons.addEventListener('click', restartGame));  // Click restart icon >> game restarts
 pauseIcons.forEach(pauseIcons => pauseIcons.addEventListener('click', pauseTime));  // Click pause icon >> timer pauses
+resumeIcons.forEach(resumeIcons => resumeIcons.addEventListener('click', resumeTime));  // Click resume icon >> timer resumes
 instructionIcons.forEach(instructionIcons => instructionIcons.addEventListener('click', showInstructionsModal));  // Click instructions icon >> instructions modal opens
 document.getElementById("instructions-dismiss-btn").addEventListener('click', continueTime);  // Click instructions dismiss button >> timer resumes
