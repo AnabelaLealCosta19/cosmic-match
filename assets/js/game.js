@@ -54,6 +54,7 @@ function showModal(modalId) {  // Show start page modals
 
 function showInstructionsModal() {
     showModal("#instructions");
+    pauseTime();
 };
 
 $("form").keypress(function(e) {  // Prevent enter key from closing modal
@@ -280,14 +281,11 @@ function restartGame() {
 // Pause 
 function pauseTime() {  // Pause timer
     clearInterval(timer);
-    console.log(pausedTime);
 }
 
 function continueTime() {  // Resume timer
-    console.log(pausedTime);
     newTime = pausedTime;
     pausedTime = 0;  // ~ Reset paused time variable to allow repeated use of pause function
-    console.log(typeof newTime, newTime);
     countDownTime(newTime)
 };
 
@@ -297,6 +295,5 @@ allCards.forEach(allCards => allCards.addEventListener('click', checkCard));  //
 difficultyButtons.forEach(difficultyButtons => difficultyButtons.addEventListener('click', selectDifficulty));  // Click difficulty button >> buttons are displayed as "focused" 
 restartIcons.forEach(restartIcons => restartIcons.addEventListener('click', restartGame));  // Click restart icon >> game restarts
 pauseIcons.forEach(pauseIcons => pauseIcons.addEventListener('click', pauseTime));  // Click pause icon >> timer pauses
-instructionIcons.forEach(instructionIcons => instructionIcons.addEventListener('click', pauseTime));  // Click instructions icon >> timer pauses
 instructionIcons.forEach(instructionIcons => instructionIcons.addEventListener('click', showInstructionsModal));  // Click instructions icon >> instructions modal opens
 document.getElementById("instructions-dismiss-btn").addEventListener('click', continueTime);  // Click instructions dismiss button >> timer resumes
