@@ -24,6 +24,7 @@ let flipsCounted = 0;
 
 let timer;
 let time, minutes, seconds;
+let pausedTime, newTime;
 
 let restartIcons = Array.from($(".restart-icon"));
 let pauseIcons = Array.from($(".pause-icon"));
@@ -168,6 +169,7 @@ function countDownTime(time) {  // Count down time limit
     timer = setInterval(function() {
         time--;
         displayTime(time);
+        pausedTime = time;  // * Store time in variable to be accessed by pause function later
         if (time === 0) {
             clearInterval(timer);
         }; 
@@ -274,7 +276,16 @@ function restartGame() {
 // Pause 
 function pauseTime() {  // Pause timer
     clearInterval(timer);
+    console.log(pausedTime);
 }
+
+function continueTime() {  // Resume timer
+    console.log(pausedTime);
+    newTime = pausedTime;
+    pausedTime = 0;  // ~ Reset paused time variable to allow repeated use of pause function
+    console.log(typeof newTime, newTime);
+    countDownTime(newTime)
+};
 
 
 // Event listeners
@@ -283,3 +294,4 @@ difficultyButtons.forEach(difficultyButtons => difficultyButtons.addEventListene
 restartIcons.forEach(restartIcons => restartIcons.addEventListener('click', restartGame)); // Game restarts when restart icon is clicked
 pauseIcons.forEach(pauseIcons => pauseIcons.addEventListener('click', pauseTime)); // Timer pauses when pause icon is clicked
 instructionIcons.forEach(instructionIcons => instructionIcons.addEventListener('click', pauseTime)); // Timer pauses when instructions icon is clicked
+document.getElementById("instructions-dismiss-btn").addEventListener('click', continueTime);  // Timer continues when instructions dismiss button is clicked
