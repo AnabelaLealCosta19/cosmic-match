@@ -70,13 +70,19 @@
                         <div class="col-12 d-none d-lg-block my-col action-items-container">
                             <ul class="list-inline">
                                 <li class="list-inline-item">
-                                    <div class="action-items restart-btn">
+                                    <div class="action-items pause-icon">
+                                        <i class="far fa-pause-circle" aria-hidden="true"></i>
+                                        <span class="sr-only">Pause game</span>
+                                    </div>
+                                </li>
+                                <li class="list-inline-item">
+                                    <div class="action-items restart-icon">
                                         <i class="fas fa-redo-alt" aria-hidden="true"></i>
                                         <span class="sr-only">Restart</span>
                                     </div>
                                 </li>
                                 <li class="list-inline-item">
-                                    <a href="#instructions" class="action-items" data-toggle="modal" data-target="#instructions">
+                                    <a href="#instructions" class="action-items instruction-icon" data-toggle="modal" data-target="#instructions">
                                         <i class="fas fa-question" aria-hidden="true"></i>
                                         <span class="sr-only">Instructions</span>
                                     </a>
@@ -101,7 +107,13 @@
                     <div class="col-6 d-lg-none my-col action-items-container d-flex flex-row-reverse">
                             <ul class="list-inline">
                                 <li class="list-inline-item">
-                                    <div class="action-items restart-btn">
+                                    <div class="action-items pause-icon">
+                                        <i class="far fa-pause-circle" aria-hidden="true"></i>
+                                        <span class="sr-only">Pause game</span>
+                                    </div>
+                                </li>
+                                <li class="list-inline-item">
+                                    <div class="action-items restart-icon">
                                         <i class="fas fa-redo-alt" aria-hidden="true"></i>
                                         <span class="sr-only">Restart</span>
                                     </div>
@@ -406,7 +418,7 @@
                 <p>The higher the difficulty, the less time you have and the more similar the star constellations.</p>
                 <p>Can you find all pairs before the time runs out?</p>
                 <div class="text-center">
-                    <button type="button" class="btn text-uppercase btn-play neon" data-dismiss="modal" aria-label="Let's find out">Let's find out</button> 
+                    <button type="button" id="instructions-dismiss-btn" class="btn text-uppercase btn-play neon" data-dismiss="modal" aria-label="Let's find out">Let's find out</button> 
                 </div> 
             </div>
         </div>
