@@ -34,22 +34,26 @@ let instructionIcons = Array.from($(".instruction-icon"));
 // Display modals
 $(document).ready(function(){  // Load page correctly (first-time visitor vs. familiar player)
     if (player == null || player == ""){
-        showStartPage("#firstStartPage");
+        showModal("#firstStartPage");
         activateDifficultyMode("easy");
     } else {
-        showStartPage("#repeatStartPage");
+        showModal("#repeatStartPage");
         UpdatePlayerName();
         UpdateDifficulty();
         flipsCounted = 0;
     }
 });
 
-function showStartPage(modalId) {  // Show start page modals
+function showModal(modalId) {  // Show start page modals
     $(modalId).modal({
             show: true,
             backdrop: 'static',
             keyboard: false
         });
+};
+
+function showInstructionsModal() {
+    showModal("#instructions");
 };
 
 $("form").keypress(function(e) {  // Prevent enter key from closing modal
@@ -288,10 +292,11 @@ function continueTime() {  // Resume timer
 };
 
 
-// Event listeners
-allCards.forEach(allCards => allCards.addEventListener('click', checkCard));  // All cards are checked and matched when clicked
-difficultyButtons.forEach(difficultyButtons => difficultyButtons.addEventListener('click', selectDifficulty));  // All difficulty buttons displayed as "focused" when clicked
-restartIcons.forEach(restartIcons => restartIcons.addEventListener('click', restartGame)); // Game restarts when restart icon is clicked
-pauseIcons.forEach(pauseIcons => pauseIcons.addEventListener('click', pauseTime)); // Timer pauses when pause icon is clicked
-instructionIcons.forEach(instructionIcons => instructionIcons.addEventListener('click', pauseTime)); // Timer pauses when instructions icon is clicked
-document.getElementById("instructions-dismiss-btn").addEventListener('click', continueTime);  // Timer continues when instructions dismiss button is clicked
+// Event listeners: on click
+allCards.forEach(allCards => allCards.addEventListener('click', checkCard));  // Click card >> cards are checked and matched
+difficultyButtons.forEach(difficultyButtons => difficultyButtons.addEventListener('click', selectDifficulty));  // Click difficulty button >> buttons are displayed as "focused" 
+restartIcons.forEach(restartIcons => restartIcons.addEventListener('click', restartGame));  // Click restart icon >> game restarts
+pauseIcons.forEach(pauseIcons => pauseIcons.addEventListener('click', pauseTime));  // Click pause icon >> timer pauses
+instructionIcons.forEach(instructionIcons => instructionIcons.addEventListener('click', pauseTime));  // Click instructions icon >> timer pauses
+instructionIcons.forEach(instructionIcons => instructionIcons.addEventListener('click', showInstructionsModal));  // Click instructions icon >> instructions modal opens
+document.getElementById("instructions-dismiss-btn").addEventListener('click', continueTime);  // Click instructions dismiss button >> timer resumes
