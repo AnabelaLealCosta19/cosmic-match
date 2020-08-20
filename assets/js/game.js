@@ -25,7 +25,9 @@ let flipsCounted = 0;
 let timer;
 let time, minutes, seconds;
 
-let restartIcons = Array.from($(".restart-btn"));
+let restartIcons = Array.from($(".restart-icon"));
+let pauseIcons = Array.from($(".pause-icon"));
+let instructionIcons = Array.from($(".instruction-icon"));
 
 
 // Display modals
@@ -269,9 +271,15 @@ function restartGame() {
     firstCard = secondCard = firstCardType = secondCardType = undefined;
 };
 
+// Pause 
+function pauseTime() {  // Pause timer
+    clearInterval(timer);
+}
+
 
 // Event listeners
-allCards.forEach(allCards => allCards.addEventListener('click', checkCard));  // All cards react to click
-difficultyButtons.forEach(difficultyButtons => difficultyButtons.addEventListener('click', selectDifficulty));  // All difficulty buttons react to click
-restartIcons.forEach(restartIcons => restartIcons.addEventListener('click', restartGame)); // Restart icon reacts to click
-
+allCards.forEach(allCards => allCards.addEventListener('click', checkCard));  // All cards are checked and matched when clicked
+difficultyButtons.forEach(difficultyButtons => difficultyButtons.addEventListener('click', selectDifficulty));  // All difficulty buttons displayed as "focused" when clicked
+restartIcons.forEach(restartIcons => restartIcons.addEventListener('click', restartGame)); // Game restarts when restart icon is clicked
+pauseIcons.forEach(pauseIcons => pauseIcons.addEventListener('click', pauseTime)); // Timer pauses when pause icon is clicked
+instructionIcons.forEach(instructionIcons => instructionIcons.addEventListener('click', pauseTime)); // Timer pauses when instructions icon is clicked
