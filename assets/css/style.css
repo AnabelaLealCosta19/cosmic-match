@@ -19,8 +19,7 @@ body {
     font-family: 'montserrat', sans-serif;
     font-weight: 500;
     color: white;
-    /* Source of the following picture is https://pxhere.com/ (URL https://pxhere.com/en/photo/115088) */
-    background: url("../images/bg-img/background-img-crop-mobl.jpg") no-repeat center center;
+    background: url("../images/bg-img/background-img-crop-mobl.jpg") no-repeat center center; /* Source of the picture is https://pxhere.com/ (URL https://pxhere.com/en/photo/115088) */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -29,10 +28,10 @@ body {
 
 /* /.Body */
 
+
 /* Heading */
 
-/* Vertically aligning block-level element with unknown height | source: 'CSS-Tricks' (URL: https://css-tricks.com/centering-css-complete-guide/) */
-header {
+header { /* Vertically aligning block-level element with unknown height | source: 'CSS-Tricks' (URL: https://css-tricks.com/centering-css-complete-guide/) */
     height: 18vh;
     position:relative;
 }
@@ -53,13 +52,13 @@ h1, .h1 {
     margin: 0;
 }
 
-/* Glowing text | source: 'Free Frontend' (URL: https://freefrontend.com/css-glow-text-effects/) */
-.neon {
+.neon { /* Glowing text | source: 'Free Frontend' (URL: https://freefrontend.com/css-glow-text-effects/) */
     color: #fff;
     text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #44525b, 0 0 80px #284558, 0 0 90px #7986b0, 0 0 100px #000000, 0 0 150px #382929;
 }
 
 /* /.Heading */
+
 
 /* Article */
 
@@ -68,6 +67,7 @@ article {
 }
 
 /* /.Article */
+
 
 /* Footer */
 
@@ -83,6 +83,7 @@ footer p {
 
 /* /.Footer */
 
+
 /* Player details */
 
 h2 {
@@ -91,6 +92,7 @@ h2 {
 }
 
 /* /.Player details */
+
 
 /* Game details */
 
@@ -122,13 +124,12 @@ p i {
     font-size: 0.98em;
 }
 
-
 /* /.Game details */
+
 
 /* Action items */
 
-/* Vertically aligning block-level element with unknown height | source: 'CSS-Tricks' (URL: https://css-tricks.com/centering-css-complete-guide/) */
-.action-items-container {
+.action-items-container { /* Vertically aligning block-level element with unknown height | source: 'CSS-Tricks' (URL: https://css-tricks.com/centering-css-complete-guide/) */
     position:relative;
     padding-right: 0;
 }
@@ -159,9 +160,8 @@ button.action-items.restart-btn {
 	outline: inherit;
 }
 
-
-
 /* /.Action items */
+
 
 /* Cards */
 
@@ -206,19 +206,18 @@ button.action-items.restart-btn {
     height: 100%;
 } 
 
-/* Flip card */
-.card.flip .cards {
+.card.flip .cards { /* Flip card */
     transform: rotateY(180deg);
 }
 
-/* Selected card */
-.row div .cards.selected {
+.row div .cards.selected { /* Selected card */
     outline: none;
     border-color: #f8f9fa;
     box-shadow: 0 0 5px #f8f9fa;
 }
 
 /* /.Cards */
+
 
 /* Modal start page: first */
 
@@ -248,6 +247,7 @@ button.action-items.restart-btn {
 
 /* /.Modal start page: first */
 
+
 /* Modal start page: repeat */
 
 .other-player {
@@ -261,6 +261,7 @@ button.action-items.restart-btn {
 
 /* /.Modal start page: repeat */
 
+
 /* Modal instructions */
 
 .instructions-body p {
@@ -269,12 +270,12 @@ button.action-items.restart-btn {
 
 /* /.Modal instructions */
 
+
 /* Media queries */
 
 @media only screen and (min-width: 350px) {
     body {
-        /* Source of the following picture is https://pxhere.com/ (URL https://pxhere.com/en/photo/115088) */
-        background: url("../images/bg-img/background-img-crop-mobl-tabl.jpg") no-repeat center center;
+        background: url("../images/bg-img/background-img-crop-mobl-tabl.jpg") no-repeat center center; /* Source of the following picture is https://pxhere.com/ (URL https://pxhere.com/en/photo/115088) */
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -333,7 +334,6 @@ button.action-items.restart-btn {
         font-size: 2.25em;
         margin-right: 0.25em; 
     }
-
 }
 
 @media only screen and (min-width: 992px) {
@@ -395,8 +395,7 @@ button.action-items.restart-btn {
     }
 }
 
-/* Combining several conditions in same media query | source: 'MDN web docs' (URL: https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) */
-@media only screen and (min-width: 992px) and (max-height: 749px) {
+@media only screen and (min-width: 992px) and (max-height: 749px) { /* Combining several conditions in same media query | source: 'MDN web docs' (URL: https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) */
     .info-container-desktop {
         padding-left: 10vw;
     }
