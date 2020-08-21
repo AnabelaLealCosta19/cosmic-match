@@ -98,11 +98,14 @@ $('#firstPlayNow').on("click", function() {  // When clicking first play now but
     startTimer();
 });
 
-$('#repeatPlayNow').on("click", function() {  // When clicking new game button (modals: repeat start page [familiar player], settings, game over, congratulations)
+$('.btn-play-again').on("click", function() {  // When clicking new game button (modals: repeat start page [familiar player], settings, game over, congratulations)
     shuffle();
-    checkForChangedPlayerName();
     checkDifficultySelection();
     startTimer();
+    console.log(this)
+    if (this.id = "repeatPlayNow") {
+        checkForChangedPlayerName();
+    };
 });
 
 
