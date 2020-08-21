@@ -108,6 +108,11 @@ p i {
     padding: 2px;
 }
 
+.last-seconds {
+    color: rgb(255, 122, 122);
+    font-weight: bold;
+}
+
 #flips {
     text-align: center;
 }
