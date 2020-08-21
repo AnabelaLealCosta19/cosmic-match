@@ -145,19 +145,10 @@ li {
     line-height: 1.25em;
 }
 
-li a i, li div i {
+li div i {
     color: white;
     font-size: 1.25em; 
-}
-
-button.action-items.restart-btn {
-    background-color: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
+    cursor: pointer;
 }
 
 /* /.Action items */
@@ -293,7 +284,7 @@ button.action-items.restart-btn {
     li {
         line-height: 1.5em;
     }
-    li a i, li div i {
+    li div i {
         font-size: 1.5em; 
     }
     .difficulty {
@@ -330,7 +321,7 @@ button.action-items.restart-btn {
     li {
         line-height: 2.25em;
     }
-    li a i, li div i {
+    li div i {
         font-size: 2.25em;
         margin-right: 0.25em; 
     }
@@ -389,7 +380,7 @@ button.action-items.restart-btn {
     li {
         line-height: 4vh;
     }
-    li a i, li div i {
+    li div i {
         font-size: 4vh;
         margin-right: 0.25em; 
     }
