@@ -200,8 +200,10 @@ function displayTime(time){  // Display time correctly in minutes and seconds
         $(".time").text(`${minutes}:${seconds}`);
     } else {
         $(".time").text(`${minutes}:0${seconds}`);
-        $(".time").addClass("last-seconds");
     };  
+    if (minutes == 0 && seconds < 10) {
+        $(".time").addClass("last-seconds");
+    }
 };
 
 
