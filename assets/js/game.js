@@ -56,9 +56,14 @@ function showModal(modalId) {  // Show start page modals
         });
 };
 
-function showInstructionsModal() {
+function showInstructionsModal() {  // Open instructions modal + pause timer
     showModal("#instructions");
     clearInterval(timer);
+};
+
+function dismissInstructionsModal() {
+    continueTime();
+    resetResumeButton();
 };
 
 $("form").keypress(function(e) {  // Prevent enter key from closing modal
@@ -264,6 +269,7 @@ function noMatch() {  // Cards don't match
 
 // Restart game
 function restartGame() {
+    resetResumeButton();  // - Reset resume button
     flipsCounted = 0;  // - Reset flip counter
     $(".flips-counted").text(flipsCounted);
     clearInterval(timer);    // - Reset time
@@ -297,8 +303,15 @@ function continueTime() {  // Resume timer
 
 function resumeTime() {
     continueTime();
-    pauseContainer.forEach(pauseIcons => pauseIcons.classList.remove("d-none"));
-    resumeContainer.forEach(resumeIcons => resumeIcons.classList.add("d-none"));
+    pauseContainer.forEach(pauseContainer => pauseContainer.classList.remove("d-none"));
+    resumeContainer.forEach(resumeContainer => resumeContainer.classList.add("d-none"));
+};
+
+function resetResumeButton() {
+    if (!$(".resume-icon").hasClass("d-none")) {
+        pauseContainer.forEach(pauseContainer => pauseContainer.classList.remove("d-none"));
+        resumeContainer.forEach(resumeContainer => resumeContainer.classList.add("d-none"));
+    };
 };
 
 
@@ -309,4 +322,4 @@ restartIcons.forEach(restartIcons => restartIcons.addEventListener('click', rest
 pauseIcons.forEach(pauseIcons => pauseIcons.addEventListener('click', pauseTime));  // Click pause icon >> timer pauses
 resumeIcons.forEach(resumeIcons => resumeIcons.addEventListener('click', resumeTime));  // Click resume icon >> timer resumes
 instructionIcons.forEach(instructionIcons => instructionIcons.addEventListener('click', showInstructionsModal));  // Click instructions icon >> instructions modal opens
-document.getElementById("instructions-dismiss-btn").addEventListener('click', continueTime);  // Click instructions dismiss button >> timer resumes
+document.getElementById("instructions-dismiss-btn").addEventListener('click', dismissInstructionsModal);  // Click instructions dismiss button >> instructions modal closes
