@@ -296,18 +296,21 @@ function pauseTime() {  // Pause timer
     clearInterval(timer);
     pauseContainer.forEach(pauseIcons => pauseIcons.classList.add("d-none"));
     resumeContainer.forEach(resumeIcons => resumeIcons.classList.remove("d-none"));
+    allCards.forEach(allCards => allCards.removeEventListener('click', checkCard));
 };
 
 function continueTime() {  // Resume timer
     newTime = pausedTime;
     pausedTime = 0;  // ~ Reset paused time variable to allow repeated use of pause function
     countDownTime(newTime)
+    allCards.forEach(allCards => allCards.addEventListener('click', checkCard));
 };
 
 function resumeTime() {
     continueTime();
     pauseContainer.forEach(pauseContainer => pauseContainer.classList.remove("d-none"));
     resumeContainer.forEach(resumeContainer => resumeContainer.classList.add("d-none"));
+    allCards.forEach(allCards => allCards.addEventListener('click', checkCard));
 };
 
 function resetResumeButton() {
