@@ -278,6 +278,7 @@ function restartGame() {
     $(".flips-counted").text(flipsCounted);
     clearInterval(timer);    // - Reset time
     startTimer();
+    $(".time").removeClass("last-seconds");
     allCards.forEach(allCards => {  // - Turn back all cards
         allCards.classList.remove("flip");
         let children = Array.from(allCards.children);
