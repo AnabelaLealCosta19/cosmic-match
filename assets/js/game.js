@@ -7,6 +7,7 @@
 
 
 // Global Variables
+let newPlayer;
 let player = localStorage.getItem("player");
 let difficulty = localStorage.getItem("difficulty");
 
@@ -28,6 +29,7 @@ let pausedTime, newTime;
 
 let restartIcons = Array.from($(".restart-icon"));
 let instructionIcons = Array.from($(".instruction-icon"));
+let settingsIcons = Array.from($(".settings-icon"));
 
 let pauseIcons = Array.from($(".pause-icon"));
 let pauseContainer = Array.from($(".pause-icon-container"));
@@ -66,6 +68,12 @@ function dismissInstructionsModal() {
     resetResumeButton();
 };
 
+function showSettingsModal() {
+    console.log("Open settings modal");
+    showModal("#settings");
+    clearInterval(timer);
+};
+
 $("form").keypress(function(e) {  // Prevent enter key from closing modal
   if (e.which == 13) { // * Disable enter key | source: 'Paulund' (URL: https://paulund.co.uk/how-to-disable-enter-key-on-forms) 
     return false;
@@ -102,8 +110,10 @@ $('.btn-play-again').on("click", function() {  // When clicking new game button 
     shuffle();
     checkDifficultySelection();
     startTimer();
-    if (this.id = "repeatPlayNow") {
-        checkForChangedPlayerName();
+    if (this.id == "repeatPlayNow") {
+        checkForChangedPlayerName("#otherPlayer");
+    } else if (this.id == "settingsPlayNow") {
+        checkForChangedPlayerName("#settingsPlayer");
     };
 });
 
@@ -119,9 +129,9 @@ function UpdatePlayerName() {  // Update saved player name [familiar player] on 
     $('.player').text(player);    
 };
 
-function checkForChangedPlayerName() {  // Check if player changed name and update player name accordingly (modals: repeat start page, settings)
-    if (!(($('#otherPlayer').val()) == null || ($('#otherPlayer').val()) == "")) {
-        player = $('#otherPlayer').val();
+function checkForChangedPlayerName(newPlayer) {  // Check if player changed name and update player name accordingly (modals: repeat start page, settings)
+    if (!(($(newPlayer).val()) == null || ($(newPlayer).val()) == "")) {
+        player = $(newPlayer).val();
         localStorage.setItem("player", player);
         $('.player').text(player);
     }
@@ -336,3 +346,4 @@ pauseIcons.forEach(pauseIcons => pauseIcons.addEventListener('click', pauseTime)
 resumeIcons.forEach(resumeIcons => resumeIcons.addEventListener('click', resumeTime));  // Click resume icon >> timer resumes
 instructionIcons.forEach(instructionIcons => instructionIcons.addEventListener('click', showInstructionsModal));  // Click instructions icon >> instructions modal opens
 document.getElementById("instructions-dismiss-btn").addEventListener('click', dismissInstructionsModal);  // Click instructions dismiss button >> instructions modal closes
+settingsIcons.forEach(settingsIcons => settingsIcons.addEventListener('click', showSettingsModal));  // Click settings icon >> settings modal opens
