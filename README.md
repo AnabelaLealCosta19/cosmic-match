@@ -1,8 +1,13 @@
-# Cosmic match
+# Cosmic Match
 
-One or two paragraphs providing an overview of your project.
+Memory games are an entertaining way to improve one's memory, concentration, and attention to detail. Even though it can be as beneficial to small children as to adults, most games are designed for children. 
 
-Essentially, this part is your sales pitch.
+That's when **Cosmic Match** comes into play. It's a simple memory game that uses star constellations as images to be matched and provides an overall nice feel to the game. Using real star constellation might further enable the player to recognize star constellations in the night sky in real life.
+
+The player is presented with 12 cards turned on their back. When the player clicks on the card, it's front is displayed, which should be memorized by the user to find the matching pairs. Each turn two cards are flipped and either matched or turned back for another try. Goal of the game is to match all cards before the time runs out. 
+
+Cosmic Match - Live website
+
 
 ## Table of Content
 
@@ -108,7 +113,7 @@ In addition, you may also use this section to discuss plans for additional featu
 ## Technologies Used
 
 ### Languages
-This project uses **HTML5**, **CSS3** and **JavaScript**. 
+This project uses **HTML**, **CSS** and **JavaScript**. 
 
 ### Libraries
 - [Bootstrap](https://getbootstrap.com/): Its grid, components and classes simplify the website structure and add additional responsiveness. 
