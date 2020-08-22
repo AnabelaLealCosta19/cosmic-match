@@ -57,6 +57,19 @@ Furthermore, it rounds off with his responsive and pleasing design, which is ade
 
 #### User
 
+Cosmic match targets the following audiance: 
+- English speaking
+- Age can generally range, although the youngest users are expected to be teenagers
+- Diverse audience *(gender, social status, nationality)*, but generally in private/ free time
+- Slight to strong interest in astrology
+
+User goals: 
+- Is looking for entertainment/ a time waster 
+- Wants to play a simple game with little time commitment
+- Wants to play a game that is adequate for his age
+- *Possibly looking specifically for a memory game to improve memory and concentration*
+
+Cosmic Match fits these goals as it provides a simple memory game with an adequate design for the users' age. Furthermore the time commitment to play Cosmic Match is very little as it can be started as soon as the name and difficulty preference have been submitted. For users that come back, this initial step is further condensed as it remembers the users' preferences. Furthermore each round is very short, with the longest taking 1min 15s. 
 
 
 #### Stakeholder !!!
