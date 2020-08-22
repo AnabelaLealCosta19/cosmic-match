@@ -212,6 +212,7 @@ function displayTime(time){  // Display time correctly in minutes and seconds
     };  
     if (minutes == 0 && seconds < 10) {
         $(".time").addClass("last-seconds");
+        $(".time-detail").addClass("last-seconds");
     };
     if (minutes == 0 && seconds == 0) {
         console.log("Game over!");
