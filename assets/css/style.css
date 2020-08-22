@@ -53,7 +53,7 @@ h1, .h1 {
 }
 
 .neon { /* Glowing text | source: 'Free Frontend' (URL: https://freefrontend.com/css-glow-text-effects/) */
-    color: #fff;
+    color: white;
     text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #44525b, 0 0 80px #284558, 0 0 90px #7986b0, 0 0 100px #000000, 0 0 150px #382929;
 }
 
@@ -220,8 +220,8 @@ li div i {
 
 .row div .cards.selected { /* Selected card */
     outline: none;
-    border-color: #f8f9fa;
-    box-shadow: 0 0 5px #f8f9fa;
+    border-color: rgb(248, 249, 250);
+    box-shadow: 0 0 5px rgb(248, 249, 250);
 }
 
 /* /.Cards */
@@ -232,7 +232,7 @@ li div i {
 .modal .modal-content {
     background-color: rgb(10, 22, 30); 
     border: 1px solid rgba(253, 253, 253, 0.8);
-    box-shadow: 0 0 5px #f8f9fa;
+    box-shadow: 0 0 5px rgb(248, 249, 250);
 }
 
 .modal-content span.cosmic-match {

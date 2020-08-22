@@ -125,7 +125,17 @@ The whole website is visible on the users' screen which ensures that he doesn't 
 
 Last but not least, the layout changes depending on the device size to ensure readability and ease of use. The additional icons also come into play on smaller devices to ensure that the website isn't too busy. 
 
-#### Colour scheme !!!
+#### Colour scheme
+
+My colour choices were made with consideration of the background image. 
+
+All the text elements as well as icons are white to provide clear contrast and ensure readability. The gradient colours for the glowing effect were selected in the colour picker in Chrome's DevTools by eye to ensure a visually appealing effect. This was used to additionally highlight specific text elements.
+
+I've selected a dark blue (rgb(10, 22, 30)) for the background of the cards and modals as it fits with the overall background image while still contrasting well. Furthermore, white borders have been used for the cards by default to provide crisp and clear separation. The off-white rgb(248, 249, 250) as border and border shadow has additionally been used to distinguish selected cards from others. The same effect has been used for the modals at it highlights the modal from the faded out background and looks overall visually appealing. This has also been used when hovering over the buttons in the modals to provide the user with immediate feedback that this button is clickable. 
+
+
+For the last seconds on each round, I've selected rgb(255, 122, 122). It's a soft shade of red that clearly signalizes that the time runs up and fits with the colours of the background image. It, nevertheless, is contrasting to the background and gets the users' attention with ease. 
+
 
 #### Images !!!
 
