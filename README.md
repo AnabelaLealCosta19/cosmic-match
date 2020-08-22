@@ -48,17 +48,16 @@ Cosmic Match - Live website
 1. [Disclaimer](#disclaimer)
  
 ## User Experience (UX)
- 
-Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
 
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
-- As a user type, I want to perform an action, so that I can achieve a goal.
+Generally, Cosmic Match intends to provide a seamless user experience by remembering the users' name and preferences as well as by including different features that enhance the gaming experience. 
 
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
+Furthermore, it rounds off with his responsive and pleasing design, which is adequate for the targeted audience as well as the overall topic of the website. 
 
 ### Goals
 
-#### User !!!
+#### User
+
+
 
 #### Stakeholder !!!
 
@@ -121,7 +120,6 @@ In addition, you may also use this section to discuss plans for additional featu
     - While the player is matching the cards he might ask himself which star constellations he's currently looking at. 
     - The user should have the ability to get more details about each of the star constellation through an magnifying icon in the action items section. Once clicked, it will open a modal that contains the image of each star constellation used, it's name and additional fun facts like e.g. it's overall size. 
     - This will round up the experience for the user and prevent him to leave the website to do some research himself. 
-
 
 ## Technologies Used
 
