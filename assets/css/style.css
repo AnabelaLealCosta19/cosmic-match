@@ -200,9 +200,9 @@ li div i {
     width: calc(100% - 10px);
     height: 100%;
 } 
-/* Flip cards | source: 'Memory Card Game - JavaScript Tutorial - freecodecamp' (URL: https://www.youtube.com/watch?v=ZniVgo8U7ek&t=298s) */
+
 .card.flip { /* Flip card */
-    -webkit-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg); /* Flip cards | source: 'Memory Card Game - JavaScript Tutorial - freecodecamp' (URL: https://www.youtube.com/watch?v=ZniVgo8U7ek&t=298s) */
     -ms-transform: rotateY(180deg);
     transform: rotateY(180deg);
 }

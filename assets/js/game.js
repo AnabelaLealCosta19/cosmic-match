@@ -198,7 +198,7 @@ function countDownTime(time) {  // Count down time limit
     timer = setInterval(function() {
         time--;
         displayTime(time);
-        pausedTime = time;  // * Store time in variable to be accessed by pause function later
+        pausedTime = time;  // ~ Store time in variable to be accessed by pause function later
         if (time === 0) {
             clearInterval(timer);
         }; 
@@ -238,7 +238,6 @@ function checkCard() {  // Check if card is first, same  or second card
         hasFlippedCard = true;  // - Click on first card
         firstCard = this;
         firstCardType = defineCardType(firstCard);
-        // * Flip cards | source: 'Memory Card Game - JavaScript Tutorial - freecodecamp' (URL: https://www.youtube.com/watch?v=ZniVgo8U7ek&t=298s) 
         this.classList.add("flip");
         markChildrenAsSelected();
         countFlips();
