@@ -37,7 +37,6 @@ Essentially, this part is your sales pitch.
     - [Deployed vs development version](#deployed-vs-development-version)
     - [Run code locally](#run-code-locally)
 1. Credits
-    - [Content](#content)
     - [Media](#media)
     - [Code](#code) 
     - [Acknowledgments](#acknowledgments)
@@ -202,9 +201,6 @@ Find below the necessary steps to be able to run the code locally. The default i
 1. Click **Clone** to create the local clone.
 
 ## Credits
-
-### Content !!!
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
 
 ### Media
 
