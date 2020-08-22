@@ -14,6 +14,7 @@ let difficulty = localStorage.getItem("difficulty");
 let difficultyButtons = Array.from($(".btn-difficulty"));
 
 let allCards = Array.from($(".card")); 
+let activeCards, matchedCards;
 let selectedChildren;
 
 let hasFlippedCard = false;
@@ -176,6 +177,8 @@ function activateDifficultyMode(providedDifficulty) {  // Adapt game to difficul
     $('.difficulty').text(difficulty);
     $(".card").addClass("d-none"); // - Change cards
     $("."+providedDifficulty).removeClass("d-none");
+    activeCards = Array.from($("."+providedDifficulty));
+    console.log(activeCards);
 };
 
 
@@ -271,10 +274,13 @@ function markChildrenAsSelected() {  // Mark children as selected
 };
 
 function cardsMatch() {  // Cards match
+    firstCard.classList.add("matched");
+    secondCard.classList.add("matched");
     let matchedChildren = Array.from(firstCard.children).concat(Array.from(secondCard.children));  // - Remove highlighted border
     matchedChildren.forEach(matchedChildren => matchedChildren.classList.remove("selected"));
     firstCard = secondCard = firstCardType = secondCardType = undefined;  // - Reset all first and second card variables
     allCards.forEach(allCards => allCards.addEventListener('click', checkCard));  // - Add event listener again
+    allCardsMatch();
 };
 
 function noMatch() {  // Cards don't match
@@ -284,6 +290,15 @@ function noMatch() {  // Cards don't match
     matchedChildren.forEach(matchedChildren => matchedChildren.classList.remove("selected"));
     firstCard = secondCard = firstCardType = secondCardType = undefined;  // - Reset all first and second card variables
     allCards.forEach(allCards => allCards.addEventListener('click', checkCard));  // - Add event listener again
+};
+
+function allCardsMatch() {
+    matchedCards = Array.from($($(".matched")));
+    if (matchedCards.length == activeCards.length) {
+        console.log("Congrats!");
+        showModal("#congrats");
+        clearInterval(timer);
+    };
 };
 
 
