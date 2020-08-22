@@ -14,7 +14,7 @@ Cosmic Match - Live website
 1. User Experience (UX) 
     - Goals
         - [User](#user)
-        - [Stakeholder](#stakeholder)
+        - [Developer](#developer)
     - [User Stories](#user-stories)
     - Design Choices
         - [Layout](#layout)
@@ -72,7 +72,13 @@ User goals:
 Cosmic Match fits these goals as it provides a simple memory game with an adequate design for the users' age. Furthermore the time commitment to play Cosmic Match is very little as it can be started as soon as the name and difficulty preference have been submitted. For users that come back, this initial step is further condensed as it remembers the users' preferences. Furthermore each round is very short, with the longest taking 1min 15s. 
 
 
-#### Stakeholder !!!
+#### Developer
+
+Developer goals: 
+- Create a user friendly and intuitive memory game
+- Learn how to write JavaScript to create and combine different functionalities into one consistent project
+- Learn how to debug JavaScript effectively
+- Write defensive code to ensure that unexpected actions from users don't have a negative effect on the website and overall user experience
 
 ### User Stories !!!
 
