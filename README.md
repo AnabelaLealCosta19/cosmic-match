@@ -119,7 +119,11 @@ Developer goals:
 
 ### Design Choices
 
-#### Layout !!!
+#### Layout
+
+The whole website is visible on the users' screen which ensures that he doesn't have to scroll at any time. This has also been considered when deciding the number of cards as 12 cards can be displayed clearly across all devices while keeping the website on the users' viewport. Like this, all cards, icons and game details are in the users' field of view and are accessible at any moment during the game. 
+
+Last but not least, the layout changes depending on the device size to ensure readability and ease of use. The additional icons also come into play on smaller devices to ensure that the website isn't too busy. 
 
 #### Colour scheme !!!
 
