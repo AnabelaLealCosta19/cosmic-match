@@ -238,6 +238,7 @@ function checkCard() {  // Check if card is first, same  or second card
         hasFlippedCard = true;  // - Click on first card
         firstCard = this;
         firstCardType = defineCardType(firstCard);
+        // * Flip cards | source: 'Memory Card Game - JavaScript Tutorial - freecodecamp' (URL: https://www.youtube.com/watch?v=ZniVgo8U7ek&t=298s) 
         this.classList.add("flip");
         markChildrenAsSelected();
         countFlips();
@@ -294,7 +295,7 @@ function noMatch() {  // Cards don't match
 
 function allCardsMatch() {
     matchedCards = Array.from($($(".matched")));
-    if (matchedCards.length == activeCards.length) {
+    if (matchedCards.length == activeCards.length) {  // * Check if all elements in array have specific class | source: 'stack overflow' (URL: https://stackoverflow.com/questions/31962074/jquery-how-to-check-if-all-element-in-array-have-specific-class) 
         console.log("Congrats!");
         showModal("#congrats");
         clearInterval(timer);

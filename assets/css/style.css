@@ -186,6 +186,8 @@ li div i {
     border-radius: .25em;
     background-color: rgb(10, 22, 30); 
     cursor: pointer;
+    -webkit-transition: -webkit-transform 0.75s;
+    -o-transition: transform 0.75s;
     transition: transform .75s;
 }
 
@@ -201,8 +203,21 @@ li div i {
     width: calc(100% - 10px);
     height: 100%;
 } 
+/* Flip cards | source: 'Memory Card Game - JavaScript Tutorial - freecodecamp' (URL: https://www.youtube.com/watch?v=ZniVgo8U7ek&t=298s) */
+.card.flip { /* Flip card */
+    -webkit-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
 
-.card.flip .cards { /* Flip card */
+.card-front, .card-back{
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.card-front {
+    -webkit-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
     transform: rotateY(180deg);
 }
 
