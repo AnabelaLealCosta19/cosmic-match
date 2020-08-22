@@ -171,7 +171,7 @@ My project has been deployed to GitHub Pages. To do so, I completed the steps be
 3. Under **GitHub Pages**, I used the **Source** drop-down menu and selected "master branch"
 4. Clicked on **Save**
 
-Once done, GitHub displayed the following message: " Your site is published at https://anabelalealcosta19.github.io/cosmic-match/". I clicked on the link and could confirm that the website was successfully deployed. 
+Once done, GitHub displayed the following message: "Your site is published at https://anabelalealcosta19.github.io/cosmic-match/". I clicked on the link and could confirm that the website was successfully deployed. 
 
 ### Deployed vs development version
 
@@ -209,8 +209,8 @@ I exclusively used images as media for my website.
 The images used in this project have been obtained from the following sources:
 
 * **Background image:** Free image downloaded from [pxhere](https://pxhere.com/en/photo/115088). To view the image click [here](https://pxhere.com/en/photo/115088).
-* **Card images - front:** Vector images purchased at [Creative market](https://creativemarket.com/). To view the specific product click [here](https://creativemarket.com/skyboxcreative/448990-Constellations-Vector-Set#fullscreen)
-* **Card images - back:** Telescope vector obtained from [shutterstock](https://www.shutterstock.com/home). To view the image click [here](https://www.shutterstock.com/image-vector/telescope-flat-icon-on-black-background-599913728)
+* **Card images - front:** Vector images purchased at [Creative market](https://creativemarket.com/). To view the specific product click [here](https://creativemarket.com/skyboxcreative/448990-Constellations-Vector-Set#fullscreen).
+* **Card images - back:** Telescope vector obtained from [shutterstock](https://www.shutterstock.com/home). To view the image click [here](https://www.shutterstock.com/image-vector/telescope-flat-icon-on-black-background-599913728).
 
 ### Code
 
