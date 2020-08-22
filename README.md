@@ -38,9 +38,7 @@ Essentially, this part is your sales pitch.
     - [Run code locally](#run-code-locally)
 1. Credits
     - [Content](#content)
-    - Media
-        - [Images](#images)
-        - [Audio](#audio)
+    - [Media](#media)
     - [Code](#code) 
     - [Acknowledgments](#acknowledgments)
 1. [Disclaimer](#disclaimer)
@@ -210,14 +208,13 @@ Find below the necessary steps to be able to run the code locally. The default i
 
 ### Media
 
-#### Images !!!
+I exclusively used images as media for my website. 
 
 The images used in this project have been obtained from the following sources:
 
 * **Background image:** Free image downloaded from [pxhere](https://pxhere.com/en/photo/115088). To view the image click [here](https://pxhere.com/en/photo/115088).
 * **Card images - front:** Vector images purchased at [Creative market](https://creativemarket.com/). To view the specific product click [here](https://creativemarket.com/skyboxcreative/448990-Constellations-Vector-Set#fullscreen)
-
-#### Audio !!!
+* **Card images - back:** Telescope vector obtained from [shutterstock](https://www.shutterstock.com/home). To view the image click [here](https://www.shutterstock.com/image-vector/telescope-flat-icon-on-black-background-599913728)
 
 ### Code
 
