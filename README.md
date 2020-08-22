@@ -228,7 +228,7 @@ Language | Effect | Example | Source | URL
 CSS | Vertically align block-level element with unknown height | style.css, lines 34-45 | [CSS tricks](https://css-tricks.com/) | [here](https://css-tricks.com/centering-css-complete-guide/)
 CSS | Combine several conditions in same media query | style.css, lines 283-303 | [MDN web docs](https://developer.mozilla.org/en-US/) | [here](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
 
-### Acknowledgements
+### Acknowledgments
 
 While I  decided to create a memory game, I got the inspiration for the overall theme from my partner Glen Harris. He has always been truly fascinated by astronomy and stars in particular. When looking at the different constellations at night, I had the idea to combine this with my second project. 
 
