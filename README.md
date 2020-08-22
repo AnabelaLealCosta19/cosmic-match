@@ -80,7 +80,42 @@ Developer goals:
 - Learn how to debug JavaScript effectively
 - Write defensive code to ensure that unexpected actions from users don't have a negative effect on the website and overall user experience
 
-### User Stories !!!
+### User Stories
+
+- **User 1** ... is a first time visitor of Cosmic Match
+    - I want to be able to quickly start playing without having to create an account
+    - I want to be able to choose a difficulty that seems adequate for my first try
+    - I want to be able to review instructions on how to play the game
+    - I want to be able to pause the game if an external distraction occurs
+    - I want to be able to restart the game if I messed up (without having to wait until the time runs up)
+    - I want to be able to change my difficulty settings in case I noticed it's too easy/ to hard (without having to complete the game)
+    - I want to be able to change my name in case it has a typo (without having to complete the game)
+    - I want to notice easily when the time runs up
+    - I want to have an overview of the current game like difficulty, time and flips without those details being too distracting
+    - I want to have appropriate feedback when losing or winning the game 
+    - I want to be able to play again if I liked the game
+
+- **User 2** ... played Cosmic Match before
+    - I want to be able to quickly start playing without having to enter all my details again
+    - I want to be able to pause the game if an external distraction occurs
+    - I want to be able to restart the game if I messed up (without having to wait until the time runs up)
+    - I want to notice easily when the time runs up
+    - I want to have an overview of the current game like difficulty, time and flips without those details being too distracting
+    - I want to have appropriate feedback when losing or winning the game 
+    - I want to be able to play again if I want
+
+- **User 1** ... saw a friend play Cosmic Match and give it a try himself
+    - I want to be able to easily change the name to my own
+    - I want to be able to choose a difficulty that seems adequate for my first try
+    - I want to be able to review instructions on how to play the game
+    - I want to be able to pause the game if an external distraction occurs
+    - I want to be able to restart the game if I messed up (without having to wait until the time runs up)
+    - I want to be able to change my difficulty settings in case I noticed it's too easy/ to hard (without having to complete the game)
+    - I want to be able to change my name in case it has a typo (without having to complete the game)
+    - I want to notice easily when the time runs up
+    - I want to have an overview of the current game like difficulty, time and flips without those details being too distracting
+    - I want to have appropriate feedback when losing or winning the game 
+    - I want to be able to play again if I liked the game
 
 ### Design Choices
 
