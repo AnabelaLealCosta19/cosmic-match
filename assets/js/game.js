@@ -102,7 +102,6 @@ $('.btn-play-again').on("click", function() {  // When clicking new game button 
     shuffle();
     checkDifficultySelection();
     startTimer();
-    console.log(this)
     if (this.id = "repeatPlayNow") {
         checkForChangedPlayerName();
     };
@@ -203,7 +202,11 @@ function displayTime(time){  // Display time correctly in minutes and seconds
     };  
     if (minutes == 0 && seconds < 10) {
         $(".time").addClass("last-seconds");
-    }
+    };
+    if (minutes == 0 && seconds == 0) {
+        console.log("Game over!");
+        showModal("#gameOver");
+    };
 };
 
 
