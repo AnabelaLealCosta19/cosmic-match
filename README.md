@@ -102,21 +102,22 @@ In addition, you may also use this section to discuss plans for additional featu
 ### Future considerations !!!
 - Another feature idea
 
+### Future considerations !!!
+- Another feature idea
+
 ## Technologies Used
 
 ### Languages
 This project uses **HTML5**, **CSS3** and **JavaScript**. 
 
-### Libraries !!!
+### Libraries
 - [Bootstrap](https://getbootstrap.com/): Its grid, components and classes simplify the website structure and add additional responsiveness. 
 - [jQuery](https://jquery.com/): This JavaScript library simplifies DOM manipulation.
-- [Jasmine](https://jasmine.github.io/): Allows me to automatically test my JavaScript and jQuery code. 
-- [Jasmine-jQuery](https://github.com/velesin/jasmine-jquery): Used when writing automated testing. 
 - [Favicon.io](https://favicon.io/): Provides favicons to improve website recognition and branding.
 - [Font Awesome](https://fontawesome.com/): Provides icons to simplify and visualise content and creates a better UX.
 - [Google Fonts](https://fonts.google.com/): Used to style the website font.
 
-### Tools !!!
+### Tools
 
 - [Github](https://github.com/): Hosts the project files and was used to deploy the website to Git Pages. Additionally the Githubs Projects Planner was used to plan the project and keep track of any outstanding tasks (see [here](https://github.com/AnabelaLealCosta19/cosmic-match/projects/1)).
 - [Gitpod](https://www.gitpod.io/): Provides a developing environment to write code and commit changes to Github.
@@ -129,6 +130,8 @@ This project uses **HTML5**, **CSS3** and **JavaScript**.
 - [WhatIsMyScreenResolution](http://whatismyscreenresolution.net/): Determines the screen resolution of your current device (this information helps when troubleshooting with developer tools).
 - [Nu HTML Checker](https://validator.w3.org/nu/): Validated my HTML code.
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/): Validate my CSS code.
+- [Esprima](https://esprima.org/demo/validate.html): Validate my JS code.
+- [Diffchecker](https://www.diffchecker.com/): Used to identify mistakes by comparing similar elements of my website (working vs not working).
 - [FREEFORMATTER](https://www.freeformatter.com/): Indented my HTML, CSS and JS code.
 - [LetterCount](https://www.lettercount.com/): Counted letters of commit messages to ensure they aren't too long.
 - [Scribens.com](https://www.scribens.com/): Checked grammar of website and readme content.
