@@ -107,8 +107,21 @@ In addition, you may also use this section to discuss plans for additional featu
 ### Future considerations !!!
 - Another feature idea
 
-### Future considerations !!!
-- Another feature idea
+### Future considerations
+
+- **Adding audio to enhance UX**
+    - The website should be enhanced with audio effects in the future as this would improve the overall user experience and engage the user more in the game.
+    - Appropriate sound effects should be used when clicking on the cards, matching pairs and losing or winning the game. 
+    - The sound will be turned on by default, but the user should be presented with an option to toggle it on/off as to his own preference. 
+- **Add scoring system**
+    - By implementing a scoring system, the user will be more engaged in the game as he tries to improve his personal score. 
+    - Both - time and card flips - will be taken into consideration for the score. Matching cards at an earlier stage will score higher points. Furthermore points for the remaining time will be added, as points for the card flips subtracted.
+    - The user will further be presented with his personal highscore which will display on the game dashboard and update automatically should he improve himself. 
+- **Provide additional information about star constellations**
+    - While the player is matching the cards he might ask himself which star constellations he's currently looking at. 
+    - The user should have the ability to get more details about each of the star constellation through an magnifying icon in the action items section. Once clicked, it will open a modal that contains the image of each star constellation used, it's name and additional fun facts like e.g. it's overall size. 
+    - This will round up the experience for the user and prevent him to leave the website to do some research himself. 
+
 
 ## Technologies Used
 
