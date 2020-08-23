@@ -138,9 +138,13 @@ For the last seconds on each round, I've selected rgb(255, 122, 122). It's a sof
 
 The background image plays a central role as it sets the overall atmosphere of the page. Therefore, several crops of the same image have been made to ensure high quality and good positioning across all devices.
 
-The cards have vectors of star constellations as their front face while their back have a vector of a simple telescope. All selections have been made to fit the topic of Cosmic Match. 
+The cards have vectors of star constellations as their front face while their back has a vector of a simple telescope. All selections have been made to fit the topic of Cosmic Match. 
 
-#### Typography !!!
+#### Typography
+
+The font **Orbitron** is a geometric sans-serif typeface that has a "spacey" touch to it. It was used for the website's name "Cosmic Match" to give it a brand-like look, which fits the overall topic perfectly. 
+
+The font **Montserrat** was one of the popular pairings with Orbitron suggested by Google fonts. I chose to use this font as it's a very clean font, which gives additional effect to Orbitron. It has been used for all the other text on the website.  
 
 #### Icons !!!
 
