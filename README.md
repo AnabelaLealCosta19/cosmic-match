@@ -249,7 +249,11 @@ While writing code, two further modals were added as they would provide an impro
 
 ![Main page](assets/images/readme/main-page.PNG)
 
-
+- **Game details**
+    - **Timer:** The timer displays the time the user has left to complete the game. It is automatically updated depending on the selected difficulty level and is displayed in minutes and seconds. Additionally, it changes the font colour to a soft red when less than 10 seconds are left, to signalize to the user that the time is running up. 
+    - **Flips Counter:** The flips counter counts increases each time the user flips a card and not upon clicking a card. This ensures that cards clicked twice in the same turn are only counted once. 
+    - **Difficulty:** It displays the difficulty selected and updates should it be changed.
+    
 ### Future considerations
 
 - **Adding audio to enhance UX**
