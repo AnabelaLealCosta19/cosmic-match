@@ -193,13 +193,18 @@ All buttons of the modals, bring the user back to the main page with the memory 
 
 ### Wireframes !!!
 
-These wireframes were created using [Balsamiq](https://balsamiq.com/?gclid=CjwKCAjwh472BRAGEiwAvHVfGsly1Nt9bDZCFUTGCc9I8OfaLtSIcxLhm_WX8911ERsm__luBJslTBoCqgQQAvD_BwE) during the design and planning process for this project. They have not been amended since the repository has been created and, therefore, display small differences when compared to the live website.
+The following wireframes were created using [Balsamiq](https://balsamiq.com/?gclid=CjwKCAjwh472BRAGEiwAvHVfGsly1Nt9bDZCFUTGCc9I8OfaLtSIcxLhm_WX8911ERsm__luBJslTBoCqgQQAvD_BwE) during the design and planning process for this project. They have not been amended since the repository has been created and, therefore, display small differences when compared to the live website.
 
-* [Start page](assets/wireframes/start-page.pdf)
+* [First start page](assets/wireframes/first-start-page.pdf)
 * [Memory game](assets/wireframes/memory-game.pdf)
 * [Modal - Instructions](assets/wireframes/instructions.pdf)
 * [Modal - Game won](assets/wireframes/game-won.pdf)
 * [Modal - Game over](assets/wireframes/game-over.pdf)
+
+While writing code, two further modals were added as they would provide an improved user experience. Their wireframes have been created at a later moment. 
+
+* [Repeat start page](assets/wireframes/repeat-start-page.pdf)
+* [Modal - Settings](assets/wireframes/settings.pdf)
 
 ## Features
 
