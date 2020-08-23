@@ -242,10 +242,10 @@ While writing code, two further modals were added as they would provide an impro
 ![Repeat start page](assets/images/readme/repeat-start-page.PNG)
 
 - **Main page**
-    - The main page consists of 5 sections: Cosmic match title, player name, game details, action items and the game board with the cards.
-    - The player name updates accordingly to the player's input to engage additionally in the game. 
+    - The main page consists of 5 sections: Cosmic match title, player name, game details, action items, and the game board with the cards.
+    - The player name updates according to the player's input to engage additionally in the game. 
     - The game details section displays the time the user has left, the flips made and the difficulty selected. It updates automatically to always inform the user of the current state of his game. 
-    - The action items are displayed neatly as icons and allow the user to perform additional actions: pause/resume game, restart game, open instructions and change settings. For all icons the cursor has been added as pointer to indicate their clickability.   
+    - The action items are displayed neatly as icons and allow the user to perform additional actions: pause/resume game, restart game, open instructions, and change settings. For all icons, the cursor has been added as a pointer to indicate their clickability.   
 
 ![Main page](assets/images/readme/main-page.PNG)
 
@@ -253,7 +253,7 @@ While writing code, two further modals were added as they would provide an impro
     - **Timer:** The timer displays the time the user has left to complete the game. It is automatically updated depending on the selected difficulty level and is displayed in minutes and seconds. Additionally, it changes the font colour to a soft red when less than 10 seconds are left, to signalize to the user that the time is running up. 
     - **Flips Counter:** The flips counter counts increases each time the user flips a card and not upon clicking a card. This ensures that cards clicked twice in the same turn are only counted once. 
     - **Difficulty:** It displays the difficulty selected and updates should it be changed.
-    
+
 ### Future considerations
 
 - **Adding audio to enhance UX**
