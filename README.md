@@ -135,7 +135,11 @@ I've selected a dark blue (rgb(10, 22, 30)) for the background of the cards and 
 
 For the last seconds on each round, I've selected rgb(255, 122, 122). It's a soft shade of red that clearly signalizes that the time runs up and fits with the colours of the background image. It, nevertheless, is contrasting to the background and gets the users' attention with ease. 
 
-#### Images !!!
+#### Images
+
+The background image plays a central role as it sets the overall atmosphere of the page. Therefore, several crops of the same image have been made to ensure high quality and good positioning across all devices.
+
+The cards have vectors of star constellations as their front face while their back have a vector of a simple telescope. All selections have been made to fit the topic of Cosmic Match. 
 
 #### Audio !!!
 
