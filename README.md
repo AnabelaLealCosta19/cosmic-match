@@ -267,6 +267,10 @@ While writing code, two further modals were added as they would provide an impro
         - If the game was paused previously and the user had the option to resume the game, this is replaced by the pause icon and it's functionality.
         - All cards are flipped back and shuffled. Please note that a time out function has been used to ensure that the cards are only shuffled when all cards are fully flipped back. Furthermore, the cards cannot be clicked until those steps are completed to prevent any issues. 
 
+- **Instructions**
+    - The question mark icon allows the user to open the game instructions any time during the game. The user can then read through the rules and objective of the game, which should enable him to be successfull. 
+    - While the instructions modal is displaying, the timer is paused. Upon clicking it's button, the time resumes where it has left off. 
+
 ### Future considerations
 
 - **Adding audio to enhance UX**
