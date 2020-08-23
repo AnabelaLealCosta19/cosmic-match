@@ -47,7 +47,6 @@ $(document).ready(function(){  // Load page correctly (first-time visitor vs. fa
         showModal("#repeatStartPage");
         UpdatePlayerName();
         UpdateDifficulty();
-        flipsCounted = 0;
     }
 });
 
@@ -111,6 +110,7 @@ $('.btn-play-again').on("click", function() {  // When clicking new game button 
     shuffle();
     checkDifficultySelection();
     startTimer();
+    flipsCounted = 0;
     if (this.id == "repeatPlayNow") {
         checkForChangedPlayerName("#otherPlayer");
     } else if (this.id == "settingsPlayNow") {
