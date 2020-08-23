@@ -103,7 +103,7 @@ Developer goals:
     - I want to have appropriate feedback when losing or winning the game 
     - I want to be able to play again if I want
 
-- **User 1** ... saw a friend play Cosmic Match and wants to give it a try himself
+- **User 3** ... saw a friend play Cosmic Match and wants to give it a try himself
     - I want to be able to easily change the name to my own
     - I want to be able to choose a difficulty that seems adequate for my first try
     - I want to be able to review instructions on how to play the game
@@ -191,7 +191,7 @@ If the user finds all matching pairs, the Congratulations modal will display.
 
 All buttons of the modals, bring the user back to the main page with the memory game. 
 
-### Wireframes !!!
+### Wireframes
 
 The following wireframes were created using [Balsamiq](https://balsamiq.com/?gclid=CjwKCAjwh472BRAGEiwAvHVfGsly1Nt9bDZCFUTGCc9I8OfaLtSIcxLhm_WX8911ERsm__luBJslTBoCqgQQAvD_BwE) during the design and planning process for this project. They have not been amended since the repository has been created and, therefore, display small differences when compared to the live website.
 
