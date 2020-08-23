@@ -20,7 +20,6 @@ Cosmic Match - Live website
         - [Layout](#layout)
         - [Colour scheme](#colour-scheme)
         - [Images](#images)
-        - [Audio](#audio)
         - [Typography](#typography) 
         - [Icons](#icons)
     - [Accessibility](#accessibility)
@@ -140,8 +139,6 @@ For the last seconds on each round, I've selected rgb(255, 122, 122). It's a sof
 The background image plays a central role as it sets the overall atmosphere of the page. Therefore, several crops of the same image have been made to ensure high quality and good positioning across all devices.
 
 The cards have vectors of star constellations as their front face while their back have a vector of a simple telescope. All selections have been made to fit the topic of Cosmic Match. 
-
-#### Audio !!!
 
 #### Typography !!!
 
