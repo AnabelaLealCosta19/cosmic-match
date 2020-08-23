@@ -133,9 +133,7 @@ All the text elements as well as icons are white to provide clear contrast and e
 
 I've selected a dark blue (rgb(10, 22, 30)) for the background of the cards and modals as it fits with the overall background image while still contrasting well. Furthermore, white borders have been used for the cards by default to provide crisp and clear separation. The off-white rgb(248, 249, 250) as border and border shadow has additionally been used to distinguish selected cards from others. The same effect has been used for the modals at it highlights the modal from the faded out background and looks overall visually appealing. This has also been used when hovering over the buttons in the modals to provide the user with immediate feedback that this button is clickable. 
 
-
 For the last seconds on each round, I've selected rgb(255, 122, 122). It's a soft shade of red that clearly signalizes that the time runs up and fits with the colours of the background image. It, nevertheless, is contrasting to the background and gets the users' attention with ease. 
-
 
 #### Images !!!
 
@@ -147,7 +145,35 @@ For the last seconds on each round, I've selected rgb(255, 122, 122). It's a sof
 
 ### Accessibility !!!
 
-### Navigation !!!
+### Navigation
+
+The navigation between the game itself and different modals is mainly controlled by the developer. 
+
+There are two modals, that will show on page load. When the user accesses the website, the JavaScript code checks if he's a first-time user by checking if a player's name has been saved in a previous session. 
+
+If any data can be found, the modal "Repeat start page" is displaying. 
+
+![Repeat start page](assets/images/readme/repeat-start-page.PNG) 
+
+Should no data be found, the modal "First start page" will show instead. 
+
+![First start page](assets/images/readme/first-start-page.PNG) 
+
+Once the user sees the main page with the game, he can access the instructions and settings modal through the respective icons. Please see below: 
+
+![Navigation from the main page](assets/images/readme/navigation.png)
+
+Two further modals are triggered by the JavaScript code: Game over and Congratulations. 
+
+Should the time run out before the user finds all matching pairs, the Game over modal will show.
+
+![Game over](assets/images/readme/*)
+
+If the user finds all matching pairs, the Congratulations modal will display. 
+
+![Congratulations](assets/images/readme/*)
+
+All buttons of the modals, bring the user back to the main page with the memory game. 
 
 ### Wireframes !!!
 
