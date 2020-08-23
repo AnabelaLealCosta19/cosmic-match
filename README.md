@@ -257,7 +257,15 @@ While writing code, two further modals were added as they would provide an impro
 - **Pause/resume**
     - When clicking on the pause icon, the timer is paused and the event listener is removed from the cards to prevent the user from playing. 
     - Additionally, the pause icon is hidden and the resume icon is displayed instead, to provide the user with the option to continue the game. 
-    - When the resume icon is clicked, the timer continues where left off and the cards can be clicked again. At the same time, this icon is exchanged with the original pause icon to bring it to full circle. 
+    - When the resume icon is clicked, the timer continues where left off and the cards can be clicked again. At the same time, this icon is exchanged with the original pause icon to bring this functionality to full circle. 
+
+- **Restart**
+    - The restart functionality allows the user to restart the current game.
+    - Functionality executed once clicked:
+        - Flips counter is reset
+        - Time is set back to original time-limit (depending on difficulty) and if applied, the red styling for the last seconds is removed. 
+        - If the game was paused previously and the user had the option to resume the game, this is replaced by the pause icon and it's functionality.
+        - All cards are flipped back and shuffled. Please note that a time out function has been used to ensure that the cards are only shuffled when all cards are fully flipped back. Furthermore, the cards cannot be clicked until those steps are completed to prevent any issues. 
 
 ### Future considerations
 
