@@ -148,7 +148,7 @@ The font **Montserrat** was one of the popular pairings with Orbitron suggested 
 
 #### Icons 
 
-Icons were used for the action items on the website: pause/play, restart, instructions, and settings. Their meaning is obvious as commonly used on websites/applications, which allows the user to immediately understand his options without needing to read through any text. Especially since the user is playing a game, this allows him to act quickly without being too distracted. 
+Icons were used for the action items on the website: pause/resume, restart, instructions, and settings. Their meaning is obvious as commonly used on websites/applications, which allows the user to immediately understand his options without needing to read through any text. Especially since the user is playing a game, this allows him to act quickly without being too distracted. 
 
 Additionally, icons were used for the game details (time, flips, and difficulty level) on mobile devices to give additional space and make the website less busy for the user. 
 
@@ -159,7 +159,7 @@ Last but not least, a trophy icon was used in the congratulations modal to provi
 The accessibility of websites is an important factor when planning and creating a project. To ensure accessibility, the following points have been implemented:
 
 * **Images:** To ensure that any images provided give additional context to the user, the alt attribute has always been included with a short image description. 
-* **Icons:** As icons were not used for decorative purposes but to provide the user with additional information (time, flips and difficulty level on mobile devices) or functionality (pause/play, restart, open instructions, and change settings), additional information is provided to screen readers only. 
+* **Icons:** As icons were not used for decorative purposes but to provide the user with additional information (time, flips and difficulty level on mobile devices) or functionality (pause/resume, restart, open instructions, and change settings), additional information is provided to screen readers only. 
 
 ### Navigation
 
@@ -241,6 +241,13 @@ While writing code, two further modals were added as they would provide an impro
 
 ![Repeat start page](assets/images/readme/repeat-start-page.PNG)
 
+- **Main page**
+    - The main page consists of 5 sections: Cosmic match title, player name, game details, action items and the game board with the cards.
+    - The player name updates accordingly to the player's input to engage additionally in the game. 
+    - The game details section displays the time the user has left, the flips made and the difficulty selected. It updates automatically to always inform the user of the current state of his game. 
+    - The action items are displayed neatly as icons and allow the user to perform additional actions: pause/resume game, restart game, open instructions and change settings. For all icons the cursor has been added as pointer to indicate their clickability.   
+
+![Main page](assets/images/readme/main-page.PNG)
 
 
 ### Future considerations
