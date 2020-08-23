@@ -146,7 +146,13 @@ The font **Orbitron** is a geometric sans-serif typeface that has a "spacey" tou
 
 The font **Montserrat** was one of the popular pairings with Orbitron suggested by Google fonts. I chose to use this font as it's a very clean font, which gives additional effect to Orbitron. It has been used for all the other text on the website.  
 
-#### Icons !!!
+#### Icons 
+
+Icons were used for the action items on the website: pause/play, restart, instructions, and settings. Their meaning is obvious as commonly used on websites/applications, which allows the user to immediately understand his options without needing to read through any text. Especially since the user is playing a game, this allows him to act quickly without being too distracted. 
+
+Additionally, icons were used for the game details (time, flips, and difficulty level) on mobile devices to give additional space and make the website less busy for the user. 
+
+Last but not least, a trophy icon was used in the congratulations modal to provide the user with a feeling of achievement. 
 
 ### Accessibility !!!
 
