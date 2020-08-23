@@ -154,7 +154,12 @@ Additionally, icons were used for the game details (time, flips, and difficulty 
 
 Last but not least, a trophy icon was used in the congratulations modal to provide the user with a feeling of achievement. 
 
-### Accessibility !!!
+### Accessibility
+
+The accessibility of websites is an important factor when planning and creating a project. To ensure accessibility, the following points have been implemented:
+
+* **Images:** To ensure that any images provided give additional context to the user, the alt attribute has always been included with a short image description. 
+* **Icons:** As icons were not used for decorative purposes but to provide the user with additional information (time, flips and difficulty level on mobile devices) or functionality (pause/play, restart, open instructions, and change settings), additional information is provided to screen readers only. 
 
 ### Navigation
 
