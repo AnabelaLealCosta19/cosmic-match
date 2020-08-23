@@ -254,6 +254,11 @@ While writing code, two further modals were added as they would provide an impro
     - **Flips Counter:** The flips counter counts increases each time the user flips a card and not upon clicking a card. This ensures that cards clicked twice in the same turn are only counted once. 
     - **Difficulty:** It displays the difficulty selected and updates should it be changed.
 
+- **Pause/resume**
+    - When clicking on the pause icon, the timer is paused and the event listener is removed from the cards to prevent the user from playing. 
+    - Additionally, the pause icon is hidden and the resume icon is displayed instead, to provide the user with the option to continue the game. 
+    - When the resume icon is clicked, the timer continues where left off and the cards can be clicked again. At the same time, this icon is exchanged with the original pause icon to bring it to full circle. 
+
 ### Future considerations
 
 - **Adding audio to enhance UX**
