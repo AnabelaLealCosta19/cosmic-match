@@ -213,7 +213,7 @@ While writing code, two further modals were added as they would provide an impro
 - **Functionality executed on page load**
     - When the user loads the page, the code checks if there's a player name stored from a previous session. 
         * No player name is found: first start page modal is displayed and the default difficulty level easy is set.
-        * Previous player details are found: display repeat start modal, update the player name in modal and difficulty button selected in modal, update player name and difficulty in main page. 
+        * Previous player details are found: display repeat start page modal, update the player name and difficulty button selected in modal, update player name and difficulty in main page. 
 
 - **First start page modal**
     - When arriving at the page for the first time, this modal pops up to collect the players' name and gives him the option to select the desired difficulty level. Please note that the difficulty easy is selected by default. 
@@ -229,9 +229,9 @@ While writing code, two further modals were added as they would provide an impro
 ![First start page](assets/images/readme/first-start-page.PNG) 
 
 - **Repeat start page modal**
-    - For any subsequent times that the user visits this website, this modal pops up. It has text that indicates that Cosmic Match is aware that it has already been played by the user. Additionally, the modal displays the players' name and difficulty preference from last session. 
+    - For any subsequent times that the user visits this website, this modal pops up. It has text that indicates that Cosmic Match is aware that it has already been played by the user. Additionally, the modal displays the players' name and difficulty preference from their last session. 
     - The user has the option to change the difficulty. The active/clicked button has distinct styling, which changes if another difficulty is selected.
-    - The user can also change the player name by clicking on the link *"You're not [player name]?"*. Upon clicking, a field for the name input opens, which allows the user to update his current player name. Updating the name is optional and limited to 10 characters. Please note that the player name will only be updated if this fields isn't empty. 
+    - The user can also change the player name by clicking on the link *"You're not [player name]?"*. Upon clicking, a field for the name input opens, which allows the user to update his current player name. Updating the name is optional and limited to 10 characters. Please note that the player name will only be updated if this field isn't empty. 
     - The modal has been programmed to only close when clicking on the "Play now" button - not when clicking outside the modal or pressing enter after typing in the name. This is to ensure that the needed functionality to set up the game is executed. 
     - The play now button changes his styling on hover to indicate that it's clickable to the user. 
     - Functionality executed upon pressing "Play now": 
@@ -251,7 +251,7 @@ While writing code, two further modals were added as they would provide an impro
 
 - **Game details**
     - **Timer:** The timer displays the time the user has left to complete the game. It is automatically updated depending on the selected difficulty level and is displayed in minutes and seconds. Additionally, it changes the font colour to a soft red when less than 10 seconds are left, to signalize to the user that the time is running up. 
-    - **Flips Counter:** The flips counter counts increases each time the user flips a card and not upon clicking a card. This ensures that cards clicked twice in the same turn are only counted once. 
+    - **Flips Counter:** The flips counter increases each time the user flips a card and not upon clicking a card. This ensures that cards clicked twice in the same turn are only counted once. 
     - **Difficulty:** It displays the difficulty selected and updates should it be changed.
 
 - **Pause/resume**
