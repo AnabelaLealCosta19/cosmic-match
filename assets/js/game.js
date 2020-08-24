@@ -204,6 +204,7 @@ function startTimer() {  // Set time limit according to difficulty
 
 function countDownTime(time) {  // Count down time limit
     displayTime(time);
+    clearInterval(timer);
     timer = setInterval(function() {
         time--;
         displayTime(time);
