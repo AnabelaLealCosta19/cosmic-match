@@ -13,7 +13,7 @@ let difficulty = localStorage.getItem("difficulty");
 
 let difficultyButtons = Array.from($(".btn-difficulty"));
 
-let allCards = Array.from($(".card")); 
+let allCards = Array.from($(".card"));
 let activeCards, matchedCards;
 let selectedChildren;
 
@@ -39,8 +39,8 @@ let resumeContainer = Array.from($(".resume-icon-container"));
 
 
 // Display modals
-$(document).ready(function(){  // Load page correctly (first-time visitor vs. familiar player)
-    if (player == null || player == ""){
+$(document).ready(function () { // Load page correctly (first-time visitor vs. familiar player)
+    if (player == null || player == "") {
         showModal("#firstStartPage");
         activateDifficultyMode("easy");
     } else {
@@ -50,34 +50,34 @@ $(document).ready(function(){  // Load page correctly (first-time visitor vs. fa
     }
 });
 
-function showModal(modalId) {  // Display modals correctly
+function showModal(modalId) { // Display modals correctly
     $(modalId).modal({
-            show: true,
-            backdrop: 'static',
-            keyboard: false
-        });
+        show: true,
+        backdrop: 'static',
+        keyboard: false
+    });
 };
 
-function showInstructionsModal() {  // Open instructions modal + pause timer
+function showInstructionsModal() { // Open instructions modal + pause timer
     showModal("#instructions");
     clearInterval(timer);
 };
 
-function showSettingsModal() {  // Open settings modal + pause timer
+function showSettingsModal() { // Open settings modal + pause timer
     showModal("#settings");
     $("#settingsPlayer").attr("value", player)
     clearInterval(timer);
 };
 
-$("form").keypress(function(e) {  // Prevent enter key from closing modal
-  if (e.which == 13) {  // * Disable enter key | source: 'Paulund' (URL: https://paulund.co.uk/how-to-disable-enter-key-on-forms) 
-    return false;
-  }
+$("form").keypress(function (e) { // Prevent enter key from closing modal
+    if (e.which == 13) { // * Disable enter key | source: 'Paulund' (URL: https://paulund.co.uk/how-to-disable-enter-key-on-forms) 
+        return false;
+    }
 });
 
 
 // Align cards
-allCards.forEach(allCards => {  // Align card-front and card-back on top of each other
+allCards.forEach(allCards => { // Align card-front and card-back on top of each other
     allCards.classList.add("card-alignment-parent");
     let children = Array.from(allCards.children);
     children.forEach(children => children.classList.add("card-alignment-child"));
@@ -85,66 +85,66 @@ allCards.forEach(allCards => {  // Align card-front and card-back on top of each
 
 
 // Shuffle Cards
- function shuffle (){ // * Shuffle Cards | source: 'Memory Card Game - JavaScript Tutorial - freecodecamp' (URL: https://www.youtube.com/watch?v=ZniVgo8U7ek&t=298s)
+function shuffle() { // * Shuffle Cards | source: 'Memory Card Game - JavaScript Tutorial - freecodecamp' (URL: https://www.youtube.com/watch?v=ZniVgo8U7ek&t=298s)
     allCards.forEach(allCards => {
-        let randomNumber = Math.round(Math.random()*12);
+        let randomNumber = Math.round(Math.random() * 12);
         allCards.style.order = randomNumber;
-     })
+    })
 };
 
 
 // Special buttons
-$('#firstPlayNow').on("click", function() {  // When clicking play now button (modal: first start page [first-time visitor])
+$('#firstPlayNow').on("click", function () { // When clicking play now button (modal: first start page [first-time visitor])
     shuffle();
     firstPlayerName();
     checkDifficultySelection();
     startTimer();
 });
 
-$('#repeatPlayNow').on("click", function() {  // When clicking play now button (modal: repeat start page [familiar player])
+$('#repeatPlayNow').on("click", function () { // When clicking play now button (modal: repeat start page [familiar player])
     shuffle();
     checkDifficultySelection();
     startTimer();
     checkForChangedPlayerName("#otherPlayer");
 });
 
-$('.btn-play-again').on("click", function() {  // When clicking play again button (modals: game over and congratulations) or confirm changes button (modal: settings)
+$('.btn-play-again').on("click", function () { // When clicking play again button (modals: game over and congratulations) or confirm changes button (modal: settings)
     checkDifficultySelection();
-    $(".time-detail").removeClass("last-seconds");  // - Reset timer
+    $(".time-detail").removeClass("last-seconds"); // - Reset timer
     startTimer();
-    flipsCounted = 0;  // - Flips couter
+    flipsCounted = 0; // - Flips couter
     $(".flips-counted").text(flipsCounted);
     turnCardsBack();
-    shuffle();  // - Resets & shuffles cards
+    shuffle(); // - Resets & shuffles cards
     allCards.forEach(allCards => allCards.classList.remove("matched"));
-    if (this.id == "settingsPlayNow") {  // - When clicking confirm changes button (modal: settings) code checks for new player name
+    if (this.id == "settingsPlayNow") { // - When clicking confirm changes button (modal: settings) code checks for new player name
         checkForChangedPlayerName("#settingsPlayer");
     };
 });
- 
-$('#instructions-dismiss-btn').on("click", function() {  // When clicking let's find out button (modal: instructions)
+
+$('#instructions-dismiss-btn').on("click", function () { // When clicking let's find out button (modal: instructions)
     continueTime();
     resetResumeButton();
 });
 
-$('#cancel').on("click", function() {  // When clicking cancel button (modal: settings)
+$('#cancel').on("click", function () { // When clicking cancel button (modal: settings)
     continueTime();
     resetResumeButton();
 });
 
 
 // Handle player name
-function firstPlayerName() {  // Set player name for first-time visitor
+function firstPlayerName() { // Set player name for first-time visitor
     player = $('#player').val();
     localStorage.setItem("player", player);
     $('.player').text(player);
 };
 
-function UpdatePlayerName() {  // Update saved player name [familiar player] on page load
-    $('.player').text(player);    
+function UpdatePlayerName() { // Update saved player name [familiar player] on page load
+    $('.player').text(player);
 };
 
-function checkForChangedPlayerName(newPlayer) {  // Check if player changed name and update player name accordingly (modals: repeat start page, settings)
+function checkForChangedPlayerName(newPlayer) { // Check if player changed name and update player name accordingly (modals: repeat start page, settings)
     if (!(($(newPlayer).val()) == null || ($(newPlayer).val()) == "")) {
         player = $(newPlayer).val();
         localStorage.setItem("player", player);
@@ -154,28 +154,28 @@ function checkForChangedPlayerName(newPlayer) {  // Check if player changed name
 
 
 // Handle difficulty
-function selectDifficulty() {  // Display clicked button as "focused"
+function selectDifficulty() { // Display clicked button as "focused"
     $(".btn-difficulty").removeClass("focus");
     $(this).addClass("focus");
 };
 
-function UpdateDifficulty() {  // Update difficulty and "focus" correct button (page load: familiar player)
-    $('.difficulty').text(difficulty);  
+function UpdateDifficulty() { // Update difficulty and "focus" correct button (page load: familiar player)
+    $('.difficulty').text(difficulty);
     if (difficulty == "easy") {
         updateButton("easy");
-    }  else if (difficulty == "normal") {
+    } else if (difficulty == "normal") {
         updateButton("normal");
     } else {
         updateButton("hard");
     };
 };
 
-function updateButton(providedDifficulty) {  // Display button as "focused" (nested in function above)
+function updateButton(providedDifficulty) { // Display button as "focused" (nested in function above)
     $(".btn-difficulty").removeClass("focus");
-    $(".btn-"+providedDifficulty).addClass("focus");
+    $(".btn-" + providedDifficulty).addClass("focus");
 };
 
-function checkDifficultySelection() {  // Check which difficulty has been selected
+function checkDifficultySelection() { // Check which difficulty has been selected
     if ($(".focus").hasClass("btn-easy")) {
         activateDifficultyMode("easy");
     } else if ($(".focus").hasClass("btn-normal")) {
@@ -185,18 +185,18 @@ function checkDifficultySelection() {  // Check which difficulty has been select
     }
 };
 
-function activateDifficultyMode(providedDifficulty) {  // Adapt game to difficulty
+function activateDifficultyMode(providedDifficulty) { // Adapt game to difficulty
     difficulty = providedDifficulty; // - Store difficulty
     localStorage.setItem("difficulty", difficulty);
     $('.difficulty').text(difficulty);
     $(".card").addClass("d-none"); // - Change cards
-    $("."+providedDifficulty).removeClass("d-none");
-    activeCards = Array.from($("."+providedDifficulty));
+    $("." + providedDifficulty).removeClass("d-none");
+    activeCards = Array.from($("." + providedDifficulty));
 };
 
 
 // Handle Timer
-function startTimer() {  // Set time limit according to difficulty
+function startTimer() { // Set time limit according to difficulty
     if (difficulty == "easy") {
         countDownTime(75);
     } else if (difficulty == "normal") {
@@ -206,29 +206,29 @@ function startTimer() {  // Set time limit according to difficulty
     };
 };
 
-function countDownTime(time) {  // Count down time limit
+function countDownTime(time) { // Count down time limit
     displayTime(time);
     clearInterval(timer);
-    timer = setInterval(function() {
+    timer = setInterval(function () {
         time--;
         displayTime(time);
-        pausedTime = time;  // ~ Store time in variable to be accessed by pause function later
-        if (minutes == 0 && seconds == 0) {  // - Display game over modal when time runs up
+        pausedTime = time; // ~ Store time in variable to be accessed by pause function later
+        if (minutes == 0 && seconds == 0) { // - Display game over modal when time runs up
             clearInterval(timer);
             showModal("#gameOver");
             UpdateDifficulty();
         };
-    }, 1000); 
+    }, 1000);
 };
 
-function displayTime(time){  // Display time correctly in minutes and seconds
+function displayTime(time) { // Display time correctly in minutes and seconds
     minutes = Math.floor(time / 60);
     seconds = Math.floor(time % 60);
-    if (seconds > 9){
+    if (seconds > 9) {
         $(".time").text(`${minutes}:${seconds}`);
     } else {
         $(".time").text(`${minutes}:0${seconds}`);
-    };  
+    };
     if (minutes == 0 && seconds < 10) {
         $(".time-detail").addClass("last-seconds");
     };
@@ -236,25 +236,25 @@ function displayTime(time){  // Display time correctly in minutes and seconds
 
 
 // Flip counter
-function countFlips() {  // Counts how often cards were flipped
+function countFlips() { // Counts how often cards were flipped
     flipsCounted++;
     $(".flips-counted").text(flipsCounted);
 };
 
 
 // Check and match cards
-function checkCard() {  // Check if card is first, same  or second card 
+function checkCard() { // Check if card is first, same  or second card 
     selectedChildren = Array.from(this.children);
-     if (!hasFlippedCard){  // * Define if card is first card or second card | source: 'Memory Card Game - JavaScript Tutorial - freecodecamp' (URL: https://www.youtube.com/watch?v=ZniVgo8U7ek&t=298s) 
-        hasFlippedCard = true;  // - Click on first card
+    if (!hasFlippedCard) { // * Define if card is first card or second card | source: 'Memory Card Game - JavaScript Tutorial - freecodecamp' (URL: https://www.youtube.com/watch?v=ZniVgo8U7ek&t=298s) 
+        hasFlippedCard = true; // - Click on first card
         firstCard = this;
         firstCardType = defineCardType(firstCard);
         this.classList.add("flip");
         markChildrenAsSelected();
         countFlips();
-    } else if (hasFlippedCard && this.id == firstCard.id){  // - Click on same card again
+    } else if (hasFlippedCard && this.id == firstCard.id) { // - Click on same card again
         hasFlippedCard = true;
-    } else {  // - Click on second card 
+    } else { // - Click on second card 
         hasFlippedCard = false;
         secondCard = this;
         secondCardType = defineCardType(secondCard);
@@ -263,9 +263,9 @@ function checkCard() {  // Check if card is first, same  or second card
         countFlips();
     };
 
-    if (firstCardType !== undefined && secondCardType !== undefined) {  // Check if cards match
+    if (firstCardType !== undefined && secondCardType !== undefined) { // Check if cards match
         if (firstCardType == secondCardType) {
-            allCards.forEach(allCards => allCards.removeEventListener('click', checkCard));  // - Remove event listener for clicking on further cards while setTimeOut function is executing
+            allCards.forEach(allCards => allCards.removeEventListener('click', checkCard)); // - Remove event listener for clicking on further cards while setTimeOut function is executing
             setTimeout(cardsMatch, 1000);
         } else {
             allCards.forEach(allCards => allCards.removeEventListener('click', checkCard));
@@ -277,35 +277,35 @@ function checkCard() {  // Check if card is first, same  or second card
 
 // Supporting functions for checking and matching cards
 function defineCardType(cardType) { // Define card type
-    return cardType.id.substr(0, cardType.id.length -1);  // * Remove last character from id | source: stackoverflow' (URL: https://stackoverflow.com/questions/1794822/remove-last-character-in-id-attribute)
+    return cardType.id.substr(0, cardType.id.length - 1); // * Remove last character from id | source: stackoverflow' (URL: https://stackoverflow.com/questions/1794822/remove-last-character-in-id-attribute)
 }
 
-function markChildrenAsSelected() {  // Mark children as selected
+function markChildrenAsSelected() { // Mark children as selected
     selectedChildren.forEach(selectedChildren => selectedChildren.classList.add("selected"));
 };
 
-function cardsMatch() {  // Cards match
-    firstCard.classList.add("matched");  // - Mark cards as matched
+function cardsMatch() { // Cards match
+    firstCard.classList.add("matched"); // - Mark cards as matched
     secondCard.classList.add("matched");
-    let matchedChildren = Array.from(firstCard.children).concat(Array.from(secondCard.children));  // - Remove highlighted border
+    let matchedChildren = Array.from(firstCard.children).concat(Array.from(secondCard.children)); // - Remove highlighted border
     matchedChildren.forEach(matchedChildren => matchedChildren.classList.remove("selected"));
-    firstCard = secondCard = firstCardType = secondCardType = undefined;  // - Reset all first and second card variables
-    allCards.forEach(allCards => allCards.addEventListener('click', checkCard));  // - Add event listener again
+    firstCard = secondCard = firstCardType = secondCardType = undefined; // - Reset all first and second card variables
+    allCards.forEach(allCards => allCards.addEventListener('click', checkCard)); // - Add event listener again
     allCardsMatch();
 };
 
-function noMatch() {  // Cards don't match
-    firstCard.classList.remove("flip");  // - Turn cards back over
+function noMatch() { // Cards don't match
+    firstCard.classList.remove("flip"); // - Turn cards back over
     secondCard.classList.remove("flip");
-    let matchedChildren = Array.from(firstCard.children).concat(Array.from(secondCard.children));  // - Remove highlighted border
+    let matchedChildren = Array.from(firstCard.children).concat(Array.from(secondCard.children)); // - Remove highlighted border
     matchedChildren.forEach(matchedChildren => matchedChildren.classList.remove("selected"));
-    firstCard = secondCard = firstCardType = secondCardType = undefined;  // - Reset all first and second card variables
-    allCards.forEach(allCards => allCards.addEventListener('click', checkCard));  // - Add event listener again
+    firstCard = secondCard = firstCardType = secondCardType = undefined; // - Reset all first and second card variables
+    allCards.forEach(allCards => allCards.addEventListener('click', checkCard)); // - Add event listener again
 };
 
-function allCardsMatch() {  // All pairs were matched
+function allCardsMatch() { // All pairs were matched
     matchedCards = Array.from($($(".matched")));
-    if (matchedCards.length == activeCards.length) {  // * Check if all elements in array have specific class | source: 'stack overflow' (URL: https://stackoverflow.com/questions/31962074/jquery-how-to-check-if-all-element-in-array-have-specific-class) 
+    if (matchedCards.length == activeCards.length) { // * Check if all elements in array have specific class | source: 'stack overflow' (URL: https://stackoverflow.com/questions/31962074/jquery-how-to-check-if-all-element-in-array-have-specific-class) 
         showModal("#congrats");
         UpdateDifficulty();
         clearInterval(timer);
@@ -315,18 +315,18 @@ function allCardsMatch() {  // All pairs were matched
 
 // Restart game
 function restartGame() {
-    resetResumeButton();  // - Reset resume button
-    flipsCounted = 0;  // - Reset flip counter
+    resetResumeButton(); // - Reset resume button
+    flipsCounted = 0; // - Reset flip counter
     $(".flips-counted").text(flipsCounted);
-    clearInterval(timer);    // - Reset time
+    clearInterval(timer); // - Reset time
     startTimer();
     $(".time-detail").removeClass("last-seconds");
-    turnCardsBack();  // - Turn cards back + shuffle them
-    allCards.forEach(allCards => allCards.removeEventListener('click', checkCard)); 
-    setTimeout(function(){ // ~ TimeOut set to allow cards to be flipped first before being shuffled (flipping takes ~ 1000ms)
+    turnCardsBack(); // - Turn cards back + shuffle them
+    allCards.forEach(allCards => allCards.removeEventListener('click', checkCard));
+    setTimeout(function () { // ~ TimeOut set to allow cards to be flipped first before being shuffled (flipping takes ~ 1000ms)
         shuffle();
         allCards.forEach(allCards => allCards.addEventListener('click', checkCard));
-    }, 1000); 
+    }, 1000);
     hasFlippedCard = false; // - Reset card variables
     firstCard = secondCard = firstCardType = secondCardType = undefined;
 };
@@ -334,7 +334,7 @@ function restartGame() {
 
 // Turn back all cards
 function turnCardsBack() {
-    allCards.forEach(allCards => { 
+    allCards.forEach(allCards => {
         allCards.classList.remove("flip");
         let children = Array.from(allCards.children);
         children.forEach(children => children.classList.remove("selected"));
@@ -343,16 +343,16 @@ function turnCardsBack() {
 
 
 // Pause + resume timer
-function pauseTime() {  // Pause timer
+function pauseTime() { // Pause timer
     clearInterval(timer);
     pauseContainer.forEach(pauseIcons => pauseIcons.classList.add("d-none"));
     resumeContainer.forEach(resumeIcons => resumeIcons.classList.remove("d-none"));
     allCards.forEach(allCards => allCards.removeEventListener('click', checkCard));
 };
 
-function continueTime() {  // Resume timer
+function continueTime() { // Resume timer
     newTime = pausedTime;
-    pausedTime = 0;  // ~ Reset paused time variable to allow repeated use of pause function
+    pausedTime = 0; // ~ Reset paused time variable to allow repeated use of pause function
     countDownTime(newTime)
     allCards.forEach(allCards => allCards.addEventListener('click', checkCard));
 };
@@ -373,10 +373,10 @@ function resetResumeButton() {
 
 
 // Event listeners: on click
-allCards.forEach(allCards => allCards.addEventListener('click', checkCard));  // Click card >> cards are checked and matched
-difficultyButtons.forEach(difficultyButtons => difficultyButtons.addEventListener('click', selectDifficulty));  // Click difficulty button >> buttons are displayed as "focused" 
-restartIcons.forEach(restartIcons => restartIcons.addEventListener('click', restartGame));  // Click restart icon >> game restarts
-pauseIcons.forEach(pauseIcons => pauseIcons.addEventListener('click', pauseTime));  // Click pause icon >> timer pauses
-resumeIcons.forEach(resumeIcons => resumeIcons.addEventListener('click', resumeTime));  // Click resume icon >> timer resumes
-instructionIcons.forEach(instructionIcons => instructionIcons.addEventListener('click', showInstructionsModal));  // Click instructions icon >> instructions modal opens
-settingsIcons.forEach(settingsIcons => settingsIcons.addEventListener('click', showSettingsModal));  // Click settings icon >> settings modal opens
+allCards.forEach(allCards => allCards.addEventListener('click', checkCard)); // Click card >> cards are checked and matched
+difficultyButtons.forEach(difficultyButtons => difficultyButtons.addEventListener('click', selectDifficulty)); // Click difficulty button >> buttons are displayed as "focused" 
+restartIcons.forEach(restartIcons => restartIcons.addEventListener('click', restartGame)); // Click restart icon >> game restarts
+pauseIcons.forEach(pauseIcons => pauseIcons.addEventListener('click', pauseTime)); // Click pause icon >> timer pauses
+resumeIcons.forEach(resumeIcons => resumeIcons.addEventListener('click', resumeTime)); // Click resume icon >> timer resumes
+instructionIcons.forEach(instructionIcons => instructionIcons.addEventListener('click', showInstructionsModal)); // Click instructions icon >> instructions modal opens
+settingsIcons.forEach(settingsIcons => settingsIcons.addEventListener('click', showSettingsModal)); // Click settings icon >> settings modal opens
