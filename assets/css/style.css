@@ -1,16 +1,3 @@
-/*
-.container{
-    border: 5px solid green;
-}
-
-.row{
-    border: 5px solid blue;
-}
-
-.my-col{
-    border: 5px solid red;
-} */
-
 /* Body */
 
 body {
@@ -227,7 +214,7 @@ li div i {
 /* /.Cards */
 
 
-/* Modal start page: first */
+/* Modal general */
 
 .modal .modal-content {
     background-color: rgb(10, 22, 30); 
@@ -253,7 +240,7 @@ li div i {
     box-shadow: 0 0 5px #f8f9fa;
 }
 
-/* /.Modal start page: first */
+/* /.Modal general */
 
 
 /* Modal start page: repeat */
@@ -292,7 +279,7 @@ li div i {
 
 /* /.Modal settings */
 
-/* Modal congrats */
+/* Modal congrats/game over */
 
 #congratsTitle, #gameOverTitle {
     font-size: 2em;
@@ -302,7 +289,7 @@ p i.congrats-icon {
     font-size: 3em;
 }
 
-/* /.Modal congrats */
+/* /.Modal congrats/game over */
 
 /* Media queries */
 
