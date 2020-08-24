@@ -36,7 +36,13 @@ The player is presented with 12 cards turned on their back. When the player clic
     - [Languages](#languages)
     - [Libraries](#libraries)
     - [Tools](#tools)
-1. [Testing](#testing) 
+1. Testing
+    - [Code Validation](#code-validation)
+    - [Initial Testing](#initial-testing)
+    - [Responsiveness](#responsiveness)
+    - [Browsers](#browsers)
+    - [Functionality testing](#functionality-testing)
+    - [Other](#other)
 1. [Existing bugs](#existing-bugs)
 1. Deployment
     - [Deploy project](#deploy-project)
@@ -438,24 +444,50 @@ I have tested the responsiveness and functionality of the website on the followi
 
 The website could not be tested on safari as we don't have any apple devices ourselves. I tried to find a friend that uses apple's devices, but was unable to find someone as I only remembered this shortly before project submission. 
 
+### Functionality testing
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+Please note that the functionality of the features of this website has been tested throughout the development process. For this I used the website as a player and debugged with help of the Chrome developer tools if it wasn't behaving as expected.  
 
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
+Unfortunately, I was not able to summarize the functionality testing below as detailed as I'd like to, but I hope that this provides a sufficient overview over the main areas. 
 
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
+1. First start page modal
+    - Default selection under page open is a blank field for name entry and easy difficulty selected.
+    - Each of the difficulties highlights and changes when selected without fault.
+    - Characters are limited to ten for entering a user name.
 
-1. Contact form:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
+2. Repeat Start Page Modal
+    - Upon reopening the page there is no name entry field as my name is already listed and the last played difficulty is set to default.
+    - Each of the difficulties highlights and changes when selected without fault.
+    - Upon clicking "You're not [player name]?" a username entry field appears which is limited to ten characters.
+    - This modal only closes when selecting the "Play Now" button.
 
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+3. Main Page
+    - Player name updated according to my input.
+    - Time automatically starts.
+    - I cannot flip another card until the first pair has flipped back.
+    - Upon pausing the game, time stops and I cannot select another card to be flipped.
+    - Resuming continues the countdown and players can continue to flip cards.
+    - Flip counter tracks all flip whilst the game is in play, whilst paused no flips can be counted.
+    - Matching all cards shows the congratulations modal.
+    - Restart button resets time, flip counter, flips any matched cards face down and shuffles cards.
 
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
+4. Instructions modal
+    - Clicking the instructions modal automatically pauses the game whilst opening the modal.
+    - Instructions modal will not close unless choosing the "Let`s Find Out" button, when done the timer starts and the game continues.
 
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+5. Setting Modal
+    - When clicking on the cog icon, the settings modal is opened.
+    - In this modal I can change name and difficulty, the modal only closes up choosing the "Confirm Changes" or "Cancel".
+    - Selecting "Confirm Changes" changes the settings and name to my choosing and restarts the timer and flip count.
+    - Selecting "Cancel" closes the settings modal and resumes gameplay.
+
+6. Congratulations Modal
+    - Completing the game will display the congratulations modal which displays my name, asks if I wish to proceed with another round and allows me to choose a difficulty. 
+    - This modal only closes when clicking the "Play Again" button.
+
+7. Game Over Modal.
+    - Failing to complete the game will display the game over modal which displays my name, asks if I wish to proceed with another round and allows me to choose a difficulty. 
+    - This modal only closes when clicking the "Play Again" button.
 
 ### Other
 
