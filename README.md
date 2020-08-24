@@ -420,6 +420,10 @@ When initially creating the webiste, I've made sure to test the bootstrap grid b
 To do so, I have styled the containers, rows and columns with thick borders in different colours. I then tested the grid on different devices in the Developer Tools as well as by changing the width when in "responsive" mode. Like this, I could make sure that the grid behaves as expected and responsiveness is ensured.
 
 
+### Responsiveness
+
+The responsiveness has been tested throughout the project creation on my desktop, in the Developer Tools (all devices) as well as by changing the width when in "responsive" mode. I furthermore tested my website on my Samsung Galaxy S10 phone and my partner's Huawei P20 Pro without noticing any issues.
+
 
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
