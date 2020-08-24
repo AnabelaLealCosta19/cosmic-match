@@ -6,7 +6,7 @@ That's when **Cosmic Match** comes into play. It's a simple memory game that use
 
 The player is presented with 12 cards turned on their back. When the player clicks on the card, it's front is displayed, which should be memorized by the user to find the matching pairs. Each turn two cards are flipped and either matched or turned back for another try. Goal of the game is to match all cards before the time runs out. 
 
-Cosmic Match - Live website
+[Cosmic Match - Live website](https://anabelalealcosta19.github.io/cosmic-match/)
 
 
 ## Table of Content
