@@ -220,6 +220,7 @@ function displayTime(time){  // Display time correctly in minutes and seconds
     if (minutes == 0 && seconds == 0) {
         console.log("Game over!");
         showModal("#gameOver");
+        UpdateDifficulty();
     };
 };
 
