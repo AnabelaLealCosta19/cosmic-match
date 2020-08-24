@@ -304,6 +304,7 @@ function allCardsMatch() {
     if (matchedCards.length == activeCards.length) {  // * Check if all elements in array have specific class | source: 'stack overflow' (URL: https://stackoverflow.com/questions/31962074/jquery-how-to-check-if-all-element-in-array-have-specific-class) 
         console.log("Congrats!");
         showModal("#congrats");
+        UpdateDifficulty();
         clearInterval(timer);
     };
 };

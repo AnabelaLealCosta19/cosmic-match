@@ -274,10 +274,21 @@ li div i {
 
 .instructions-body p {
     text-align: center;
-};
+}
 
 /* /.Modal instructions */
 
+/* Modal congrats */
+
+#congratsTitle, #gameOverTitle {
+    font-size: 2em;
+}
+
+p i.congrats-icon {
+    font-size: 3em;
+}
+
+/* /.Modal congrats */
 
 /* Media queries */
 
