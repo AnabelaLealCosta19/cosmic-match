@@ -277,7 +277,7 @@ While writing code, two further modals were added as they would provide an impro
     - The modal has been programmed to only close when clicking on the buttons to ensure that their functionality is executed as intended.
     - Functionality executed upon pressing "Confirm changes": 
         * Depending on difficulty selected: adapt time limit, display difficulty and select cards used
-        * Shuffle cards, remove last seconds styling for timer, start timer and reset flip counter
+        * Shuffle cards, start timer and reset flip counter
         * If the game was paused previously and the resume icon is replaced by the pause icon.
         * Update new player name
     - Functionality executed upon pressing "Confirm changes": 
@@ -287,7 +287,14 @@ While writing code, two further modals were added as they would provide an impro
 
 - **Congratulations modal**
 
+
 - **Game over modal**
+    - Should the time run up before all matching pairs have been found, then the game over modal will show. 
+    - The modal gives the user appropriate feedback that he lost and encourages him to play another round. It also gives the option to change the difficulty level before starting the new game. 
+    - The modal only closes when clicking on "Play now" to ensure that its functionality is executed.
+    - Functionality executed upon pressing "Play now": 
+        * Depending on difficulty selected: adapt time limit, display difficulty and select cards used
+        * Shuffle cards, start timer and reset flip counter
 
 ### Future considerations
 
