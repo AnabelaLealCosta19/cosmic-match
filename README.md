@@ -185,11 +185,11 @@ Two further modals are triggered by the JavaScript code: Game over and Congratul
 
 Should the time run out before the user finds all matching pairs, the Game over modal will show.
 
-![Game over](assets/images/readme/*)
+![Game over modal](assets/images/readme/game-over.PNG)
 
 If the user finds all matching pairs, the Congratulations modal will display. 
 
-![Congratulations](assets/images/readme/*)
+![Congratulations modal](assets/images/readme/congratulations.PNG)
 
 All buttons of the modals, bring the user back to the main page with the memory game. 
 
