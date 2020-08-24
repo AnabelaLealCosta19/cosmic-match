@@ -397,6 +397,25 @@ This project uses **HTML**, **CSS** and **JavaScript**.
 
 ## Testing
 
+### Code Validation
+
+- HTML validation: 
+    - No errors, [results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fanabelalealcosta19.github.io%2Fcosmic-match%2F)
+
+- CSS validation: 
+    - Any errors seem to be related to bootstrap's library, my code itself passes
+    - [Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fanabelalealcosta19.github.io%2Fcosmic-match%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=de)
+
+- JS validation: 
+    - No errors, see details in screenshot below.
+
+ <div align="center">
+    <img src="assets/images/readme/js-validator.png" alt="JS validations - results" >
+</div>  
+
+
+
+
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
 Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
