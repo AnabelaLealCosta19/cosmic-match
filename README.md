@@ -283,16 +283,21 @@ While writing code, two further modals were added as they would provide an impro
     - Functionality executed upon pressing "Confirm changes": 
         * Close modal and resume timer where left off
 
-- **Game board**
+
 
 - **Congratulations modal**
-
+    - If the player finds all matching pairs, the congratulations modal opens. 
+    - The modal congratulates the user for his success and encourages him to play another round. It also gives the option to change the difficulty level before starting the new game. 
+    - The modal only closes when clicking on "Play again" to ensure that its functionality is executed.
+    - Functionality executed upon pressing "Play again": 
+        * Depending on difficulty selected: adapt time limit, display difficulty and select cards used
+        * Shuffle cards, start timer and reset flip counter
 
 - **Game over modal**
     - Should the time run up before all matching pairs have been found, then the game over modal will show. 
     - The modal gives the user appropriate feedback that he lost and encourages him to play another round. It also gives the option to change the difficulty level before starting the new game. 
-    - The modal only closes when clicking on "Play now" to ensure that its functionality is executed.
-    - Functionality executed upon pressing "Play now": 
+    - The modal only closes when clicking on "Play again" to ensure that its functionality is executed.
+    - Functionality executed upon pressing "Play again": 
         * Depending on difficulty selected: adapt time limit, display difficulty and select cards used
         * Shuffle cards, start timer and reset flip counter
 
