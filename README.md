@@ -271,6 +271,24 @@ While writing code, two further modals were added as they would provide an impro
     - The question mark icon allows the user to open the game instructions any time during the game. The user can then read through the rules and objective of the game, which should enable him to be successfull. 
     - While the instructions modal is displaying, the timer is paused. Upon clicking it's button, the time resumes where it has left off. 
 
+- **Settings**
+    - When clicking on the cog icon, the settings modal is opened. It has one section each to amend the player name as well as difficulty. Additionally, it includes two buttons: "Confirm changes" and "Cancel". 
+    - The current player name is displayed by default and can be amended as desired by the player. Furthermore, the current difficulty level can be changed by clicking on a different difficulty button. 
+    - The modal has been programmed to only close when clicking on the buttons to ensure that their functionality is executed as intended.
+    - Functionality executed upon pressing "Confirm changes": 
+        * Depending on difficulty selected: adapt time limit, display difficulty and select cards used
+        * Shuffle cards, remove last seconds styling for timer, start timer and reset flip counter
+        * If the game was paused previously and the resume icon is replaced by the pause icon.
+        * Update new player name
+    - Functionality executed upon pressing "Confirm changes": 
+        * Close modal and resume timer where left off
+
+- **Game board**
+
+- **Congratulations modal**
+
+- **Game over modal**
+
 ### Future considerations
 
 - **Adding audio to enhance UX**
