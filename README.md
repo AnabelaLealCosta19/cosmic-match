@@ -1,6 +1,6 @@
 # Cosmic Match
 
-![Cosmic Match displayed on different devices](assets/images/readme/introduction-img.PNG)
+![Cosmic Match displayed on different devices](assets/images/readme/introduction-img.png)
 
 Memory games are an entertaining way to improve one's memory, concentration, and attention to detail. Even though it can be as beneficial to small children as to adults, most games are designed for children. 
 
@@ -171,11 +171,11 @@ There are two modals, that will show on page load. When the user accesses the we
 
 If any data can be found, the modal "Repeat start page" is displaying. 
 
-![Repeat start page](assets/images/readme/repeat-start-page.PNG) 
+![Repeat start page](assets/images/readme/repeat-start-page.png) 
 
 Should no data be found, the modal "First start page" will show instead. 
 
-![First start page](assets/images/readme/first-start-page.PNG) 
+![First start page](assets/images/readme/first-start-page.png) 
 
 Once the user sees the main page with the game, he can access the instructions and settings modal through the respective icons. Please see below: 
 
@@ -185,11 +185,11 @@ Two further modals are triggered by the JavaScript code: Game over and Congratul
 
 Should the time run out before the user finds all matching pairs, the Game over modal will show.
 
-![Game over modal](assets/images/readme/game-over.PNG)
+![Game over modal](assets/images/readme/game-over.png)
 
 If the user finds all matching pairs, the Congratulations modal will display. 
 
-![Congratulations modal](assets/images/readme/congratulations.PNG)
+![Congratulations modal](assets/images/readme/congratulations.png)
 
 All buttons of the modals, bring the user back to the main page with the memory game. 
 
@@ -228,7 +228,7 @@ While writing code, two further modals were added as they would provide an impro
         * Depending on difficulty selected: adapt time limit, display difficulty and select cards used
         * Shuffle cards and start timer
 
-![First start page](assets/images/readme/first-start-page.PNG) 
+![First start page](assets/images/readme/first-start-page.png) 
 
 - **Repeat start page modal**
     - For any subsequent times that the user visits this website, this modal pops up. It has text that indicates that Cosmic Match is aware that it has already been played by the user. Additionally, the modal displays the players' name and difficulty preference from their last session. 
@@ -241,7 +241,7 @@ While writing code, two further modals were added as they would provide an impro
         * Check if new player name has been provided and update it accordingly
         * Shuffle cards, start timer and reset flip counter
 
-![Repeat start page](assets/images/readme/repeat-start-page.PNG)
+![Repeat start page](assets/images/readme/repeat-start-page.png)
 
 - **Main page**
     - The main page consists of 5 sections: Cosmic match title, player name, game details, action items, and the game board with the cards.
@@ -249,7 +249,7 @@ While writing code, two further modals were added as they would provide an impro
     - The game details section displays the time the user has left, the flips made and the difficulty selected. It updates automatically to always inform the user of the current state of his game. 
     - The action items are displayed neatly as icons and allow the user to perform additional actions: pause/resume game, restart game, open instructions, and change settings. For all icons, the cursor has been added as a pointer to indicate their clickability.   
 
-![Main page](assets/images/readme/main-page.PNG)
+![Main page](assets/images/readme/main-page.png)
 
 - **Game details**
     - **Timer:** The timer displays the time the user has left to complete the game. It is automatically updated depending on the selected difficulty level and is displayed in minutes and seconds. Additionally, it changes the font colour to a soft red when less than 10 seconds are left, to signalize to the user that the time is running up. 
