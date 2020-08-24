@@ -1,7 +1,7 @@
 // NOTES
 // "// TEXT" >> overall topic of following code block(s)
 // CODE  "// TEXT" >> summary of current code block
-// CODE  "// - TEXT" >> subcategories of code block that have certain effect
+// CODE  "// - TEXT" >> subcategories of code block that have a certain effect
 // CODE  "// * TEXT" >> external code source
 // CODE  "// ~ TEXT" >> additional notes from developer
 
@@ -50,7 +50,7 @@ $(document).ready(function(){  // Load page correctly (first-time visitor vs. fa
     }
 });
 
-function showModal(modalId) {  // Show start page modals
+function showModal(modalId) {  // Display modals correctly
     $(modalId).modal({
             show: true,
             backdrop: 'static',
@@ -63,20 +63,14 @@ function showInstructionsModal() {  // Open instructions modal + pause timer
     clearInterval(timer);
 };
 
-function dismissInstructionsModal() {
-    continueTime();
-    resetResumeButton();
-};
-
-function showSettingsModal() {
-    console.log("Open settings modal");
+function showSettingsModal() {  // Open settings modal + pause timer
     showModal("#settings");
     $("#settingsPlayer").attr("value", player)
     clearInterval(timer);
 };
 
 $("form").keypress(function(e) {  // Prevent enter key from closing modal
-  if (e.which == 13) { // * Disable enter key | source: 'Paulund' (URL: https://paulund.co.uk/how-to-disable-enter-key-on-forms) 
+  if (e.which == 13) {  // * Disable enter key | source: 'Paulund' (URL: https://paulund.co.uk/how-to-disable-enter-key-on-forms) 
     return false;
   }
 });
@@ -99,38 +93,41 @@ allCards.forEach(allCards => {  // Align card-front and card-back on top of each
 };
 
 
-// Functionality for play buttons
-$('#firstPlayNow').on("click", function() {  // When clicking first play now button (modal: first start page [first-time visitor])
+// Special buttons
+$('#firstPlayNow').on("click", function() {  // When clicking play now button (modal: first start page [first-time visitor])
     shuffle();
     firstPlayerName();
     checkDifficultySelection();
     startTimer();
 });
 
-$('#repeatPlayNow').on("click", function() {  // When clicking repeat play now button (modals: repeat start page [familiar player])
+$('#repeatPlayNow').on("click", function() {  // When clicking play now button (modal: repeat start page [familiar player])
     shuffle();
     checkDifficultySelection();
     startTimer();
-    flipsCounted = 0;
     checkForChangedPlayerName("#otherPlayer");
 });
 
-$('.btn-play-again').on("click", function() {  // When clicking new game button (modals: repeat start page [familiar player], settings, game over, congratulations)
+$('.btn-play-again').on("click", function() {  // When clicking play again button (modals: game over and congratulations) or confirm changes button (modal: settings)
     checkDifficultySelection();
+    $(".time-detail").removeClass("last-seconds");  // - Reset timer
     startTimer();
-    $(".time-detail").removeClass("last-seconds");
-    flipsCounted = 0;
+    flipsCounted = 0;  // - Flips couter
     $(".flips-counted").text(flipsCounted);
     turnCardsBack();
-    shuffle();
+    shuffle();  // - Resets & shuffles cards
     allCards.forEach(allCards => allCards.classList.remove("matched"));
-    if (this.id == "settingsPlayNow") {
-        console.log("settingsplaynow");
+    if (this.id == "settingsPlayNow") {  // - When clicking confirm changes button (modal: settings) code checks for new player name
         checkForChangedPlayerName("#settingsPlayer");
     };
 });
+ 
+$('#instructions-dismiss-btn').on("click", function() {  // When clicking let's find out button (modal: instructions)
+    continueTime();
+    resetResumeButton();
+});
 
-$('#cancel').on("click", function() {  
+$('#cancel').on("click", function() {  // When clicking cancel button (modal: settings)
     continueTime();
     resetResumeButton();
 });
@@ -178,7 +175,7 @@ function updateButton(providedDifficulty) {  // Display button as "focused" (nes
     $(".btn-"+providedDifficulty).addClass("focus");
 };
 
-function checkDifficultySelection() {  // Check which difficulty has been selected by player
+function checkDifficultySelection() {  // Check which difficulty has been selected
     if ($(".focus").hasClass("btn-easy")) {
         activateDifficultyMode("easy");
     } else if ($(".focus").hasClass("btn-normal")) {
@@ -195,7 +192,6 @@ function activateDifficultyMode(providedDifficulty) {  // Adapt game to difficul
     $(".card").addClass("d-none"); // - Change cards
     $("."+providedDifficulty).removeClass("d-none");
     activeCards = Array.from($("."+providedDifficulty));
-    console.log(activeCards);
 };
 
 
@@ -217,7 +213,7 @@ function countDownTime(time) {  // Count down time limit
         time--;
         displayTime(time);
         pausedTime = time;  // ~ Store time in variable to be accessed by pause function later
-        if (minutes == 0 && seconds == 0) {
+        if (minutes == 0 && seconds == 0) {  // - Display game over modal when time runs up
             clearInterval(timer);
             showModal("#gameOver");
             UpdateDifficulty();
@@ -249,7 +245,7 @@ function countFlips() {  // Counts how often cards were flipped
 // Check and match cards
 function checkCard() {  // Check if card is first, same  or second card 
     selectedChildren = Array.from(this.children);
-     if (!hasFlippedCard){  // * Define if card is firstCard or secondCard | source: 'Memory Card Game - JavaScript Tutorial - freecodecamp' (URL: https://www.youtube.com/watch?v=ZniVgo8U7ek&t=298s) 
+     if (!hasFlippedCard){  // * Define if card is first card or second card | source: 'Memory Card Game - JavaScript Tutorial - freecodecamp' (URL: https://www.youtube.com/watch?v=ZniVgo8U7ek&t=298s) 
         hasFlippedCard = true;  // - Click on first card
         firstCard = this;
         firstCardType = defineCardType(firstCard);
@@ -289,7 +285,7 @@ function markChildrenAsSelected() {  // Mark children as selected
 };
 
 function cardsMatch() {  // Cards match
-    firstCard.classList.add("matched");
+    firstCard.classList.add("matched");  // - Mark cards as matched
     secondCard.classList.add("matched");
     let matchedChildren = Array.from(firstCard.children).concat(Array.from(secondCard.children));  // - Remove highlighted border
     matchedChildren.forEach(matchedChildren => matchedChildren.classList.remove("selected"));
@@ -307,10 +303,9 @@ function noMatch() {  // Cards don't match
     allCards.forEach(allCards => allCards.addEventListener('click', checkCard));  // - Add event listener again
 };
 
-function allCardsMatch() {
+function allCardsMatch() {  // All pairs were matched
     matchedCards = Array.from($($(".matched")));
     if (matchedCards.length == activeCards.length) {  // * Check if all elements in array have specific class | source: 'stack overflow' (URL: https://stackoverflow.com/questions/31962074/jquery-how-to-check-if-all-element-in-array-have-specific-class) 
-        console.log("Congrats!");
         showModal("#congrats");
         UpdateDifficulty();
         clearInterval(timer);
@@ -326,19 +321,20 @@ function restartGame() {
     clearInterval(timer);    // - Reset time
     startTimer();
     $(".time-detail").removeClass("last-seconds");
-    turnCardsBack();
-    allCards.forEach(allCards => allCards.removeEventListener('click', checkCard));  // - Shuffle cards
+    turnCardsBack();  // - Turn cards back + shuffle them
+    allCards.forEach(allCards => allCards.removeEventListener('click', checkCard)); 
     setTimeout(function(){ // ~ TimeOut set to allow cards to be flipped first before being shuffled (flipping takes ~ 1000ms)
         shuffle();
         allCards.forEach(allCards => allCards.addEventListener('click', checkCard));
     }, 1000); 
-    hasFlippedCard = false; // - Reset variables
+    hasFlippedCard = false; // - Reset card variables
     firstCard = secondCard = firstCardType = secondCardType = undefined;
 };
 
+
 // Turn back all cards
 function turnCardsBack() {
-    allCards.forEach(allCards => {  // - Turn back all cards
+    allCards.forEach(allCards => { 
         allCards.classList.remove("flip");
         let children = Array.from(allCards.children);
         children.forEach(children => children.classList.remove("selected"));
@@ -346,7 +342,7 @@ function turnCardsBack() {
 };
 
 
-// Pause 
+// Pause + resume timer
 function pauseTime() {  // Pause timer
     clearInterval(timer);
     pauseContainer.forEach(pauseIcons => pauseIcons.classList.add("d-none"));
@@ -383,5 +379,4 @@ restartIcons.forEach(restartIcons => restartIcons.addEventListener('click', rest
 pauseIcons.forEach(pauseIcons => pauseIcons.addEventListener('click', pauseTime));  // Click pause icon >> timer pauses
 resumeIcons.forEach(resumeIcons => resumeIcons.addEventListener('click', resumeTime));  // Click resume icon >> timer resumes
 instructionIcons.forEach(instructionIcons => instructionIcons.addEventListener('click', showInstructionsModal));  // Click instructions icon >> instructions modal opens
-document.getElementById("instructions-dismiss-btn").addEventListener('click', dismissInstructionsModal);  // Click instructions dismiss button >> instructions modal closes
 settingsIcons.forEach(settingsIcons => settingsIcons.addEventListener('click', showSettingsModal));  // Click settings icon >> settings modal opens
