@@ -71,6 +71,7 @@ function dismissInstructionsModal() {
 function showSettingsModal() {
     console.log("Open settings modal");
     showModal("#settings");
+    $("#settingsPlayer").attr("value", player)
     clearInterval(timer);
 };
 

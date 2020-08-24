@@ -278,6 +278,20 @@ li div i {
 
 /* /.Modal instructions */
 
+/* Modal settings */
+
+#cancel {
+    color: rgba(199, 41, 41, 0.8);
+    border: 1px solid rgba(199, 41, 41, 0.8);
+}
+
+#cancel:hover {
+    color:  rgba(199, 41, 41, 0.8);  
+    box-shadow: 0 0 5px rgba(199, 41, 41, 0.8);
+}
+
+/* /.Modal settings */
+
 /* Modal congrats */
 
 #congratsTitle, #gameOverTitle {
