@@ -413,6 +413,11 @@ This project uses **HTML**, **CSS** and **JavaScript**.
     <img src="assets/images/readme/js-validator.png" alt="JS validations - results" >
 </div>  
 
+### Initial Testing
+
+When initially creating the webiste, I've made sure to test the bootstrap grid before adding any custom styling.
+
+To do so, I have styled the containers, rows and columns with thick borders in different colours. I then tested the grid on different devices in the Developer Tools as well as by changing the width when in "responsive" mode. Like this, I could make sure that the grid behaves as expected and responsiveness is ensured.
 
 
 
