@@ -119,6 +119,8 @@ $('.btn-play-again').on("click", function () { // When clicking play again butto
     allCards.forEach(allCards => allCards.classList.remove("matched"));
     if (this.id == "settingsPlayNow") { // - When clicking confirm changes button (modal: settings) code checks for new player name
         checkForChangedPlayerName("#settingsPlayer");
+        resetResumeButton();
+        allCards.forEach(allCards => allCards.addEventListener('click', checkCard));
     };
 });
 
