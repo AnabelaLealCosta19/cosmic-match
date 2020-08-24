@@ -393,7 +393,7 @@ My project has been deployed to GitHub Pages. To do so, I completed the steps be
 3. Under **GitHub Pages**, I used the **Source** drop-down menu and selected "master branch"
 4. Clicked on **Save**
 
-Once done, GitHub displayed the following message: "Your site is published at https://anabelalealcosta19.github.io/cosmic-match/". I clicked on the link and could confirm that the website was successfully deployed. 
+Once done, GitHub displayed the following message: "Your site is ready to be published at https://anabelalealcosta19.github.io/cosmic-match/". I clicked on the link and could confirm that the website was successfully deployed. 
 
 ### Deployed vs development version
 
