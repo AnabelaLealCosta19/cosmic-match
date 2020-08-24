@@ -453,6 +453,19 @@ You should also mention in this section any interesting bugs or problems you dis
 
 If this section grows too long, you may want to split it off into a separate file and link to it from here.
 
+### Other
+
+- Website Speed Test 
+    - Performance grade is overall ok, load time 611ms
+    - [Results](https://tools.pingdom.com/#5d080d1c44000000)
+
+- SortSite - Browser Compatibility Tests
+    - Minor page issues, overall better than average (see screenshot below)
+
+ <div align="center">
+    <img src="assets/images/readme/browser-compability-testing.png" alt="Browser Compatibility Tests - results" >
+</div> 
+
 ## Existing bugs
 
 1. **First page modal closes even if no player name provided**
