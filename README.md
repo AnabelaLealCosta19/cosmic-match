@@ -1,6 +1,8 @@
 # Cosmic Match
 
-![Cosmic Match displayed on different devices](assets/images/readme/introduction-img.png)
+<div align="center">
+    <img src="assets/images/readme/introduction-img.png" alt="Cosmic Match displayed on different devices" >
+</div>
 
 Memory games are an entertaining way to improve one's memory, concentration, and attention to detail. Even though it can be as beneficial to small children as to adults, most games are designed for children. 
 
@@ -171,25 +173,36 @@ There are two modals, that will show on page load. When the user accesses the we
 
 If any data can be found, the modal "Repeat start page" is displaying. 
 
-![Repeat start page](assets/images/readme/repeat-start-page.png) 
+<div align="center">
+    <img src="assets/images/readme/repeat-start-page.png" alt="Repeat start page" >
+</div>
+
 
 Should no data be found, the modal "First start page" will show instead. 
 
-![First start page](assets/images/readme/first-start-page.png) 
+<div align="center">
+    <img src="assets/images/readme/first-start-page.png" alt="First start page" >
+</div>
 
 Once the user sees the main page with the game, he can access the instructions and settings modal through the respective icons. Please see below: 
 
-![Navigation from the main page](assets/images/readme/navigation.png)
+<div align="center">
+    <img src="assets/images/readme/navigation.png" alt="Navigation from the main page" >
+</div>
 
 Two further modals are triggered by the JavaScript code: Game over and Congratulations. 
 
 Should the time run out before the user finds all matching pairs, the Game over modal will show.
 
-![Game over modal](assets/images/readme/game-over.png)
+<div align="center">
+    <img src="assets/images/readme/game-over.png" alt="Game over modal" >
+</div>
 
 If the user finds all matching pairs, the Congratulations modal will display. 
 
-![Congratulations modal](assets/images/readme/congratulations.png)
+<div align="center">
+    <img src="assets/images/readme/congratulations.png" alt="Congratulations modal" >
+</div>
 
 All buttons of the modals, bring the user back to the main page with the memory game. 
 
@@ -228,7 +241,9 @@ While writing code, two further modals were added as they would provide an impro
         * Depending on difficulty: adapt time limit, display difficulty and select cards used
         * Shuffle cards and start timer
 
-![First start page](assets/images/readme/first-start-page.png) 
+<div align="center">
+    <img src="assets/images/readme/first-start-page.png" alt="First start page" >
+</div>
 
 - **Repeat start page modal**
     - For any subsequent times that the user visits this website, this modal pops up. It has text that indicates that Cosmic Match is aware that it has already been played by the user. Additionally, the modal displays the player's name and difficulty preference from their last session. 
@@ -241,7 +256,9 @@ While writing code, two further modals were added as they would provide an impro
         * Check if new player name has been provided and update it accordingly
         * Shuffle cards, start timer and reset flip counter
 
-![Repeat start page](assets/images/readme/repeat-start-page.png)
+<div align="center">
+    <img src="assets/images/readme/repeat-start-page.png" alt="Repeat start page" >
+</div>
 
 - **Main page**
     - The main page consists of 5 sections: Cosmic match title, player name, game details, action items, and the game board with the cards.
@@ -249,7 +266,9 @@ While writing code, two further modals were added as they would provide an impro
     - The game details section displays the time the user has left, the flips made and the difficulty selected. It updates automatically to always inform the user of the current state of his game. 
     - The action items are displayed neatly as icons and allow the user to perform additional actions: pause/resume game, restart game, open instructions, and change settings. For all icons, the cursor has been added as a pointer to indicate their clickability.   
 
-![Main page](assets/images/readme/main-page.png)
+<div align="center">
+    <img src="assets/images/readme/main-page.png" alt="Main page" >
+</div>
 
 - **Game details**
     - **Timer:** The timer displays the time the user has left to complete the game. It is automatically updated depending on the selected difficulty level and is displayed in minutes and seconds. Additionally, it changes the font colour to a soft red when less than 10 seconds are left, to signalize to the user that the time is running up. 
@@ -273,7 +292,9 @@ While writing code, two further modals were added as they would provide an impro
     - The question mark icon allows the user to open the game instructions any time during the game. The user can then read through the rules and objective of the game, which should enable him to be successfull. 
     - While the instructions modal is displaying, the timer is paused. Upon clicking it's button, the time resumes where it has left off. 
 
-![Instructions modal](assets/images/readme/instructions.png)
+<div align="center">
+    <img src="assets/images/readme/instructions.png" alt="Instructions modal" >
+</div>
 
 - **Settings**
     - When clicking on the cog icon, the settings modal is opened. It has one section to amend the player name as well as difficulty. Additionally, it includes two buttons: "Confirm changes" and "Cancel". 
@@ -287,7 +308,9 @@ While writing code, two further modals were added as they would provide an impro
     - Functionality executed upon pressing "Cancel": 
         * Close modal and resume timer where left off
 
-![Settings modal](assets/images/readme/change-settings.png)
+<div align="center">
+    <img src="assets/images/readme/change-settings.png" alt="Settings modal" >
+</div>
 
 - **Game board**
     - The game board displays the cards selected (depending on difficulty). By default, the cards are displayed with their back up. 
@@ -306,7 +329,9 @@ While writing code, two further modals were added as they would provide an impro
         * Depending on difficulty selected: adapt time limit, display difficulty and select cards used
         * Shuffle cards, start timer and reset flip counter
 
-![Congratulations modal](assets/images/readme/congratulations.png)
+<div align="center">
+    <img src="assets/images/readme/congratulations.png" alt="Congratulations modal" >
+</div>
 
 - **Game over modal**
     - Should the time run up before all matching pairs have been found, then the game over modal will show. 
@@ -316,7 +341,9 @@ While writing code, two further modals were added as they would provide an impro
         * Depending on difficulty selected: adapt time limit, display difficulty and select cards used
         * Shuffle cards, start timer and reset flip counter
 
-![Game over modal](assets/images/readme/game-over.png)
+<div align="center">
+    <img src="assets/images/readme/game-over.png" alt="Game over modal" >
+</div>
 
 
 ### Future considerations
@@ -368,7 +395,7 @@ This project uses **HTML**, **CSS** and **JavaScript**.
 - [Tiny PNG](https://tinypng.com/): Compressed images for my project. 
 - [Diagram Editor](https://www.diagrameditor.com/): Used to create the diagrams for my readme.
 
-## Testing !!!
+## Testing
 
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
@@ -390,9 +417,9 @@ If this section grows too long, you may want to split it off into a separate fil
 
 ## Bugs
 
-### Fixed bugs !!!
+### Fixed bugs
 
-### Existing bugs !!!
+### Existing bugs
 
 ## Deployment
 
