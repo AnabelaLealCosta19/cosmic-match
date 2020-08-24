@@ -125,6 +125,7 @@ $('.btn-play-again').on("click", function() {  // When clicking new game button 
     shuffle();
     allCards.forEach(allCards => allCards.classList.remove("matched"));
     if (this.id == "settingsPlayNow") {
+        console.log("settingsplaynow");
         checkForChangedPlayerName("#settingsPlayer");
     };
 });
