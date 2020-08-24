@@ -273,6 +273,8 @@ While writing code, two further modals were added as they would provide an impro
     - The question mark icon allows the user to open the game instructions any time during the game. The user can then read through the rules and objective of the game, which should enable him to be successfull. 
     - While the instructions modal is displaying, the timer is paused. Upon clicking it's button, the time resumes where it has left off. 
 
+![Instructions modal](assets/images/readme/instructions.png)
+
 - **Settings**
     - When clicking on the cog icon, the settings modal is opened. It has one section to amend the player name as well as difficulty. Additionally, it includes two buttons: "Confirm changes" and "Cancel". 
     - The current player name is displayed by default and can be amended as desired by the player. Furthermore, the current difficulty level can be changed by clicking on a different difficulty button. 
@@ -284,6 +286,8 @@ While writing code, two further modals were added as they would provide an impro
         * Update new player name
     - Functionality executed upon pressing "Cancel": 
         * Close modal and resume timer where left off
+
+![Settings modal](assets/images/readme/change-settings.png)
 
 - **Game board**
     - The game board displays the cards selected (depending on difficulty). By default, the cards are displayed with their back up. 
@@ -302,6 +306,8 @@ While writing code, two further modals were added as they would provide an impro
         * Depending on difficulty selected: adapt time limit, display difficulty and select cards used
         * Shuffle cards, start timer and reset flip counter
 
+![Congratulations modal](assets/images/readme/congratulations.png)
+
 - **Game over modal**
     - Should the time run up before all matching pairs have been found, then the game over modal will show. 
     - The modal gives the user appropriate feedback that he lost and encourages him to play another round. It also gives the option to change the difficulty level before starting a new game. 
@@ -309,6 +315,9 @@ While writing code, two further modals were added as they would provide an impro
     - Functionality executed upon pressing "Play again": 
         * Depending on difficulty selected: adapt time limit, display difficulty and select cards used
         * Shuffle cards, start timer and reset flip counter
+
+![Game over modal](assets/images/readme/game-over.png)
+
 
 ### Future considerations
 
