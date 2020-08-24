@@ -122,6 +122,7 @@ $('.btn-play-again').on("click", function() {  // When clicking new game button 
     $(".flips-counted").text(flipsCounted);
     turnCardsBack();
     shuffle();
+    allCards.forEach(allCards => allCards.classList.remove("matched"));
     if (this.id == "settingsPlayNow") {
         checkForChangedPlayerName("#settingsPlayer");
     };
