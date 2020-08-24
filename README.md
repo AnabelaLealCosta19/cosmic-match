@@ -485,7 +485,20 @@ Steps taken:
     <img src="assets/images/readme/no-player-name-provided.png" alt="Code written to try fix this bug" >
 </div>
 
-As none of the options above worked and the project is due in a short period of time, I had to stop with the troubleshooting process and proceed writing the readme. 
+
+As none of the options above worked and I was under time pressure, I had to stop with the troubleshooting process and proceed writing the readme file. 
+
+2. **When game is paused and settings are changed, the pause icon doesn't reset**
+
+If the player pauses the game first and then changes the settings, the pause icon including functionality is not reset as intended. 
+
+This means, that even though the timer is already running, the resume icon is still displayed upon starting a new game. As a result, the cards cannot be flipped by the user, until he presses the resume button when the event listener for clicking on a card is finally added.  
+
+![Gif: Bug recording](assets/images/readme/bug2-recording.gif)
+
+Steps taken: 
+
+As this issue was discovered shortly before project submission, I was not able to complete a thorough investigation into what could be causing that issue. I added the function resetResumeButton(); to the button "settingsPlayNow" as well as adding the event listener to the card again, but, unfortunately, this didn't have the expected outcome. 
 
 ## Deployment
 
