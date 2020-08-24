@@ -37,9 +37,7 @@ The player is presented with 12 cards turned on their back. When the player clic
     - [Libraries](#libraries)
     - [Tools](#tools)
 1. [Testing](#testing) 
-1. Bugs 
-    - [Fixed bugs](#fixed-bugs)
-    - [Existing bugs](#existing-bugs)
+1. [Existing bugs](#existing-bugs)
 1. Deployment
     - [Deploy project](#deploy-project)
     - [Deployed vs development version](#deployed-vs-development-version)
@@ -417,11 +415,26 @@ You should also mention in this section any interesting bugs or problems you dis
 
 If this section grows too long, you may want to split it off into a separate file and link to it from here.
 
-## Bugs
+## Existing bugs
 
-### Fixed bugs
+1. **First page modal closes even if no player name provided**
 
-### Existing bugs
+<div align="center">
+    <img src="assets/images/readme/no-player-name-main-page.png" alt="No player visible in main page" >
+</div>
+
+The modal form is being submitted even if nothing has been provided as player name. This is problematic, as no name is displayed in the main page nor in any other modals, where the player's name is being referenced.
+
+Steps taken: 
+
+- Provided minlength="1" attribute to require at least one character for this field. As the field input was required, I expected it to not allow the user to close this modal until some data has been provided. Unfortunately, this did not work for me. 
+- I tried to solve it with an if function instead, to ensure that the code for the play now button is only executed when the player field is not empty (please see further details in the screenshot provided). Additionally, I removed the attribute data-dismiss="modal" from the respective button. 
+
+<div align="center">
+    <img src="assets/images/readme/no-player-name-provided.png" alt="Code written to try fix this bug" >
+</div>
+
+As none of the options above worked and the project is due in a short period of time, I had to stop with the troubleshooting process and proceed writing the readme. 
 
 ## Deployment
 
