@@ -106,14 +106,23 @@ $('#firstPlayNow').on("click", function() {  // When clicking first play now but
     startTimer();
 });
 
-$('.btn-play-again').on("click", function() {  // When clicking new game button (modals: repeat start page [familiar player], settings, game over, congratulations)
+$('#repeatPlayNow').on("click", function() {  // When clicking repeat play now button (modals: repeat start page [familiar player])
     shuffle();
     checkDifficultySelection();
     startTimer();
     flipsCounted = 0;
-    if (this.id == "repeatPlayNow") {
-        checkForChangedPlayerName("#otherPlayer");
-    } else if (this.id == "settingsPlayNow") {
+    checkForChangedPlayerName("#otherPlayer");
+});
+
+$('.btn-play-again').on("click", function() {  // When clicking new game button (modals: repeat start page [familiar player], settings, game over, congratulations)
+    checkDifficultySelection();
+    startTimer();
+    $(".time-detail").removeClass("last-seconds");
+    flipsCounted = 0;
+    $(".flips-counted").text(flipsCounted);
+    turnCardsBack();
+    shuffle();
+    if (this.id == "settingsPlayNow") {
         checkForChangedPlayerName("#settingsPlayer");
     };
 });
@@ -199,9 +208,11 @@ function countDownTime(time) {  // Count down time limit
         time--;
         displayTime(time);
         pausedTime = time;  // ~ Store time in variable to be accessed by pause function later
-        if (time === 0) {
+        if (minutes == 0 && seconds == 0) {
             clearInterval(timer);
-        }; 
+            showModal("#gameOver");
+            UpdateDifficulty();
+        };
     }, 1000); 
 };
 
@@ -214,13 +225,7 @@ function displayTime(time){  // Display time correctly in minutes and seconds
         $(".time").text(`${minutes}:0${seconds}`);
     };  
     if (minutes == 0 && seconds < 10) {
-        $(".time").addClass("last-seconds");
         $(".time-detail").addClass("last-seconds");
-    };
-    if (minutes == 0 && seconds == 0) {
-        console.log("Game over!");
-        showModal("#gameOver");
-        UpdateDifficulty();
     };
 };
 
@@ -310,12 +315,8 @@ function restartGame() {
     $(".flips-counted").text(flipsCounted);
     clearInterval(timer);    // - Reset time
     startTimer();
-    $(".time").removeClass("last-seconds");
-    allCards.forEach(allCards => {  // - Turn back all cards
-        allCards.classList.remove("flip");
-        let children = Array.from(allCards.children);
-        children.forEach(children => children.classList.remove("selected"));
-    });
+    $(".time-detail").removeClass("last-seconds");
+    turnCardsBack();
     allCards.forEach(allCards => allCards.removeEventListener('click', checkCard));  // - Shuffle cards
     setTimeout(function(){ // ~ TimeOut set to allow cards to be flipped first before being shuffled (flipping takes ~ 1000ms)
         shuffle();
@@ -324,6 +325,16 @@ function restartGame() {
     hasFlippedCard = false; // - Reset variables
     firstCard = secondCard = firstCardType = secondCardType = undefined;
 };
+
+// Turn back all cards
+function turnCardsBack() {
+    allCards.forEach(allCards => {  // - Turn back all cards
+        allCards.classList.remove("flip");
+        let children = Array.from(allCards.children);
+        children.forEach(children => children.classList.remove("selected"));
+    });
+};
+
 
 // Pause 
 function pauseTime() {  // Pause timer
