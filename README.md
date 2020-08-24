@@ -436,6 +436,8 @@ The images used in this project have been obtained from the following sources:
 * **Card images - front:** Vector images purchased at [Creative market](https://creativemarket.com/). To view the specific product click [here](https://creativemarket.com/skyboxcreative/448990-Constellations-Vector-Set#fullscreen).
 * **Card images - back:** Telescope vector obtained from [shutterstock](https://www.shutterstock.com/home). To view the image click [here](https://www.shutterstock.com/image-vector/telescope-flat-icon-on-black-background-599913728).
 
+The image in the project introduction is a screenshot of my own website displayed in Am I Responsive and has, therefore, no typical external source. Additionally further screenshots have been made of this website to visualize certain sections of the readme file.
+
 ### Code
 
 Code has been used by me from the following sources: 
