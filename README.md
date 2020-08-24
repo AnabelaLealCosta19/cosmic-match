@@ -564,15 +564,15 @@ Code has been used by me from the following sources:
 
 Language | Effect | Example | Source | URL
 -------- | ------ | ------- | ------ | ---
-CSS | Vertically align block-level element with unknown height | style.css, lines 34-45 | [CSS tricks](https://css-tricks.com/) | [here](https://css-tricks.com/centering-css-complete-guide/)
-CSS | Styling: glowing text | style.css, lines 55-58 | [Free Frontend](https://freefrontend.com/) | [here](https://freefrontend.com/css-glow-text-effects/)
-CSS | Flip cards | style.css, lines 204-219 | [FreeCodeCamp (youtube channel)](https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ) | [here](https://www.youtube.com/watch?v=ZniVgo8U7ek&t=298s)
-CSS | Combine several conditions in same media query | style.css, lines 283-303 | [MDN web docs](https://developer.mozilla.org/en-US/) | [here](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-JS | Disable enter key | game.js, lines 78-82 | [Paulund](https://paulund.co.uk/) | [here](https://paulund.co.uk/how-to-disable-enter-key-on-forms)
-JS | Shuffle cards | game.js, lines 93-99 | [FreeCodeCamp (youtube channel)](https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ) | [here](https://www.youtube.com/watch?v=ZniVgo8U7ek&t=298s)
-JS | Define if card if first or second card | game.js, lines 234-253 | [FreeCodeCamp (youtube channel)](https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ) | [here](https://www.youtube.com/watch?v=ZniVgo8U7ek&t=298s)
-JS | Remove last character from id | game.js, lines 268-270 | [Stackoverflow](https://stackoverflow.com/) | [here](https://stackoverflow.com/questions/1794822/remove-last-character-in-id-attribute)
-JS | Check if all elements in array have specific class | game.js, lines 297-301 | [Stackoverflow](https://stackoverflow.com/) | [here](https://stackoverflow.com/questions/31962074/jquery-how-to-check-if-all-element-in-array-have-specific-class)
+CSS | Vertically align block-level element with unknown height | style.css, lines 23-27 | [CSS tricks](https://css-tricks.com/) | [here](https://css-tricks.com/centering-css-complete-guide/)
+CSS | Styling: glowing text | style.css, lines 46-50 | [Free Frontend](https://freefrontend.com/) | [here](https://freefrontend.com/css-glow-text-effects/)
+CSS | Flip cards | style.css, lines 203-221 | [FreeCodeCamp (youtube channel)](https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ) | [here](https://www.youtube.com/watch?v=ZniVgo8U7ek&t=298s)
+CSS | Combine several conditions in same media query | style.css, lines 446-469 | [MDN web docs](https://developer.mozilla.org/en-US/) | [here](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+JS | Disable enter key | game.js, lines 72-76 | [Paulund](https://paulund.co.uk/) | [here](https://paulund.co.uk/how-to-disable-enter-key-on-forms)
+JS | Shuffle cards | game.js, lines 87-93 | [FreeCodeCamp (youtube channel)](https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ) | [here](https://www.youtube.com/watch?v=ZniVgo8U7ek&t=298s)
+JS | Define if card if first or second card | game.js, lines 248-266 | [FreeCodeCamp (youtube channel)](https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ) | [here](https://www.youtube.com/watch?v=ZniVgo8U7ek&t=298s)
+JS | Remove last character from id | game.js, lines 281-283 | [Stackoverflow](https://stackoverflow.com/) | [here](https://stackoverflow.com/questions/1794822/remove-last-character-in-id-attribute)
+JS | Check if all elements in array have specific class | game.js, lines 308-315 | [Stackoverflow](https://stackoverflow.com/) | [here](https://stackoverflow.com/questions/31962074/jquery-how-to-check-if-all-element-in-array-have-specific-class)
    
 ### Acknowledgments
 
