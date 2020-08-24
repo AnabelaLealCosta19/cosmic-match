@@ -129,6 +129,11 @@ $('.btn-play-again').on("click", function() {  // When clicking new game button 
     };
 });
 
+$('#cancel').on("click", function() {  
+    continueTime();
+    resetResumeButton();
+});
+
 
 // Handle player name
 function firstPlayerName() {  // Set player name for first-time visitor
