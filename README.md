@@ -272,7 +272,7 @@ While writing code, two further modals were added as they would provide an impro
     - While the instructions modal is displaying, the timer is paused. Upon clicking it's button, the time resumes where it has left off. 
 
 - **Settings**
-    - When clicking on the cog icon, the settings modal is opened. It has one section each to amend the player name as well as difficulty. Additionally, it includes two buttons: "Confirm changes" and "Cancel". 
+    - When clicking on the cog icon, the settings modal is opened. It has one section to amend the player name as well as difficulty. Additionally, it includes two buttons: "Confirm changes" and "Cancel". 
     - The current player name is displayed by default and can be amended as desired by the player. Furthermore, the current difficulty level can be changed by clicking on a different difficulty button. 
     - The modal has been programmed to only close when clicking on the buttons to ensure that their functionality is executed as intended.
     - Functionality executed upon pressing "Confirm changes": 
@@ -280,7 +280,7 @@ While writing code, two further modals were added as they would provide an impro
         * Shuffle cards, start timer and reset flip counter
         * If the game was paused previously and the resume icon is replaced by the pause icon.
         * Update new player name
-    - Functionality executed upon pressing "Confirm changes": 
+    - Functionality executed upon pressing "Cancel": 
         * Close modal and resume timer where left off
 
 - **Game board**
@@ -288,13 +288,13 @@ While writing code, two further modals were added as they would provide an impro
     - Upon clicking any card, the card gets flipped with a 3D effect and the user can see the card front. Additional styling of the border of the card is applied to emphasize which card has been selected. Both effects make the memory game more entertaining, which ensures that the user stays engaged with the game.
     - Once the second card is selected, JavaScript code is executed to check if the cards match or not. Please note, that the cards have time to fully flip before any subsequent code is executed. 
         - Cards match: The highlighted border is removed and the cards stay with their front up. The user can now try to match another pair.
-        - Cards don't match: The highlighted border is removed and the cards are flipped back. The user can now try to match another pair.
+        - Cards don't match: The highlighted border is removed and the cards are flipped back. The user can try to match another pair.
     - While the code for matched/not matched cards is executed, no other cards can be clicked to protect the memory game's logic.
     - Please also note, that a function has been added to prevent cards to be matched with themselves. Should the user click twice on the same card, nothing happens. This forces the user to click on a different card instead.  
 
 - **Congratulations modal**
     - If the player finds all matching pairs, the congratulations modal opens. 
-    - The modal congratulates the user for his success and encourages him to play another round. It also gives the option to change the difficulty level before starting the new game. 
+    - The modal congratulates the user for his success and encourages him to play another round. It also gives the option to change the difficulty level before starting a new game. 
     - The modal only closes when clicking on "Play again" to ensure that its functionality is executed.
     - Functionality executed upon pressing "Play again": 
         * Depending on difficulty selected: adapt time limit, display difficulty and select cards used
@@ -302,7 +302,7 @@ While writing code, two further modals were added as they would provide an impro
 
 - **Game over modal**
     - Should the time run up before all matching pairs have been found, then the game over modal will show. 
-    - The modal gives the user appropriate feedback that he lost and encourages him to play another round. It also gives the option to change the difficulty level before starting the new game. 
+    - The modal gives the user appropriate feedback that he lost and encourages him to play another round. It also gives the option to change the difficulty level before starting a new game. 
     - The modal only closes when clicking on "Play again" to ensure that its functionality is executed.
     - Functionality executed upon pressing "Play again": 
         * Depending on difficulty selected: adapt time limit, display difficulty and select cards used
