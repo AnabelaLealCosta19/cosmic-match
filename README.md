@@ -1,5 +1,7 @@
 # Cosmic Match
 
+![Cosmic Match displayed on different devices](assets/images/readme/introduction-img.PNG)
+
 Memory games are an entertaining way to improve one's memory, concentration, and attention to detail. Even though it can be as beneficial to small children as to adults, most games are designed for children. 
 
 That's when **Cosmic Match** comes into play. It's a simple memory game that uses star constellations as images to be matched and provides an overall nice feel to the game. Using real star constellation might further enable the player to recognize star constellations in the night sky in real life.
