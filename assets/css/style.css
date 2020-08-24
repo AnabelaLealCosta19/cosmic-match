@@ -6,21 +6,24 @@ body {
     font-family: 'montserrat', sans-serif;
     font-weight: 500;
     color: white;
-    background: url("../images/bg-img/background-img-crop-mobl.jpg") no-repeat center center; /* Source of the picture is https://pxhere.com/ (URL https://pxhere.com/en/photo/115088) */
+    background: url("../images/bg-img/background-img-crop-mobl.jpg") no-repeat center center;
+    /* Source of the picture is https://pxhere.com/ (URL https://pxhere.com/en/photo/115088) */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 
+
 /* /.Body */
 
 
 /* Heading */
 
-header { /* Vertically aligning block-level element with unknown height | source: 'CSS-Tricks' (URL: https://css-tricks.com/centering-css-complete-guide/) */
+header {
+    /* Vertically aligning block-level element with unknown height | source: 'CSS-Tricks' (URL: https://css-tricks.com/centering-css-complete-guide/) */
     height: 18vh;
-    position:relative;
+    position: relative;
 }
 
 .heading-div {
@@ -35,14 +38,17 @@ h1 {
     font-size: 2em;
 }
 
-h1, .h1 {
+h1,
+.h1 {
     margin: 0;
 }
 
-.neon { /* Glowing text | source: 'Free Frontend' (URL: https://freefrontend.com/css-glow-text-effects/) */
+.neon {
+    /* Glowing text | source: 'Free Frontend' (URL: https://freefrontend.com/css-glow-text-effects/) */
     color: white;
     text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #44525b, 0 0 80px #284558, 0 0 90px #7986b0, 0 0 100px #000000, 0 0 150px #382929;
 }
+
 
 /* /.Heading */
 
@@ -52,6 +58,7 @@ h1, .h1 {
 article {
     height: calc(82vh - 1.5em);
 }
+
 
 /* /.Article */
 
@@ -68,6 +75,7 @@ footer p {
     font-weight: 300;
 }
 
+
 /* /.Footer */
 
 
@@ -77,6 +85,7 @@ h2 {
     font-size: 1.5em;
     margin: 0;
 }
+
 
 /* /.Player details */
 
@@ -105,7 +114,7 @@ p i {
 }
 
 .difficulty-div {
-    padding-left: 0; 
+    padding-left: 0;
 }
 
 #difficulty {
@@ -116,13 +125,15 @@ p i {
     font-size: 0.98em;
 }
 
+
 /* /.Game details */
 
 
 /* Action items */
 
-.action-items-container { /* Vertically aligning block-level element with unknown height | source: 'CSS-Tricks' (URL: https://css-tricks.com/centering-css-complete-guide/) */
-    position:relative;
+.action-items-container {
+    /* Vertically aligning block-level element with unknown height | source: 'CSS-Tricks' (URL: https://css-tricks.com/centering-css-complete-guide/) */
+    position: relative;
     padding-right: 0;
 }
 
@@ -139,16 +150,17 @@ li {
 
 li div i {
     color: white;
-    font-size: 1.25em; 
+    font-size: 1.25em;
     cursor: pointer;
 }
+
 
 /* /.Action items */
 
 
 /* Cards */
 
-.card-container{
+.card-container {
     perspective: 1000px;
     -webkit-perspective: 1000px;
 }
@@ -171,7 +183,7 @@ li div i {
     padding: 10px;
     border: 1px solid rgba(253, 253, 253, 0.8);
     border-radius: .25em;
-    background-color: rgb(10, 22, 30); 
+    background-color: rgb(10, 22, 30);
     cursor: pointer;
 }
 
@@ -179,22 +191,25 @@ li div i {
     position: relative;
     height: 14vh;
     margin: 5px 0;
-} 
+}
 
 .card-alignment-child {
     position: absolute;
     box-sizing: border-box;
     width: calc(100% - 10px);
     height: 100%;
-} 
+}
 
-.card.flip { /* Flip card */
-    -webkit-transform: rotateY(180deg); /* Flip cards | source: 'Memory Card Game - JavaScript Tutorial - freecodecamp' (URL: https://www.youtube.com/watch?v=ZniVgo8U7ek&t=298s) */
+.card.flip {
+    /* Flip card */
+    -webkit-transform: rotateY(180deg);
+    /* Flip cards | source: 'Memory Card Game - JavaScript Tutorial - freecodecamp' (URL: https://www.youtube.com/watch?v=ZniVgo8U7ek&t=298s) */
     -ms-transform: rotateY(180deg);
     transform: rotateY(180deg);
 }
 
-.card-front, .card-back{
+.card-front,
+.card-back {
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
 }
@@ -205,11 +220,13 @@ li div i {
     transform: rotateY(180deg);
 }
 
-.row div .cards.selected { /* Selected card */
+.row div .cards.selected {
+    /* Selected card */
     outline: none;
     border-color: rgb(248, 249, 250);
     box-shadow: 0 0 5px rgb(248, 249, 250);
 }
+
 
 /* /.Cards */
 
@@ -217,7 +234,7 @@ li div i {
 /* Modal general */
 
 .modal .modal-content {
-    background-color: rgb(10, 22, 30); 
+    background-color: rgb(10, 22, 30);
     border: 1px solid rgba(253, 253, 253, 0.8);
     box-shadow: 0 0 5px rgb(248, 249, 250);
 }
@@ -236,9 +253,10 @@ li div i {
 }
 
 .btn-play:hover {
-    color: #fff;    
+    color: #fff;
     box-shadow: 0 0 5px #f8f9fa;
 }
+
 
 /* /.Modal general */
 
@@ -250,9 +268,11 @@ li div i {
     text-decoration: underline;
 }
 
-.other-player, .other-player .player {
+.other-player,
+.other-player .player {
     font-size: 12px;
 }
+
 
 /* /.Modal start page: repeat */
 
@@ -263,7 +283,9 @@ li div i {
     text-align: center;
 }
 
+
 /* /.Modal instructions */
+
 
 /* Modal settings */
 
@@ -273,15 +295,18 @@ li div i {
 }
 
 #cancel:hover {
-    color:  rgba(199, 41, 41, 0.8);  
+    color: rgba(199, 41, 41, 0.8);
     box-shadow: 0 0 5px rgba(199, 41, 41, 0.8);
 }
 
+
 /* /.Modal settings */
+
 
 /* Modal congrats/game over */
 
-#congratsTitle, #gameOverTitle {
+#congratsTitle,
+#gameOverTitle {
     font-size: 2em;
 }
 
@@ -289,13 +314,16 @@ p i.congrats-icon {
     font-size: 3em;
 }
 
+
 /* /.Modal congrats/game over */
+
 
 /* Media queries */
 
 @media only screen and (min-width: 350px) {
     body {
-        background: url("../images/bg-img/background-img-crop-mobl-tabl.jpg") no-repeat center center; /* Source of the following picture is https://pxhere.com/ (URL https://pxhere.com/en/photo/115088) */
+        background: url("../images/bg-img/background-img-crop-mobl-tabl.jpg") no-repeat center center;
+        /* Source of the following picture is https://pxhere.com/ (URL https://pxhere.com/en/photo/115088) */
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -314,7 +342,7 @@ p i.congrats-icon {
         line-height: 1.5em;
     }
     li div i {
-        font-size: 1.5em; 
+        font-size: 1.5em;
     }
     .difficulty {
         font-size: 1.22em;
@@ -324,7 +352,7 @@ p i.congrats-icon {
 @media only screen and (min-width: 768px) {
     h1 {
         font-size: 4.5em;
-    } 
+    }
     article {
         height: calc(82vh - 2em);
     }
@@ -340,7 +368,7 @@ p i.congrats-icon {
     }
     span {
         font-size: 1.8em;
-    }  
+    }
     .difficulty {
         font-size: 1.8em;
     }
@@ -352,7 +380,7 @@ p i.congrats-icon {
     }
     li div i {
         font-size: 2.25em;
-        margin-right: 0.25em; 
+        margin-right: 0.25em;
     }
 }
 
@@ -370,7 +398,7 @@ p i.congrats-icon {
     }
     h1 {
         font-size: 7.5vh;
-    } 
+    }
     article {
         height: 71.5vh;
     }
@@ -393,7 +421,7 @@ p i.congrats-icon {
     }
     span {
         font-size: 3.5vh;
-    } 
+    }
     .difficulty {
         font-size: 3.5vh;
     }
@@ -411,11 +439,12 @@ p i.congrats-icon {
     }
     li div i {
         font-size: 4vh;
-        margin-right: 0.25em; 
+        margin-right: 0.25em;
     }
 }
 
-@media only screen and (min-width: 992px) and (max-height: 749px) { /* Combining several conditions in same media query | source: 'MDN web docs' (URL: https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) */
+@media only screen and (min-width: 992px) and (max-height: 749px) {
+    /* Combining several conditions in same media query | source: 'MDN web docs' (URL: https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) */
     .info-container-desktop {
         padding-left: 10vw;
     }
@@ -427,7 +456,7 @@ p i.congrats-icon {
     }
     .card-alignment-parent {
         height: 17.5vh;
-    } 
+    }
 }
 
 @media only screen and (min-width: 992px) and (min-height: 750px) and (max-height: 849px) {
@@ -438,5 +467,6 @@ p i.congrats-icon {
         padding-right: 5vw;
     }
 }
+
 
 /* /.Media queries */
