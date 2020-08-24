@@ -215,27 +215,27 @@ While writing code, two further modals were added as they would provide an impro
 - **Functionality executed on page load**
     - When the user loads the page, the code checks if there's a player name stored from a previous session. 
         * No player name is found: first start page modal is displayed and the default difficulty level easy is set.
-        * Previous player details are found: display repeat start page modal, update the player name and difficulty button selected in modal, update player name and difficulty in main page. 
+        * Previous player details are found: display repeat start page modal, update the player name and difficulty button focused in the modal, update player name and difficulty in main page. 
 
 - **First start page modal**
-    - When arriving at the page for the first time, this modal pops up to collect the players' name and gives him the option to select the desired difficulty level. Please note that the difficulty easy is selected by default. 
+    - When arriving at the page for the first time, this modal pops up to collect the player's name and give him the option to select the desired difficulty level. Please note that the difficulty easy is selected by default. 
     - The input of the player name is required and limited to 10 characters to allow it to be displayed neatly across all devices. 
     - The active/clicked button has distinct styling to clearly indicate to the user which difficulty has been selected. Choosing a different difficulty will simply remove this styling from this button and add it to the newly selected one. 
     - The play now button changes his styling on hover to indicate that it's clickable to the user. 
     - The modal has been programmed to only close when clicking on the "Play now" button - not when clicking outside the modal or pressing enter after typing in the name. This is to ensure that all details have been given and that the needed functionality to set up the game is executed. 
     - Functionality executed upon pressing "Play now": 
         * Store player name and difficulty selected
-        * Depending on difficulty selected: adapt time limit, display difficulty and select cards used
+        * Depending on difficulty: adapt time limit, display difficulty and select cards used
         * Shuffle cards and start timer
 
 ![First start page](assets/images/readme/first-start-page.png) 
 
 - **Repeat start page modal**
-    - For any subsequent times that the user visits this website, this modal pops up. It has text that indicates that Cosmic Match is aware that it has already been played by the user. Additionally, the modal displays the players' name and difficulty preference from their last session. 
+    - For any subsequent times that the user visits this website, this modal pops up. It has text that indicates that Cosmic Match is aware that it has already been played by the user. Additionally, the modal displays the player's name and difficulty preference from their last session. 
     - The user has the option to change the difficulty. The active/clicked button has distinct styling, which changes if another difficulty is selected.
     - The user can also change the player name by clicking on the link *"You're not [player name]?"*. Upon clicking, a field for the name input opens, which allows the user to update his current player name. Updating the name is optional and limited to 10 characters. Please note that the player name will only be updated if this field isn't empty. 
     - The modal has been programmed to only close when clicking on the "Play now" button - not when clicking outside the modal or pressing enter after typing in the name. This is to ensure that the needed functionality to set up the game is executed. 
-    - The play now button changes his styling on hover to indicate that it's clickable to the user. 
+    - The play now button changes his styling on hover to indicate that it's clickable. 
     - Functionality executed upon pressing "Play now": 
         * Depending on difficulty selected: adapt time limit, display difficulty and select cards used
         * Check if new player name has been provided and update it accordingly
@@ -245,7 +245,7 @@ While writing code, two further modals were added as they would provide an impro
 
 - **Main page**
     - The main page consists of 5 sections: Cosmic match title, player name, game details, action items, and the game board with the cards.
-    - The player name updates according to the player's input to engage additionally in the game. 
+    - The player name updates according to the player's input to engage him additionally in the game. 
     - The game details section displays the time the user has left, the flips made and the difficulty selected. It updates automatically to always inform the user of the current state of his game. 
     - The action items are displayed neatly as icons and allow the user to perform additional actions: pause/resume game, restart game, open instructions, and change settings. For all icons, the cursor has been added as a pointer to indicate their clickability.   
 
@@ -290,7 +290,7 @@ While writing code, two further modals were added as they would provide an impro
     - Upon clicking any card, the card gets flipped with a 3D effect and the user can see the card front. Additional styling of the border of the card is applied to emphasize which card has been selected. Both effects make the memory game more entertaining, which ensures that the user stays engaged with the game.
     - Once the second card is selected, JavaScript code is executed to check if the cards match or not. Please note, that the cards have time to fully flip before any subsequent code is executed. 
         - Cards match: The highlighted border is removed and the cards stay with their front up. The user can now try to match another pair.
-        - Cards don't match: The highlighted border is removed and the cards are flipped back. The user can try to match another pair.
+        - Cards don't match: The highlighted border is removed and the cards are flipped back. The user can again try to match another pair.
     - While the code for matched/not matched cards is executed, no other cards can be clicked to protect the memory game's logic.
     - Please also note, that a function has been added to prevent cards to be matched with themselves. Should the user click twice on the same card, nothing happens. This forces the user to click on a different card instead.  
 
