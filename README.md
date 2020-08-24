@@ -394,6 +394,10 @@ This project uses **HTML**, **CSS** and **JavaScript**.
 - [Am I Responsive](http://ami.responsivedesign.is/): Used to display website across devices for screenshot in product introduction.
 - [Tiny PNG](https://tinypng.com/): Compressed images for my project. 
 - [Diagram Editor](https://www.diagrameditor.com/): Used to create the diagrams for my readme.
+- **Built in screen recorder in Huawei P20 Pro**: Used to record second issue for bug section. 
+- [Online Converter](https://www.onlineconverter.com/mp4-to-gif): Used to compress the gif for the bug section. 
+- [PowerMapper](https://www.powermapper.com/products/sortsite/checks/browser-compatibility/): Used for browser compatibility tests.
+- [Pingdom](https://tools.pingdom.com/): Used to check website speed test.  
 
 ## Testing
 
