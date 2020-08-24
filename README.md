@@ -138,6 +138,8 @@ I've selected a dark blue (rgb(10, 22, 30)) for the background of the cards and 
 
 For the last seconds on each round, I've selected rgb(255, 122, 122). It's a soft shade of red that clearly signalizes that the time runs up and fits with the colours of the background image. It, nevertheless, is contrasting to the background and gets the users' attention with ease. 
 
+The red colour rgba(199, 41, 41, 0.8) has been used for the cancel button in the settings modal as it clearly indicates a way out from changing the settings. This has also been used when hovering over the buttons in the modals to provide the user with immediate feedback that this button is clickable.
+
 #### Images
 
 The background image plays a central role as it sets the overall atmosphere of the page. Therefore, several crops of the same image have been made to ensure high quality and good positioning across all devices.
