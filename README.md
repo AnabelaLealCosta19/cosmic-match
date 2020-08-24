@@ -356,6 +356,7 @@ This project uses **HTML**, **CSS** and **JavaScript**.
 - [LetterCount](https://www.lettercount.com/): Counted letters of commit messages to ensure they aren't too long.
 - [Scribens.com](https://www.scribens.com/): Checked grammar of website and readme content.
 - [Am I Responsive](http://ami.responsivedesign.is/): Used to display website across devices for screenshot in product introduction.
+- [Tiny PNG](https://tinypng.com/): Compressed images for my project. 
 - [Diagram Editor](https://www.diagrameditor.com/): Used to create the diagrams for my readme.
 
 ## Testing !!!
